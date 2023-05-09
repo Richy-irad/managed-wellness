@@ -18,6 +18,9 @@ module.exports = {
         "cool-grey": "#A7ADA8",
         "muted-yellow": "#E2D589",
       },
+      fontFamily: {
+        "josefin-sans": "var(--font-josefin-sans)",
+      },
     },
   },
   plugins: [],
