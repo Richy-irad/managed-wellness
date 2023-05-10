@@ -52,7 +52,7 @@ const Service: FC<ServiceProps> = ({ service }): JSX.Element => {
                   <h4 className="text-2xl text-dark font-regular">Benefits</h4>
                   <div className="flex flex-col gap-3 flex-wrap">
                     {service.benefits.map((benefit) => (
-                      <p key={benefit.title}>
+                      <p key={benefit.title} className="text-dark text-lg">
                         <span className="font-bold text-deep-blue">
                           {benefit.title}:{" "}
                         </span>

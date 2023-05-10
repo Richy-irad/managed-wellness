@@ -37,8 +37,6 @@ export default function Footer() {
             </div>
           </div>
 
-          <hr className="my-8" />
-
           {/* copyright */}
           <div className="flex gap-0.5 items-center">
             <Copyright size={20} /> Managed Wellness. All rights Reserved
