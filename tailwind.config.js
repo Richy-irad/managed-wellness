@@ -24,7 +24,11 @@ module.exports = {
         "josefin-sans": "var(--font-josefin-sans)",
       },
       borderWidth: {
+        0.5: "0.5px",
         3: "3px",
+      },
+      padding: {
+        18: "72px",
       },
     },
   },

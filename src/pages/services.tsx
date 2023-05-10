@@ -24,8 +24,8 @@ const Services: FC<ServicesProps> = ({ services }): JSX.Element => {
         {/* services section */}
         <div className="bg-white">
           <div className="lg:container lg:mx-auto">
-            <div className="flex gap-x-32 items-start lg:px-20 py-20">
-              <div className="basis-1/2">
+            <div className="flex gap-x-32 justify-between items-start lg:px-20 py-20">
+              <div className="basis-4/12">
                 <div className="flex flex-col gap-y-8 w-96">
                   <h1 className="text-6xl font-bold text-black">
                     Our Services
@@ -36,7 +36,7 @@ const Services: FC<ServicesProps> = ({ services }): JSX.Element => {
                   </p>
                 </div>
               </div>
-              <div className="basis-1/2">
+              <div className="basis-7/12">
                 <div className="basis-1/2 flex flex-col gap-y-12">
                   {services.map((service) => (
                     <Service
