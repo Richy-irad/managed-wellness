@@ -65,7 +65,7 @@ const About = () => {
 
             {/* Purpose */}
             <div className="flex gap-x-32 justify-between items-center lg:px-20 py-18">
-              <div className="basis-4/12 w-96">
+              <div className="basis-4/12">
                 <div className="flex flex-col gap-y-4 w-96 py-8">
                   <span className="text-warm-grey font-2xl uppercase">
                     purpose
@@ -97,7 +97,7 @@ const About = () => {
                   and support when facing emotional or mental challenges.u
                 </p>
               </div>
-              <div className="basis-4/12 w-96">
+              <div className="basis-4/12">
                 <div className="flex flex-col gap-y-4 w-96 py-8">
                   <span className="text-warm-grey font-2xl uppercase">
                     motto
