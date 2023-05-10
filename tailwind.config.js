@@ -13,13 +13,18 @@ module.exports = {
         concrete: "#F2F2F2",
         light: "#CFCFCF",
         "deep-blue": "#003249",
+        "light-blue": "#9ECDE0",
         "sage-green": "#9EB689",
         "warm-grey": "#807664",
         "cool-grey": "#A7ADA8",
         "muted-yellow": "#E2D589",
+        "dull-yellow": "#EEE6B8",
       },
       fontFamily: {
         "josefin-sans": "var(--font-josefin-sans)",
+      },
+      borderWidth: {
+        3: "3px",
       },
     },
   },
