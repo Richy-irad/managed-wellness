@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Service from "@/components/service";
@@ -19,6 +20,9 @@ export const getStaticProps = async () => {
 const Services: FC<ServicesProps> = ({ services }): JSX.Element => {
   return (
     <>
+      <Head>
+        <title>Services | Managed Wellness</title>
+      </Head>
       <Navbar />
       <main className="font-josefin-sans">
         {/* services section */}

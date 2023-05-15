@@ -1,11 +1,14 @@
 import Link from "next/link";
-
+import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 const Contact = () => {
   return (
     <>
+      <Head>
+        <title>Contact us | Managed Wellness</title>
+      </Head>
       <Navbar />
       <main className="font-josefin-sans">
         <div className="bg-white">

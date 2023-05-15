@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
@@ -24,6 +25,9 @@ export const getStaticProps = async () => {
 const Home: FC<IndexProps> = ({ services }) => {
   return (
     <>
+      <Head>
+        <title>Managed Wellness| Home</title>
+      </Head>
       <Navbar />
       <main className="font-josefin-sans">
         {/* hero section */}

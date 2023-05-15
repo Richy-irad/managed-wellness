@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import Head from "next/head";
 import Link from "next/link";
 import { GetStaticProps } from "next";
 import { getAllServicesSlugs, getService } from "@/lib/services";
@@ -36,6 +37,10 @@ export const getStaticProps: GetStaticProps = async (context) => {
 const Service: FC<ServiceProps> = ({ service }): JSX.Element => {
   return (
     <>
+      <Head>
+        <title>{service.service} | Managed Wellness</title>
+      </Head>
+
       <Navbar />
 
       <main className="font-josefin-sans">

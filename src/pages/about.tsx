@@ -1,9 +1,13 @@
+import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 const About = () => {
   return (
     <>
+      <Head>
+        <title>About us | Managed Wellness</title>
+      </Head>
       <Navbar />
       <main className="font-josefin-sans">
         {/* Hero */}
