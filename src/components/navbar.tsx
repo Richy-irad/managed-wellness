@@ -33,7 +33,7 @@ const CustomLink = ({ children, href }: CustomLinkProps) => {
           router.asPath === href
             ? "font-bold border-b-3 border-sage-green"
             : "hover:border-b-3 hover:border-sage-green font-medium",
-          "px-4"
+          "mx-4"
         )}
       >
         {children}
@@ -69,7 +69,7 @@ export default function Navbar() {
                   </Link>
                 </div>
                 <div className="hidden md:block">
-                  <div className="ml-10 flex items-center space-x-4">
+                  <div className="ml-10 flex items-center gap-x-4">
                     {navigation.map((item) => (
                       <CustomLink key={item.name} href={item.href}>
                         {item.name}
