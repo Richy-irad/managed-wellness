@@ -6,10 +6,10 @@ const Service: FC<ServiceProps> = ({ service }): JSX.Element => {
   return (
     <div
       key={service.service}
-      className="bg-dull-yellow px-7 py-8 rounded-md flex flex-col gap-y-12"
+      className="bg-dull-yellow px-7 py-8 rounded-md flex flex-col gap-y-6 lg:gap-y-12"
     >
       <div className="flex justify-between items-center">
-        <h3 className="basis-9/12 text-dark text-3xl font-medium">
+        <h3 className="basis-9/12 text-dark text-xl lg:text-3xl font-medium">
           {service.service}
         </h3>
         <Link
@@ -20,9 +20,9 @@ const Service: FC<ServiceProps> = ({ service }): JSX.Element => {
         </Link>
       </div>
       <div className="flex flex-col gap-y-8">
-        <p className="text-lg text-dark text-justify">{service.description}</p>
+        <p className="text-base text-dark text-start lg:text-justify lg:text-lg">{service.description}</p>
         <div className="flex flex-col gap-y-6">
-          <h4 className="text-2xl text-black font-regular">Benefits</h4>
+          <h4 className="text-lg lg:text-2xl text-black font-regular">Benefits</h4>
           <div className="flex gap-4 flex-wrap">
             {service.benefits.map((benefit) => (
               <span

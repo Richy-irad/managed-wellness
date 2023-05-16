@@ -98,16 +98,16 @@ const Contact = () => {
                     </button>
                   </form>
                 </div>
-                <div className="basis-full gap-x-10 gap-y-10 px-7 py-8 items-center justify-center lg:justify-start lg:basis-4/12 flex flex-row lg:flex-col lg:items-start">
+                <div className="basis-full gap-x-10 gap-y-10 px-7 py-8 items-center justify-center flex flex-col md:flex-row lg:flex-col md:items-start md:justify-start lg:basis-4/12">
                   <div className="flex flex-col gap-y-3 items-start lg:items-end text-start lg:text-end w-full">
-                    <p className="font-semibold text-3xl">Phone</p>
-                    <p className="font-regular text-2xl">+254737965972</p>
+                    <p className="font-semibold text-2xl lg:text-3xl">Phone</p>
+                    <p className="font-regular text-xl lg:text-2xl">+254737965972</p>
                   </div>
                   <div className="flex flex-col gap-y-3 items-start lg:items-end text-start lg:text-end w-full">
-                    <p className="font-semibold text-3xl">E-mail</p>
+                    <p className="font-semibold text-2xl lg:text-3xl">E-mail</p>
                     <Link
                       href="mailto:info@managedwellness.com"
-                      className="font-regular text-2xl hover:text-sage-green"
+                      className="font-regular text-xl lg:text-2xl hover:text-sage-green"
                     >
                       info@managedwellness.com
                     </Link>
