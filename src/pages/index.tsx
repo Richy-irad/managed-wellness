@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 import heroImage from "../../public/assets/hero-image.jpg";
+import favicon from "../../public/favicon.ico";
 
 import { getMinServices } from "@/lib/services";
 import { IndexProps } from "@/lib/types";
@@ -26,7 +27,17 @@ const Home: FC<IndexProps> = ({ services }) => {
   return (
     <>
       <Head>
-        <title>Managed Wellness| Home</title>
+        <meta
+          name="description"
+          content="Welcome to Managed Wellness, your trusted destination for comprehensive mental health services. We are committed to supporting your well-being and providing the tools and guidance you need to navigate life's challenges."
+        />
+        <meta
+          name="keywords"
+          content="Mental health, Counseling, Therapy, Trauma counseling, Trauma counseling, Sex and gender-based violence counseling, Loss and grief counseling, Couples therapy, Sex therapy, Pre-marital counseling, Psychological support"
+        />
+        <title>Home | Managed Wellness</title>
+        <meta property="og:title" content="Home | Managed Wellness" />
+        <meta property="og:type" content="website" />
       </Head>
       <Navbar />
       <main className="font-josefin-sans">

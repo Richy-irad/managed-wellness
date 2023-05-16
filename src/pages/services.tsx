@@ -21,7 +21,17 @@ const Services: FC<ServicesProps> = ({ services }): JSX.Element => {
   return (
     <>
       <Head>
+        <meta
+          name="description"
+          content="At Managed Wellness, we are dedicated to providing holistic mental health support that empowers you on your wellness journey. With our expert team and a comprehensive range of services, we are here to guide you towards a healthier, happier, and more fulfilling life. Take the first step today and embark on a path of self-discovery and growth with Managed Wellness."
+        />
+        <meta
+          name="keywords"
+          content="Mental health, Counseling, Therapy, Trauma counseling, Trauma counseling, Sex and gender-based violence counseling, Loss and grief counseling, Couples therapy, Sex therapy, Pre-marital counseling, Coping skills, Communication skills, Emotional intimacy, Sexual health, Intimacy issues, Trauma recovery, Post-traumatic stress disorder (PTSD), Grief support, Relationship satisfaction, Mental health awareness, Healthy relationships"
+        />
         <title>Services | Managed Wellness</title>
+        <meta property="og:title" content="Services | Managed Wellness" />
+        <meta property="og:type" content="website" />
       </Head>
       <Navbar />
       <main className="font-josefin-sans">

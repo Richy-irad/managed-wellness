@@ -7,7 +7,17 @@ const Contact = () => {
   return (
     <>
       <Head>
-        <title>Contact us | Managed Wellness</title>
+        <meta
+          name="description"
+          content="Contact Managed Wellness for compassionate support, guidance, and confidential consultations. Start your journey towards improved mental health and well-being today."
+        />
+        <meta
+          name="keywords"
+          content="Mental health, Counseling, Therapy, Trauma counseling, Trauma counseling, Sex and gender-based violence counseling, Loss and grief counseling, Couples therapy, Sex therapy, Pre-marital counseling, Coping skills, Communication skills, Emotional intimacy, Sexual health, Intimacy issues, Trauma recovery, Post-traumatic stress disorder (PTSD), Grief support, Relationship satisfaction, Mental health awareness, Healthy relationships"
+        />
+        <title>Contact Us | Managed Wellness</title>
+        <meta property="og:title" content="Contact Us | Managed Wellness" />
+        <meta property="og:type" content="website" />
       </Head>
       <Navbar />
       <main className="font-josefin-sans">

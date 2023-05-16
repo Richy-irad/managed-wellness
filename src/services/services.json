@@ -2,12 +2,12 @@
     {
         "service": "Trauma Counseling",
         "slug": "trauma-counseling",
+        "metaDescription": "Heal from past traumas in a safe, nurturing environment. Our counselors help reduce PTSD symptoms, increase safety, and develop coping skills for transformative healing.",
         "description": "Trauma counseling can help individuals process traumatic experiences and build resilience. Benefits may include reduced symptoms of anxiety and depression, improved self-esteem, and a greater sense of control over one's life",
         "benefits": [
             {
                 "title": "Reduction in symptoms of post-traumatic stress disorder (PTSD)",
                 "description": "Trauma counseling can help you develop effective coping mechanisms and reduce symptoms of anxiety, depression, and post-traumatic stress disorder (PTSD)."
-                
             },
             {
                 "title": "Increased sense of safety and security",
@@ -24,8 +24,7 @@
             {
                 "title": "Increased sense of empowerment",
                 "description": "Trauma counseling can help you develop a greater sense of empowerment and control over your life, leading to improved self-esteem and confidence."
-            }
-            ,
+            },
             {
                 "title": "Greater ability to engage in daily activities",
                 "description": "Trauma counseling can help individuals overcome barriers to engaging in daily activities, such as work or school, that may have been disrupted by trauma."
@@ -35,6 +34,7 @@
     {
         "service": "Sexual and Gender-Based Violence Counseling",
         "slug": "sexual-and-gender-based-violence-counseling",
+        "metaDescription": "Empowering support for survivors of violence. Gain tools to navigate experiences, fostering resilience, healing, and personal growth.",
         "description": "Counseling for sexual and gender-based violence can provide support, validation, and coping skills for survivors. Benefits may include reduced symptoms of PTSD, improved self-esteem, and a greater sense of empowerment.",
         "benefits": [
             {
@@ -66,6 +66,7 @@
     {
         "service": "Loss and Grief Counseling",
         "slug": "loss-and-grief-counseling",
+        "metaDescription": "Find meaning and navigate grief with compassionate guidance. Restore balance, peace, and emotional healing.",
         "description": "Grief counseling can provide a safe space for individuals to process their emotions and work through the stages of grief. Benefits may include reduced feelings of isolation and loneliness, improved coping skills, and a greater sense of acceptance.",
         "benefits": [
             {
@@ -97,6 +98,7 @@
     {
         "service": "Couples Therapy",
         "slug": "couples-therapy",
+        "metaDescription": "Strengthen relationships with improved communication, emotional intimacy, and problem-solving skills. Transform your partnership with a stronger foundation.",
         "description": "Couples therapy can help couples improve communication, resolve conflicts, and deepen their emotional connection. Benefits may include improved relationship satisfaction, reduced symptoms of anxiety and depression, and a greater sense of intimacy.",
         "benefits": [
             {
@@ -128,6 +130,7 @@
     {
         "service": "Sex Therapy",
         "slug": "sex-therapy",
+        "metaDescription": "Enhance sexual well-being and fulfillment. Explore sexual health, improve relationships, and boost self-confidence in a safe, supportive space.",
         "description": "Sex therapy can help individuals and couples improve their sexual health and wellness. Benefits may include improved sexual functioning, increased confidence and comfort with sexuality, and a greater sense of intimacy.",
         "benefits": [
             {
@@ -159,6 +162,7 @@
     {
         "service": "Pre-Marital Counseling",
         "slug": "pre-marital-counseling",
+        "metaDescription": "Build a resilient partnership for a successful marriage. Strengthen your bond, improve communication, and navigate challenges with skilled guidance.",
         "description": "Pre-marital counseling can help couples build a strong foundation for their marriage by exploring expectations, building communication skills, and addressing potential conflicts. Benefits may include improved relationship satisfaction, reduced likelihood of divorce, and a greater sense of commitment to the relationship.",
         "benefits": [
             {

@@ -12,6 +12,7 @@ export type ServiceType = {
   slug: string;
   description: string;
   benefits: BenefitType[];
+  metaDescription?: string;
 };
 
 export interface ServiceProps {
