@@ -46,20 +46,9 @@ export default function Navbar() {
   return (
     <Disclosure as="nav" className="bg-muted-yellow font-josefin-sans">
       {({ open }) => (
-        <div className="lg:container lg:mx-auto">
-          <div className="px-5 lg:px-0 py-6 lg:mx-20">
-            <div className="flex items-center justify-start gap-2">
-              <div className="flex md:hidden">
-                {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center text-black">
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <X className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <List className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
+        <>
+          <div className="px-5 lg:px-0 py-6 lg:mx-40">
+            <div className="flex items-center justify-between gap-2">
               <div className="flex items-center justify-between w-full">
                 <div className="flex-shrink-0">
                   <Link href="/" className="font-bold text-2xl">
@@ -78,6 +67,18 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
+
+              <div className="flex md:hidden">
+                {/* Mobile menu button */}
+                <Disclosure.Button className="inline-flex items-center justify-center text-black">
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <X className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <List className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
             </div>
           </div>
 
@@ -90,7 +91,7 @@ export default function Navbar() {
               ))}
             </div>
           </Disclosure.Panel>
-        </div>
+        </>
       )}
     </Disclosure>
   );

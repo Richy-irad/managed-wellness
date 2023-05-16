@@ -55,26 +55,24 @@ const Service: FC<ServiceProps> = ({ service }): JSX.Element => {
 
       <main className="font-josefin-sans">
         {/* services section */}
-        <div className="lg:container lg:mx-auto">
-          <div className="flex gap-x-32 items-start lg:px-20 py-20">
-            <div className="basis-full lg:basis-6/12 mx-auto">
-              <div className="flex flex-col gap-y-8">
-                <h1 className="text-5xl font-bold">{service.service}</h1>
-                <p className="text-dark text-justify font-lg">
-                  {service.description}
-                </p>
-                <div className="flex flex-col gap-y-6">
-                  <h4 className="text-2xl text-dark font-regular">Benefits</h4>
-                  <div className="flex flex-col gap-3 flex-wrap">
-                    {service.benefits.map((benefit) => (
-                      <p key={benefit.title} className="text-dark text-lg">
-                        <span className="font-bold text-deep-blue">
-                          {benefit.title}:{" "}
-                        </span>
-                        {benefit.description}
-                      </p>
-                    ))}
-                  </div>
+        <div className="flex gap-x-32 items-start px-5 lg:mx-40 py-20">
+          <div className="basis-full lg:basis-6/12 mx-auto">
+            <div className="flex flex-col gap-y-8">
+              <h1 className="text-5xl font-bold">{service.service}</h1>
+              <p className="text-dark text-justify font-lg">
+                {service.description}
+              </p>
+              <div className="flex flex-col gap-y-6">
+                <h4 className="text-2xl text-dark font-regular">Benefits</h4>
+                <div className="flex flex-col gap-3 flex-wrap">
+                  {service.benefits.map((benefit) => (
+                    <p key={benefit.title} className="text-dark text-lg">
+                      <span className="font-bold text-deep-blue">
+                        {benefit.title}:{" "}
+                      </span>
+                      {benefit.description}
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>

@@ -22,12 +22,13 @@ const Contact = () => {
       <Navbar />
       <main className="font-josefin-sans">
         <div className="bg-white">
-          <div className="lg:container lg:mx-auto">
-            <div className="lg:px-20 py-20">
-              <h1 className="text-end text-5xl">Get in Touch</h1>
-              <div className="flex justify-between">
-                <div className="basis-7/12">
-                  <form className="flex flex-col gap-y-8 items-start">
+            <div className="px-5 lg:mx-40 py-20 flex flex-col gap-y-8">
+              <h1 className="text-center lg:text-end text-3xl md:text-4xl lg:text-6xl font-bold">
+                Get in Touch
+              </h1>
+              <div className="flex justify-between flex-wrap gap-y-4">
+                <div className="basis-full lg:basis-7/12">
+                  <form className="flex flex-col gap-y-8 items-center lg:items-start">
                     <div className="flex flex-col gap-y-6 w-full">
                       {/* first and last names */}
                       <div className="flex gap-x-6">
@@ -97,16 +98,16 @@ const Contact = () => {
                     </button>
                   </form>
                 </div>
-                <div className="basis-4/12 flex flex-col gap-y-10 px-7 py-8">
-                  <div className="flex flex-col gap-y-3 items-start">
-                    <p className="font-bold text-3xl">Phone</p>
-                    <p className="font-bold text-2xl">+254737965972</p>
+                <div className="basis-full gap-x-10 gap-y-10 px-7 py-8 items-center justify-center lg:justify-start lg:basis-4/12 flex flex-row lg:flex-col lg:items-start">
+                  <div className="flex flex-col gap-y-3 items-start lg:items-end text-start lg:text-end w-full">
+                    <p className="font-semibold text-3xl">Phone</p>
+                    <p className="font-regular text-2xl">+254737965972</p>
                   </div>
-                  <div className="flex flex-col gap-y-3 items-start">
-                    <p className="font-bold text-3xl">E-mail</p>
+                  <div className="flex flex-col gap-y-3 items-start lg:items-end text-start lg:text-end w-full">
+                    <p className="font-semibold text-3xl">E-mail</p>
                     <Link
                       href="mailto:info@managedwellness.com"
-                      className="font-bold text-2xl hover:text-sage-green"
+                      className="font-regular text-2xl hover:text-sage-green"
                     >
                       info@managedwellness.com
                     </Link>
@@ -114,7 +115,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </main>
       <Footer />

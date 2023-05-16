@@ -45,8 +45,8 @@ const josefinSans = localFont({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${josefinSans.variable}`}>
+    <div className={`${josefinSans.variable}`}>
       <Component {...pageProps} />
-    </main>
+    </div>
   );
 }

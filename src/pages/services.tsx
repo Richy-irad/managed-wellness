@@ -37,30 +37,26 @@ const Services: FC<ServicesProps> = ({ services }): JSX.Element => {
       <main className="font-josefin-sans">
         {/* services section */}
         <div className="bg-white">
-          <div className="lg:container lg:mx-auto">
-            <div className="flex gap-x-32 justify-between items-start lg:px-20 py-20">
-              <div className="basis-4/12">
-                <div className="flex flex-col gap-y-8 w-96">
-                  <h1 className="text-6xl font-bold text-black">
-                    Our Services
-                  </h1>
-                  <p className="text-dark font-lg">
-                    Empowering Individuals with Autism: Discover Our
-                    Comprehensive Lifestyle Services and Packages!
-                  </p>
-                </div>
+          <div className="flex gap-y-12 lg:gap-x-32 items-start px-5 lg:mx-40 py-20 flex-wrap lg:flex-nowrap">
+            <div className="basis-full lg:basis-5/12">
+              <div className="flex flex-col gap-y-3 lg:gap-y-8 w-8/12 lg:w-96 items-center lg:items-start mx-auto text-center lg:text-start">
+                <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-black">
+                  Our Services
+                </h1>
+                <p className="text-dark font-lg">
+                  Empowering Individuals with Autism: Discover Our Comprehensive
+                  Lifestyle Services and Packages!
+                </p>
               </div>
-              <div className="basis-7/12">
-                <div className="basis-1/2 flex flex-col gap-y-12">
-                  {services.map((service) => (
-                    <Service
-                      key={service.service}
-                      service={service}
-                      background="white"
-                    />
-                  ))}
-                </div>
-              </div>
+            </div>
+            <div className="basis-full lg:basis-7/12 flex flex-col gap-y-12 items-center lg:start">
+              {services.map((service) => (
+                <Service
+                  key={service.service}
+                  service={service}
+                  background="white"
+                />
+              ))}
             </div>
           </div>
         </div>

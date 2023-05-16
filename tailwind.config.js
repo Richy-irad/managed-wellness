@@ -30,6 +30,9 @@ module.exports = {
       padding: {
         18: "72px",
       },
+      backgroundImage: {
+        "hero-pattern": "url('/assets/hero-image-sm.jpg')",
+      },
     },
   },
   plugins: [],
