@@ -62,7 +62,7 @@ const Home: FC<IndexProps> = ({ services }) => {
         <div className="bg-white">
           <div className="lg:container lg:mx-auto">
             <div className="flex gap-x-32 items-start lg:px-20 py-20">
-              <div className="basis-1/2">
+              <div className="basis-full lg:basis-5/12">
                 <div className="flex flex-col gap-y-8 w-96">
                   <h1 className="text-6xl font-bold text-black">
                     Our Services
@@ -73,7 +73,7 @@ const Home: FC<IndexProps> = ({ services }) => {
                   </p>
                 </div>
               </div>
-              <div className="basis-1/2 flex flex-col gap-y-12 items-start">
+              <div className="basis-full lg:basis-7/12 flex flex-col gap-y-12 items-start">
                 {services.map((service) => (
                   <Service
                     key={service.service}
@@ -95,8 +95,8 @@ const Home: FC<IndexProps> = ({ services }) => {
         {/* contact */}
         <div className="bg-white">
           <div className="lg:container lg:mx-auto">
-            <div className="lg:px-20 py-20">
-              <h1 className="text-end text-5xl">Get in Touch</h1>
+            <div className="lg:px-20 py-20 flex flex-col gap-y-8">
+              <h1 className="text-start lg:text-end text-5xl">Get in Touch</h1>
               <div className="flex justify-between">
                 <div className="basis-7/12">
                   <form className="flex flex-col gap-y-8 items-start">
@@ -153,9 +153,9 @@ const Home: FC<IndexProps> = ({ services }) => {
                       <div className="space-y-3">
                         <label htmlFor="message ">Message</label>
                         <textarea
-                          type="text"
                           className="border-0.5 border-light rounded-md block w-full px-2.5 py-3.5"
                           name="message"
+                          rows={4}
                           placeholder="Write your message here"
                         />
                       </div>

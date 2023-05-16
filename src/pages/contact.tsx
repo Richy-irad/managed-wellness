@@ -71,9 +71,9 @@ const Contact = () => {
                       <div className="space-y-3">
                         <label htmlFor="message ">Message</label>
                         <textarea
-                          type="text"
                           className="border-0.5 border-light rounded-md block w-full px-2.5 py-3.5"
                           name="message"
+                          rows={4}
                           placeholder="Write your message here"
                         />
                       </div>
