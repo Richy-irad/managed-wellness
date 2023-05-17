@@ -35,7 +35,7 @@ const Contact = () => {
                 <div className="flex flex-col gap-y-3 items-start lg:items-end text-start lg:text-end w-full">
                   <p className="font-semibold text-2xl lg:text-3xl">Phone</p>
                   <p className="font-regular text-xl lg:text-2xl">
-                    +254737965972
+                    +254722720072
                   </p>
                 </div>
                 <div className="flex flex-col gap-y-3 items-start lg:items-end text-start lg:text-end w-full">
