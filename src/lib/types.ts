@@ -7,6 +7,11 @@ export type BenefitType = {
   description: string;
 };
 
+export type MessageType = {
+  title: string;
+  description: string;
+};
+
 export type ServiceType = {
   service: string;
   slug: string;
