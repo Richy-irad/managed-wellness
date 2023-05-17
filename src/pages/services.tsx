@@ -44,8 +44,9 @@ const Services: FC<ServicesProps> = ({ services }): JSX.Element => {
                   Our Services
                 </h1>
                 <p className="text-dark font-lg">
-                  Empowering Individuals with Autism: Discover Our Comprehensive
-                  Lifestyle Services and Packages!
+                  You deserve to live a fulfilling, meaningful life. Let us help
+                  you get there, with our commitment to personalized,
+                  client-centered care that puts your needs first.
                 </p>
               </div>
             </div>
