@@ -2,14 +2,15 @@ import React, { FC } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 
 import heroImage from "../../public/assets/hero-image.jpg";
 
 import { getMinServices } from "@/lib/services";
 import { IndexProps } from "@/lib/types";
 
+import ContactForm from "@/components/contactForm";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 import Service from "@/components/service";
 
 export const getStaticProps = async () => {
@@ -106,75 +107,7 @@ const Home: FC<IndexProps> = ({ services }) => {
             </h1>
             <div className="flex justify-between flex-wrap gap-y-4">
               <div className="basis-full lg:basis-7/12">
-                <form className="flex flex-col gap-y-8 items-center lg:items-start">
-                  <div className="flex flex-col gap-y-6 w-full">
-                    {/* first and last names */}
-                    <div className="flex gap-x-6">
-                      <div className="basis-1/2 space-y-3">
-                        <label htmlFor="firstName" className="block">
-                          First Name
-                        </label>
-                        <input
-                          type="text"
-                          className="border-0.5 border-light rounded-md block w-full px-2.5 py-3.5"
-                          name="firstName"
-                          placeholder="First Name"
-                        />
-                      </div>
-                      <div className="basis-1/2 space-y-3">
-                        <label htmlFor="lastName" className="block">
-                          Last Name
-                        </label>
-                        <input
-                          type="text"
-                          className="border-0.5 border-light rounded-md block w-full px-2.5 py-3.5"
-                          name="lastName"
-                          placeholder="First Name"
-                        />
-                      </div>
-                    </div>
-
-                    {/* email */}
-                    <div className="space-y-3">
-                      <label htmlFor="email ">Email</label>
-                      <input
-                        type="email"
-                        className="border-0.5 border-light rounded-md block w-full px-2.5 py-3.5"
-                        name="email"
-                        placeholder="e.g. john.doe@example.com"
-                      />
-                    </div>
-
-                    {/* subject */}
-                    <div className="space-y-3">
-                      <label htmlFor="subject ">Subject</label>
-                      <input
-                        type="text"
-                        className="border-0.5 border-light rounded-md block w-full px-2.5 py-3.5"
-                        name="subject"
-                        placeholder="Subject"
-                      />
-                    </div>
-
-                    {/* message */}
-                    <div className="space-y-3">
-                      <label htmlFor="message ">Message</label>
-                      <textarea
-                        className="border-0.5 border-light rounded-md block w-full px-2.5 py-3.5"
-                        name="message"
-                        rows={4}
-                        placeholder="Write your message here"
-                      />
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="bg-light-blue text-deep-blue font-semibold px-4 py-5 rounded-md"
-                  >
-                    Send Message
-                  </button>
-                </form>
+                <ContactForm />
               </div>
               <div className="basis-full gap-x-10 gap-y-10 px-7 py-8 items-center justify-center flex flex-col md:flex-row lg:flex-col md:items-start md:justify-start lg:basis-4/12">
                 <div className="flex flex-col gap-y-3 items-start lg:items-end text-start lg:text-end w-full">
