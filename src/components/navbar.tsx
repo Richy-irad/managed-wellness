@@ -36,7 +36,7 @@ const CustomLink = ({ children, href }: CustomLinkProps) => {
           router.asPath === href
             ? "font-bold border-b-3 border-sage-green"
             : "hover:border-b-3 hover:border-sage-green font-medium",
-          "mx-4"
+          "mx-2 lg:mx-4"
         )}
       >
         {children}
