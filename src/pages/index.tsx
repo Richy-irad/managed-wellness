@@ -113,7 +113,12 @@ const Home: FC<IndexProps> = ({ services }) => {
               <div className="basis-full gap-x-10 gap-y-10 px-7 py-8 items-center justify-center flex flex-col md:flex-row lg:flex-col md:items-start md:justify-start lg:basis-4/12">
                 <div className="flex flex-col gap-y-3 items-start lg:items-end text-start lg:text-end w-full">
                   <p className="font-semibold text-3xl">Phone</p>
-                  <p className="font-regular text-2xl">+254722720072</p>
+                  <p className="font-regular text-xl">
+                    +254&nbsp;774&nbsp;283&nbsp;777
+                  </p>
+                  <p className="font-regular text-xl">
+                    +254&nbsp;780&nbsp;838&nbsp;333
+                  </p>
                 </div>
                 <div className="flex flex-col gap-y-3 items-start lg:items-end text-start lg:text-end w-full">
                   <p className="font-semibold text-3xl">E-mail</p>
