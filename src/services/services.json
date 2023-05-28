@@ -6,11 +6,11 @@
         "description": "Trauma counseling can help individuals process traumatic experiences and build resilience. Benefits may include reduced symptoms of anxiety and depression, improved self-esteem, and a greater sense of control over one's life",
         "benefits": [
             {
-                "title": "Reduction in symptoms of post-traumatic stress disorder (PTSD)",
+                "title": "Post-traumatic growth",
                 "description": "Trauma counseling can help you develop effective coping mechanisms and reduce symptoms of anxiety, depression, and post-traumatic stress disorder (PTSD)."
             },
             {
-                "title": "Increased sense of safety and security",
+                "title": "Restored sense of safety",
                 "description": "You will gain a greater understanding of how trauma has affected your life through trauma counseling, leading to improved self-awareness and emotional regulation."
             },
             {
@@ -18,11 +18,11 @@
                 "description": "Through trauma counseling, you will learn how to cope with and overcome the effects of trauma, leading to improved mental health and wellbeing."
             },
             {
-                "title": "Improved relationships with others",
+                "title": "Healthy relationships",
                 "description": "Trauma counseling can help individuals improve their relationships with others by addressing issues related to trust, intimacy, and communication."
             },
             {
-                "title": "Increased sense of empowerment",
+                "title": "Enhanced self-esteem",
                 "description": "Trauma counseling can help you develop a greater sense of empowerment and control over your life, leading to improved self-esteem and confidence."
             },
             {
@@ -60,22 +60,6 @@
             {
                 "title": "Effective communication",
                 "description": "Enhance your communication skills, improving your relationships and interactions with others, leading to more meaningful connections and collaboration."
-            },
-            {
-                "title": "Skill development",
-                "description": "Identify areas where you can further develop your skills and talents, equipping you with the tools necessary for professional success and advancement."
-            },
-            {
-                "title": "Decision-making",
-                "description": "Make well-informed decisions in all aspects of your life, leveraging the valuable information provided by psychometric assessments to guide your choices."
-            },
-            {
-                "title": "Goal alignment",
-                "description": " Align your career goals with your passions and values, enabling you to pursue a fulfilling and purposeful professional journey."
-            },
-            {
-                "title": "Life balance",
-                "description": " Achieve a healthy work-life balance by gaining self-awareness and understanding your priorities, allowing you to lead a more fulfilling and balanced life."
             }
         ]
     },
@@ -108,22 +92,6 @@
             {
                 "title": "Transition support",
                 "description": "Receive guidance and support during career transitions, ensuring a smooth and successful shift to a new role or industry."
-            },
-            {
-                "title": "Work-life balance",
-                "description": "Explore strategies for achieving a healthy work-life balance, allowing you to prioritize personal well-being while excelling in your career."
-            },
-            {
-                "title": "Professional growth",
-                "description": "Identify areas for professional development and create a personalized plan to acquire the necessary skills and knowledge for career advancement."
-            },
-            {
-                "title": "Self-reflection",
-                "description": "Engage in self-reflection to gain a deeper understanding of your career motivations, strengths, and areas for improvement, helping you make more informed choices."
-            },
-            {
-                "title": "Decision-making support",
-                "description": "Benefit from expert guidance and insights throughout your career journey, receiving the support you need to make confident and informed decisions at critical junctures."
             }
         ]
     },
@@ -152,22 +120,6 @@
             {
                 "title": "Collaboration and teamwork",
                 "description": "Foster effective collaboration, communication, and teamwork skills, facilitating harmonious and productive work relationships."
-            },
-            {
-                "title": "Problem-solving abilities",
-                "description": "Strengthen your critical thinking and problem-solving skills, enabling you to identify and overcome challenges effectively."
-            },
-            {
-                "title": "Resource optimization",
-                "description": "Learn strategies to optimize resources, including time, budget, and human capital, maximizing efficiency and productivity."
-            },
-            {
-                "title": "Organizational effectiveness",
-                "description": "Contribute to the overall effectiveness of your organization by enhancing your individual and team capabilities."
-            },
-            {
-                "title": "Innovation and creativity",
-                "description": "Cultivate a culture of innovation and creativity, generating fresh ideas and finding innovative solutions to problems."
             }
         ]
     },
@@ -178,11 +130,11 @@
         "description": "Counseling for sexual and gender-based violence can provide support, validation, and coping skills for survivors. Benefits may include reduced symptoms of PTSD, improved self-esteem, and a greater sense of empowerment.",
         "benefits": [
             {
-                "title": "Improved recovery from the effects of violence",
+                "title": "Trauma recovery",
                 "description": "Sex and gender-based violence counseling can help you recover from the physical, emotional, and psychological effects of violence, leading to improved mental health and wellbeing."
             },
             {
-                "title": "Increased safety and security",
+                "title": "Restored sense of safety",
                 "description": "Sex and gender-based violence counseling can help you develop a greater sense of safety and security, allowing you to feel more comfortable and empowered in your life."
             },
             {
@@ -190,16 +142,16 @@
                 "description": "Through sex and gender-based violence counseling, you will learn how to cope with the effects of violence and develop effective coping mechanisms."
             },
             {
-                "title": "Increased sense of empowerment",
+                "title": "Empowerment and self-advocacy",
                 "description": "Through sex and gender-based violence counseling, you can develop a greater sense of self-compassion and self-care, which will improve your overall quality of life."
             },
             {
-                "title": "Improved relationships with others",
+                "title": "Healthy relationships",
                 "description": "Sex and gender-based violence counseling can help you improve your relationships with others by addressing any issues related to trust, intimacy, or attachment that may have been affected by violence."
             },
             {
-                "title": "Greater ability to engage in daily activities",
-                "description": "Sex and gender-based violence counseling can help individuals overcome barriers to engaging in daily activities, such as work or school, that may have been disrupted by violence."
+                "title": "Survivor resilience",
+                "description": "Sex and gender-based violence counseling can help individuals overcome barriers to engaging in daily activities, such as work or school, that may have been disrupted by violence. You will cultivate resilience and strength in the face of adversity, fostering personal growth and a sense of empowerment."
             }
         ]
     },
@@ -210,15 +162,15 @@
         "description": "Grief counseling can provide a safe space for individuals to process their emotions and work through the stages of grief. Benefits may include reduced feelings of isolation and loneliness, improved coping skills, and a greater sense of acceptance.",
         "benefits": [
             {
-                "title": "Increased ability to cope with loss and grief",
+                "title": "Coping strategies",
                 "description": "Loss and grief counseling can help you develop effective coping mechanisms and reduce symptoms of anxiety, depression, and grief."
             },
             {
-                "title": "Improved understanding of the grieving process",
+                "title": "Meaning-making",
                 "description": "Loss and grief counseling will help you gain a better understanding of the grieving process and what to expect, leading to a more informed and prepared approach to grief."
             },
             {
-                "title": "Greater sense of emotional support",
+                "title": "Emotional support",
                 "description": "Loss and grief counseling can help you feel less alone in your grief by providing a safe and supportive space to express your emotions and connect with others who have experienced loss."
             },
             {
@@ -226,7 +178,7 @@
                 "description": "Through loss and grief counseling, you can gain a greater understanding of your feelings and emotions, allowing you to develop a greater sense of acceptance and peace with your loss, leading to improved emotional regulation and mental health."
             },
             {
-                "title": "Improved relationships with others",
+                "title": "Healthy relationships",
                 "description": "Loss and grief counseling can help you improve your relationships with others by addressing any issues related to attachment or loss that may have affected your relationships."
             },
             {
@@ -246,11 +198,11 @@
                 "description": "Couples therapy can help you build emotional intimacy with your partner, leading to a stronger bond and greater satisfaction in your relationship."
             },
             {
-                "title": "Enhanced problem-solving skills",
+                "title": "Conflict resolution",
                 "description": "You will develop effective problem-solving skills in couples therapy, which will help you navigate challenges and conflicts in your relationship more easily."
             },
             {
-                "title": "Greater understanding of each other's needs",
+                "title": "Intimacy and emotional connection",
                 "description": "In couples therapy, you will gain a deeper understanding of your partner's needs and desires, which will lead to improved satisfaction in your relationship."
             },
             {
@@ -258,7 +210,7 @@
                 "description": "Through couples therapy, you will likely experience greater relationship satisfaction and happiness."
             },
             {
-                "title": "Improved communication skills",
+                "title": "Enhanced communication",
                 "description": "Through couples therapy, you will learn how to communicate more effectively with your partner, which will help you better understand and connect with each other."
             },
             {
@@ -282,11 +234,11 @@
                 "description": "Through sex therapy, you can increase your sexual satisfaction and enjoyment, leading to a happier and more fulfilling sex life."
             },
             {
-                "title": "Greater knowledge about sexual health",
+                "title": "Sexual health and education",
                 "description": "You will gain greater knowledge about sexual health through sex therapy, leading to improved overall health and wellbeing."
             },
             {
-                "title": "Improved body image and self-esteem",
+                "title": "Body positivity and self-confidence",
                 "description": "Sex therapy can help you improve your body image and self-esteem, leading to greater sexual confidence and enjoyment."
             },
             {
@@ -294,8 +246,8 @@
                 "description": "Through sex therapy, you can address any feelings of shame or guilt around sex, leading to greater sexual freedom and expression."
             },
             {
-                "title": "Enhanced communication skills",
-                "description": "Sex therapy can help you improve your communication skills around sex, allowing you to better understand and connect with your partner."
+                "title": "Overcoming sexual concerns",
+                "description": "Address and overcome sexual concerns such as performance anxiety, low desire, or difficulties with arousal, fostering a healthier and more satisfying sexual experience."
             }
         ]
     },
@@ -306,15 +258,15 @@
         "description": "Pre-marital counseling can help couples build a strong foundation for their marriage by exploring expectations, building communication skills, and addressing potential conflicts. Benefits may include improved relationship satisfaction, reduced likelihood of divorce, and a greater sense of commitment to the relationship.",
         "benefits": [
             {
-                "title": "Increased understanding of each other's expectations",
-                "description": "You will gain a greater understanding of each other's expectations for the marriage through pre-marital counseling, leading to improved satisfaction and connection."
+                "title": "Premarital education",
+                "description": "You will receive guidance and insights into common challenges and transitions that arise in marriage, preparing you for a successful and fulfilling journey together."
             },
             {
-                "title": "Greater knowledge of each other's values and beliefs",
+                "title": "Shared values and goals",
                 "description": "You will gain a greater understanding of each other's values and beliefs in pre-marital counseling, leading to improved connection and compatibility."
             },
             {
-                "title": "Increased commitment and dedication to the relationship",
+                "title": "Strengthened commitment",
                 "description": "Through pre-marital counseling, you can strengthen your commitment to the relationship and build a strong foundation for a successful marriage."
             },
             {
@@ -322,11 +274,11 @@
                 "description": "Pre-marital counseling can help you reduce the likelihood of divorce by addressing potential issues early on and building a strong foundation for the marriage."
             },
             {
-                "title": "Improved communication skills",
+                "title": "Effective communication",
                 "description": "Pre-marital counseling will help you improve your communication skills, which will prepare you for effective communication in your marriage."
             },
             {
-                "title": "Enhanced problem-solving skills",
+                "title": "Conflict management",
                 "description": "Pre-marital counseling can help you develop effective problem-solving skills to navigate challenges and conflicts in your relationship."
             }
         ]
