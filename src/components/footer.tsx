@@ -38,7 +38,7 @@ export default function Footer() {
 
         {/* copyright */}
         <div className="flex gap-0.5 items-center">
-          <Copyright size={20} /> Managed Wellness. All rights Reserved
+          <Copyright size={20} /> Managed Wellness Centre. All rights Reserved
         </div>
       </div>
     </footer>

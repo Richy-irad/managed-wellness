@@ -43,10 +43,10 @@ const Service: FC<ServiceProps> = ({ service }): JSX.Element => {
           name="keywords"
           content="Mental health, Counseling, Therapy, Trauma counseling, Trauma counseling, Sex and gender-based violence counseling, Loss and grief counseling, Couples therapy, Sex therapy, Pre-marital counseling, Coping skills, Communication skills, Emotional intimacy, Sexual health, Intimacy issues, Trauma recovery, Post-traumatic stress disorder (PTSD), Grief support, Relationship satisfaction, Mental health awareness, Healthy relationships"
         />
-        <title>{`${service.service} | Managed Wellness`}</title>
+        <title>{`${service.service} | Managed Wellness Centre`}</title>
         <meta
           property="og:title"
-          content={`${service.service} | Managed Wellness`}
+          content={`${service.service} | Managed Wellness Centre`}
         />
         <meta property="og:type" content="website" />
       </Head>

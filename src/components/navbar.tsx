@@ -56,11 +56,11 @@ export default function Navbar() {
                 <div className="flex-shrink-0">
                   <Link
                     href="/"
-                    className="font-bold text-2xl flex gap-x-2 items-center"
+                    className="font-bold text-xl flex gap-x-2 items-center lg:text-2xl"
                   >
                     <Image src={favIcon} width={40} height={40} alt="" />
                     <span className="text-black capitalize">
-                      Managed Wellness
+                      Managed Wellness Centre
                     </span>
                   </Link>
                 </div>
