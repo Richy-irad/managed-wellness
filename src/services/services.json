@@ -32,6 +32,146 @@
         ]
     },
     {
+        "service": "Psychometric testing",
+        "slug": "psychometric-testing",
+        "metaDescription": "Gain valuable insights into your strengths and abilities with our precise psychometric testing services. Our assessments provide a comprehensive analysis of your personality traits and aptitudes, empowering you to make informed decisions and unlock your true potential.",
+        "description": "Our psychometric testing services utilize scientifically validated assessments to evaluate your personality, cognitive abilities, and career interests. Through a series of carefully designed tests and questionnaires, our expert analysts provide detailed reports and interpretations, helping you understand your unique profile and make well-informed choices in various areas of your life.",
+        "benefits": [
+            {
+                "title": "Self-awareness",
+                "description": "We will help you understand yourself better, discovering your unique strengths and areas for growth, which will empower you to make confident decisions and reach your full potential."
+            },
+            {
+                "title": "Career guidance",
+                "description": "We will help you explore various career options aligned with your interests, values, and abilities, helping you make informed decisions and pursue a fulfilling career path."
+            },
+            {
+                "title": "Confidence",
+                "description": "You will gain confidence in your abilities and unique qualities, empowering you to pursue your goals with self-assurance and conviction."
+            },
+            {
+                "title": "Clarity",
+                "description": "Find clarity and direction in your career and educational choices, reducing uncertainty and providing a clear roadmap for your future."
+            },
+            {
+                "title": "Personal growth",
+                "description": "Embark on a transformative journey of personal growth and self-improvement, leveraging the insights gained from psychometric testing to unlock your true potential."
+            },
+            {
+                "title": "Effective communication",
+                "description": "Enhance your communication skills, improving your relationships and interactions with others, leading to more meaningful connections and collaboration."
+            },
+            {
+                "title": "Skill development",
+                "description": "Identify areas where you can further develop your skills and talents, equipping you with the tools necessary for professional success and advancement."
+            },
+            {
+                "title": "Decision-making",
+                "description": "Make well-informed decisions in all aspects of your life, leveraging the valuable information provided by psychometric assessments to guide your choices."
+            },
+            {
+                "title": "Goal alignment",
+                "description": " Align your career goals with your passions and values, enabling you to pursue a fulfilling and purposeful professional journey."
+            },
+            {
+                "title": "Life balance",
+                "description": " Achieve a healthy work-life balance by gaining self-awareness and understanding your priorities, allowing you to lead a more fulfilling and balanced life."
+            }
+        ]
+    },
+    {
+        "service": "Career Counseling",
+        "slug": "career-counseling",
+        "metaDescription": "Our dedicated career counselors provide personalized guidance and support to help you navigate your professional journey. Unlock your true potential, make confident career decisions, and achieve fulfillment in your chosen path.",
+        "description": "Our career counseling services are tailored to individuals at various stages of their professional lives. Our experienced career counselors offer one-on-one sessions to assess your strengths, interests, and goals, providing invaluable guidance to help you explore career options, overcome challenges, and create a strategic plan for achieving long-term success.",
+        "benefits": [
+            {
+                "title": "Career exploration",
+                "description": "Discover a wide range of career options and industries, expanding your knowledge and opening doors to new and exciting possibilities."
+            },
+            {
+                "title": "Goal setting",
+                "description": "Define clear and achievable career goals tailored to your aspirations, enabling you to stay focused and motivated on your desired path."
+            },
+            {
+                "title": "Resume and interview skills",
+                "description": "Develop the essential skills needed to create an impressive resume and excel in interviews, increasing your chances of securing your dream job."
+            },
+            {
+                "title": "Networking strategies",
+                "description": "Learn effective networking techniques to build meaningful professional connections, providing you with valuable opportunities and industry insights."
+            },
+            {
+                "title": "Job market knowledge",
+                "description": "Stay updated with current job market trends and demands, equipping you with the knowledge to make informed career decisions and stay competitive."
+            },
+            {
+                "title": "Transition support",
+                "description": "Receive guidance and support during career transitions, ensuring a smooth and successful shift to a new role or industry."
+            },
+            {
+                "title": "Work-life balance",
+                "description": "Explore strategies for achieving a healthy work-life balance, allowing you to prioritize personal well-being while excelling in your career."
+            },
+            {
+                "title": "Professional growth",
+                "description": "Identify areas for professional development and create a personalized plan to acquire the necessary skills and knowledge for career advancement."
+            },
+            {
+                "title": "Self-reflection",
+                "description": "Engage in self-reflection to gain a deeper understanding of your career motivations, strengths, and areas for improvement, helping you make more informed choices."
+            },
+            {
+                "title": "Decision-making support",
+                "description": "Benefit from expert guidance and insights throughout your career journey, receiving the support you need to make confident and informed decisions at critical junctures."
+            }
+        ]
+    },
+    {
+        "service": "Capacity Building",
+        "slug": "capacity-building",
+        "metaDescription": "Enhance your skills, knowledge, and capabilities through our comprehensive capacity building programs. Our expert trainers provide customized training and development solutions to empower individuals and organizations to reach their full potential.",
+        "description": "Our capacity building services focus on equipping individuals and organizations with the necessary skills, knowledge, and resources to enhance their performance and achieve their goals. Through tailored training programs, workshops, and coaching sessions, we help build capabilities, foster growth, and drive positive change.",
+        "benefits": [
+            {
+                "title": "Skill enhancement",
+                "description": "Acquire new skills and enhance existing ones, expanding your capabilities and boosting your effectiveness in various domains."
+            },
+            {
+                "title": "Leadership development",
+                "description": "Develop strong leadership qualities and skills, enabling you to lead teams, make strategic decisions, and drive positive change."
+            },
+            {
+                "title": "Knowledge expansion",
+                "description": "Gain in-depth knowledge and expertise in specific areas, becoming a valuable resource within your organization or industry."
+            },
+            {
+                "title": "Adaptability and resilience",
+                "description": "Develop the ability to adapt to change, navigate challenges, and thrive in dynamic environments."
+            },
+            {
+                "title": "Collaboration and teamwork",
+                "description": "Foster effective collaboration, communication, and teamwork skills, facilitating harmonious and productive work relationships."
+            },
+            {
+                "title": "Problem-solving abilities",
+                "description": "Strengthen your critical thinking and problem-solving skills, enabling you to identify and overcome challenges effectively."
+            },
+            {
+                "title": "Resource optimization",
+                "description": "Learn strategies to optimize resources, including time, budget, and human capital, maximizing efficiency and productivity."
+            },
+            {
+                "title": "Organizational effectiveness",
+                "description": "Contribute to the overall effectiveness of your organization by enhancing your individual and team capabilities."
+            },
+            {
+                "title": "Innovation and creativity",
+                "description": "Cultivate a culture of innovation and creativity, generating fresh ideas and finding innovative solutions to problems."
+            }
+        ]
+    },
+    {
         "service": "Sexual and Gender-Based Violence Counseling",
         "slug": "sexual-and-gender-based-violence-counseling",
         "metaDescription": "Empowering support for survivors of violence. Gain tools to navigate experiences, fostering resilience, healing, and personal growth.",
