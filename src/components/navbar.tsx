@@ -1,9 +1,12 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 import { List, X } from "@phosphor-icons/react";
 
 import { CustomLinkProps } from "@/lib/types";
+
+import favIcon from "../../public/favicon.ico";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -51,9 +54,13 @@ export default function Navbar() {
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center justify-between w-full">
                 <div className="flex-shrink-0">
-                  <Link href="/" className="font-bold text-2xl">
+                  <Link
+                    href="/"
+                    className="font-bold text-xl flex gap-x-2 items-center lg:text-2xl"
+                  >
+                    <Image src={favIcon} width={40} height={40} alt="" />
                     <span className="text-black capitalize">
-                      Managed Wellness
+                      Managed Wellness Centre
                     </span>
                   </Link>
                 </div>

@@ -29,14 +29,14 @@ const Home: FC<IndexProps> = ({ services }) => {
       <Head>
         <meta
           name="description"
-          content="Welcome to Managed Wellness, your trusted destination for comprehensive mental health services. We are committed to supporting your well-being and providing the tools and guidance you need to navigate life's challenges."
+          content="Welcome to Managed Wellness Centre, your trusted destination for comprehensive mental health services. We are committed to supporting your well-being and providing the tools and guidance you need to navigate life's challenges."
         />
         <meta
           name="keywords"
           content="Mental health, Counseling, Therapy, Trauma counseling, Trauma counseling, Sex and gender-based violence counseling, Loss and grief counseling, Couples therapy, Sex therapy, Pre-marital counseling, Psychological support"
         />
-        <title>Home | Managed Wellness</title>
-        <meta property="og:title" content="Home | Managed Wellness" />
+        <title>Home | Managed Wellness Centre</title>
+        <meta property="og:title" content="Home | Managed Wellness Centre" />
         <meta property="og:type" content="website" />
       </Head>
       <Navbar />
@@ -76,8 +76,9 @@ const Home: FC<IndexProps> = ({ services }) => {
                   Our Services
                 </h1>
                 <p className="text-dark font-lg">
-                  Empowering Individuals with Autism: Discover Our Comprehensive
-                  Lifestyle Services and Packages!
+                  You deserve to live a fulfilling, meaningful life. Let us help
+                  you get there, with our commitment to personalized,
+                  client-centered care that puts your needs first.
                 </p>
               </div>
             </div>
@@ -112,7 +113,12 @@ const Home: FC<IndexProps> = ({ services }) => {
               <div className="basis-full gap-x-10 gap-y-10 px-7 py-8 items-center justify-center flex flex-col md:flex-row lg:flex-col md:items-start md:justify-start lg:basis-4/12">
                 <div className="flex flex-col gap-y-3 items-start lg:items-end text-start lg:text-end w-full">
                   <p className="font-semibold text-3xl">Phone</p>
-                  <p className="font-regular text-2xl">+254737965972</p>
+                  <p className="font-regular text-xl">
+                    +254&nbsp;774&nbsp;283&nbsp;777
+                  </p>
+                  <p className="font-regular text-xl">
+                    +254&nbsp;780&nbsp;838&nbsp;333
+                  </p>
                 </div>
                 <div className="flex flex-col gap-y-3 items-start lg:items-end text-start lg:text-end w-full">
                   <p className="font-semibold text-3xl">E-mail</p>

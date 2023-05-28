@@ -8,14 +8,14 @@ const About = () => {
       <Head>
         <meta
           name="description"
-          content="Discover Managed Wellness, your trusted destination for comprehensive mental health services. Learn about our compassionate team and how we empower individuals to navigate life's challenges, fostering healing, resilience, and personal growth."
+          content="Discover Managed Wellness Centre, your trusted destination for comprehensive mental health services. Learn about our compassionate team and how we empower individuals to navigate life's challenges, fostering healing, resilience, and personal growth."
         />
         <meta
           name="keywords"
           content="Mental health, Counseling, Therapy, Trauma counseling, Trauma counseling, Sex and gender-based violence counseling, Loss and grief counseling, Couples therapy, Sex therapy, Pre-marital counseling, Coping skills, Communication skills, Emotional intimacy, Sexual health, Intimacy issues, Trauma recovery, Post-traumatic stress disorder (PTSD), Grief support, Relationship satisfaction, Mental health awareness, Healthy relationships"
         />
-        <title>About Us | Managed Wellness</title>
-        <meta property="og:title" content="About Us | Managed Wellness" />
+        <title>About Us | Managed Wellness Centre</title>
+        <meta property="og:title" content="About Us | Managed Wellness Centre" />
         <meta property="og:type" content="website" />
       </Head>
       <Navbar />
@@ -102,7 +102,7 @@ const About = () => {
             <div className=" basis-full lg:basis-7/12 px-7 py-8 bg-sage-green/30 rounded-md">
               <p className="text-base lg:text-2xl text-dark font-regular text-center lg:text-start">
                 The motto "It's okay not to be okay" reflects the fundamental
-                belief of Managed Wellness that mental health struggles are a
+                belief of Managed Wellness Centre that mental health struggles are a
                 normal and common part of the human experience. This motto
                 encourages clients to recognize that it's okay to seek help and
                 support when facing emotional or mental challenges.u
@@ -143,7 +143,7 @@ const About = () => {
                   </h4>
                 </div>
                 <p className="text-base lg:text-lg font-regular text-dark">
-                  At Managed Wellness, we believe that professional etiquette is
+                  At Managed Wellness Centre, we believe that professional etiquette is
                   the foundation of effective mental health care. Our commitment
                   to acting respectfully, ethically, and compassionately towards
                   every client ensures that everyone who comes through our doors
@@ -162,7 +162,7 @@ const About = () => {
                   </h4>
                 </div>
                 <p className="text-base lg:text-lg font-regular text-dark">
-                  At Managed Wellness, authenticity is key. We believe that
+                  At Managed Wellness Centre, authenticity is key. We believe that
                   being clear about who we are and what we do is essential to
                   building trusting, meaningful relationships with our clients.
                   By being our authentic selves and providing real, personalized
@@ -180,7 +180,7 @@ const About = () => {
                   </h4>
                 </div>
                 <p className="text-base lg:text-lg font-regular text-dark">
-                  At Managed Wellness, compassion is at the heart of everything
+                  At Managed Wellness Centre, compassion is at the heart of everything
                   we do. We genuinely care for each patient and strive to
                   enhance the quality of their lives through customized care and
                   a supportive, empathetic approach. By taking the time to truly
@@ -199,7 +199,7 @@ const About = () => {
                   </h4>
                 </div>
                 <p className="text-base lg:text-lg font-regular text-dark">
-                  At Managed Wellness, integrity is a cornerstone of our
+                  At Managed Wellness Centre, integrity is a cornerstone of our
                   practice. We believe that keeping our word and following
                   through on our commitments is essential to building trust with
                   our clients. By upholding our values of honesty, transparency,
@@ -218,7 +218,7 @@ const About = () => {
                   </h4>
                 </div>
                 <p className="text-base lg:text-lg font-regular text-dark">
-                  At Managed Wellness, we believe in the inherent worth of every
+                  At Managed Wellness Centre, we believe in the inherent worth of every
                   individual. Our commitment to respect means valuing and
                   honoring the diversity of our clients, employees, and
                   community. By creating a safe, inclusive environment where

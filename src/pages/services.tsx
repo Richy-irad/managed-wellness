@@ -23,14 +23,14 @@ const Services: FC<ServicesProps> = ({ services }): JSX.Element => {
       <Head>
         <meta
           name="description"
-          content="At Managed Wellness, we are dedicated to providing holistic mental health support that empowers you on your wellness journey. With our expert team and a comprehensive range of services, we are here to guide you towards a healthier, happier, and more fulfilling life. Take the first step today and embark on a path of self-discovery and growth with Managed Wellness."
+          content="At Managed Wellness Centre, we are dedicated to providing holistic mental health support that empowers you on your wellness journey. With our expert team and a comprehensive range of services, we are here to guide you towards a healthier, happier, and more fulfilling life. Take the first step today and embark on a path of self-discovery and growth with Managed Wellness Centre."
         />
         <meta
           name="keywords"
           content="Mental health, Counseling, Therapy, Trauma counseling, Trauma counseling, Sex and gender-based violence counseling, Loss and grief counseling, Couples therapy, Sex therapy, Pre-marital counseling, Coping skills, Communication skills, Emotional intimacy, Sexual health, Intimacy issues, Trauma recovery, Post-traumatic stress disorder (PTSD), Grief support, Relationship satisfaction, Mental health awareness, Healthy relationships"
         />
-        <title>Services | Managed Wellness</title>
-        <meta property="og:title" content="Services | Managed Wellness" />
+        <title>Services | Managed Wellness Centre</title>
+        <meta property="og:title" content="Services | Managed Wellness Centre" />
         <meta property="og:type" content="website" />
       </Head>
       <Navbar />
@@ -44,8 +44,9 @@ const Services: FC<ServicesProps> = ({ services }): JSX.Element => {
                   Our Services
                 </h1>
                 <p className="text-dark font-lg">
-                  Empowering Individuals with Autism: Discover Our Comprehensive
-                  Lifestyle Services and Packages!
+                  You deserve to live a fulfilling, meaningful life. Let us help
+                  you get there, with our commitment to personalized,
+                  client-centered care that puts your needs first.
                 </p>
               </div>
             </div>

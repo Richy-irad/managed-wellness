@@ -10,14 +10,17 @@ const Contact = () => {
       <Head>
         <meta
           name="description"
-          content="Contact Managed Wellness for compassionate support, guidance, and confidential consultations. Start your journey towards improved mental health and well-being today."
+          content="Contact Managed Wellness Centre for compassionate support, guidance, and confidential consultations. Start your journey towards improved mental health and well-being today."
         />
         <meta
           name="keywords"
           content="Mental health, Counseling, Therapy, Trauma counseling, Trauma counseling, Sex and gender-based violence counseling, Loss and grief counseling, Couples therapy, Sex therapy, Pre-marital counseling, Coping skills, Communication skills, Emotional intimacy, Sexual health, Intimacy issues, Trauma recovery, Post-traumatic stress disorder (PTSD), Grief support, Relationship satisfaction, Mental health awareness, Healthy relationships"
         />
-        <title>Contact Us | Managed Wellness</title>
-        <meta property="og:title" content="Contact Us | Managed Wellness" />
+        <title>Contact Us | Managed Wellness Centre</title>
+        <meta
+          property="og:title"
+          content="Contact Us | Managed Wellness Centre"
+        />
         <meta property="og:type" content="website" />
       </Head>
       <Navbar />
@@ -34,8 +37,11 @@ const Contact = () => {
               <div className="basis-full gap-x-10 gap-y-10 px-7 py-8 items-center justify-center flex flex-col md:flex-row lg:flex-col md:items-start md:justify-start lg:basis-4/12">
                 <div className="flex flex-col gap-y-3 items-start lg:items-end text-start lg:text-end w-full">
                   <p className="font-semibold text-2xl lg:text-3xl">Phone</p>
-                  <p className="font-regular text-xl lg:text-2xl">
-                    +254737965972
+                  <p className="font-regular text-xl">
+                    +254&nbsp;774&nbsp;283&nbsp;777
+                  </p>
+                  <p className="font-regular text-xl">
+                    +254&nbsp;780&nbsp;838&nbsp;333
                   </p>
                 </div>
                 <div className="flex flex-col gap-y-3 items-start lg:items-end text-start lg:text-end w-full">

@@ -16,6 +16,7 @@ export type ServiceType = {
   service: string;
   slug: string;
   description: string;
+  beneficiaries: string[];
   benefits: BenefitType[];
   metaDescription?: string;
 };
