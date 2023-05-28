@@ -62,8 +62,10 @@ const Service: FC<ServiceProps> = ({ service }): JSX.Element => {
               <p className="text-dark text-justify font-lg">
                 {service.description}
               </p>
+
+              {/* benefits */}
               <div className="flex flex-col gap-y-6">
-                <h4 className="text-2xl text-dark font-regular">Benefits</h4>
+                <h4 className="text-2xl text-dark font-semibold">Benefits</h4>
                 <div className="flex flex-col gap-3 flex-wrap">
                   {service.benefits.map((benefit) => (
                     <p key={benefit.title} className="text-dark text-lg">
@@ -74,6 +76,21 @@ const Service: FC<ServiceProps> = ({ service }): JSX.Element => {
                     </p>
                   ))}
                 </div>
+              </div>
+              {/* ------------------- */}
+
+              {/* beneficiaries */}
+              <div className="flex flex-col gap-y-6">
+                <h4 className="text-2xl text-dark font-semibold">
+                  Who does this service benefit?
+                </h4>
+                <ul className="list-disc list-inside">
+                  {service.beneficiaries.map((benecifiary, index) => (
+                    <li key={index} className="text-dark text-lg">
+                      {benecifiary}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

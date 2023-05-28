@@ -4,6 +4,11 @@
         "slug": "trauma-counseling",
         "metaDescription": "Heal from past traumas in a safe, nurturing environment. Our counselors help reduce PTSD symptoms, increase safety, and develop coping skills for transformative healing.",
         "description": "Trauma counseling can help individuals process traumatic experiences and build resilience. Benefits may include reduced symptoms of anxiety and depression, improved self-esteem, and a greater sense of control over one's life",
+        "beneficiaries": [
+            "Survivors of traumatic experiences",
+            "Individuals struggling with post-traumatic stress disorder (PTSD)",
+            "Those seeking emotional healing and resolution from past traumas"
+        ],
         "benefits": [
             {
                 "title": "Post-traumatic growth",
@@ -36,6 +41,11 @@
         "slug": "psychometric-testing",
         "metaDescription": "Gain valuable insights into your strengths and abilities with our precise psychometric testing services. Our assessments provide a comprehensive analysis of your personality traits and aptitudes, empowering you to make informed decisions and unlock your true potential.",
         "description": "Our psychometric testing services utilize scientifically validated assessments to evaluate your personality, cognitive abilities, and career interests. Through a series of carefully designed tests and questionnaires, our expert analysts provide detailed reports and interpretations, helping you understand your unique profile and make well-informed choices in various areas of your life.",
+        "beneficiaries": [
+            "Students and young adults exploring educational and career options.",
+            "Professionals seeking career development or considering a career change.",
+            "Individuals interested in personal growth and self-awareness."
+        ],
         "benefits": [
             {
                 "title": "Self-awareness",
@@ -68,6 +78,11 @@
         "slug": "career-counseling",
         "metaDescription": "Our dedicated career counselors provide personalized guidance and support to help you navigate your professional journey. Unlock your true potential, make confident career decisions, and achieve fulfillment in your chosen path.",
         "description": "Our career counseling services are tailored to individuals at various stages of their professional lives. Our experienced career counselors offer one-on-one sessions to assess your strengths, interests, and goals, providing invaluable guidance to help you explore career options, overcome challenges, and create a strategic plan for achieving long-term success.",
+        "beneficiaries": [
+            "Students and Recent Graduates",
+            "Professionals in Transition",
+            "Individuals Seeking Career Growth"
+        ],
         "benefits": [
             {
                 "title": "Career exploration",
@@ -100,6 +115,11 @@
         "slug": "capacity-building",
         "metaDescription": "Enhance your skills, knowledge, and capabilities through our comprehensive capacity building programs. Our expert trainers provide customized training and development solutions to empower individuals and organizations to reach their full potential.",
         "description": "Our capacity building services focus on equipping individuals and organizations with the necessary skills, knowledge, and resources to enhance their performance and achieve their goals. Through tailored training programs, workshops, and coaching sessions, we help build capabilities, foster growth, and drive positive change.",
+        "beneficiaries": [
+            "Professionals seeking to enhance their skills and knowledge for career advancement.",
+            "Organizations aiming to improve the performance and capabilities of their workforce.",
+            "Individuals and communities looking to develop their capacities to address social, economic, or environmental challenges."
+        ],
         "benefits": [
             {
                 "title": "Skill enhancement",
@@ -128,6 +148,11 @@
         "slug": "sexual-and-gender-based-violence-counseling",
         "metaDescription": "Empowering support for survivors of violence. Gain tools to navigate experiences, fostering resilience, healing, and personal growth.",
         "description": "Counseling for sexual and gender-based violence can provide support, validation, and coping skills for survivors. Benefits may include reduced symptoms of PTSD, improved self-esteem, and a greater sense of empowerment.",
+        "beneficiaries": [
+            "Survivors of sex and gender-based violence",
+            "Individuals seeking support and empowerment after traumatic experiences",
+            "Those looking to heal from the emotional impact of such violence"
+        ],
         "benefits": [
             {
                 "title": "Trauma recovery",
@@ -160,6 +185,11 @@
         "slug": "loss-and-grief-counseling",
         "metaDescription": "Find meaning and navigate grief with compassionate guidance. Restore balance, peace, and emotional healing.",
         "description": "Grief counseling can provide a safe space for individuals to process their emotions and work through the stages of grief. Benefits may include reduced feelings of isolation and loneliness, improved coping skills, and a greater sense of acceptance.",
+        "beneficiaries": [
+            "Individuals grieving the loss of a loved one",
+            "Those experiencing significant life changes or transitions",
+            "People seeking support and guidance in navigating the complex emotions associated with loss and grief"
+        ],
         "benefits": [
             {
                 "title": "Coping strategies",
@@ -192,6 +222,11 @@
         "slug": "couples-therapy",
         "metaDescription": "Strengthen relationships with improved communication, emotional intimacy, and problem-solving skills. Transform your partnership with a stronger foundation.",
         "description": "Couples therapy can help couples improve communication, resolve conflicts, and deepen their emotional connection. Benefits may include improved relationship satisfaction, reduced symptoms of anxiety and depression, and a greater sense of intimacy.",
+        "beneficiaries": [
+            "Couples facing relationship challenges or conflicts",
+            "Partners seeking to enhance their communication and intimacy",
+            "Those who want to strengthen their bond and build a more fulfilling partnership"
+        ],
         "benefits": [
             {
                 "title": "Increased emotional intimacy",
@@ -224,6 +259,11 @@
         "slug": "sex-therapy",
         "metaDescription": "Enhance sexual well-being and fulfillment. Explore sexual health, improve relationships, and boost self-confidence in a safe, supportive space.",
         "description": "Sex therapy can help individuals and couples improve their sexual health and wellness. Benefits may include improved sexual functioning, increased confidence and comfort with sexuality, and a greater sense of intimacy.",
+        "beneficiaries": [
+            "Individuals or couples experiencing sexual concerns or difficulties",
+            "People seeking to improve their sexual health and satisfaction",
+            "Those looking to enhance their intimate relationships and boost self-confidence"
+        ],
         "benefits": [
             {
                 "title": "Improved sexual function",
@@ -256,6 +296,11 @@
         "slug": "pre-marital-counseling",
         "metaDescription": "Build a resilient partnership for a successful marriage. Strengthen your bond, improve communication, and navigate challenges with skilled guidance.",
         "description": "Pre-marital counseling can help couples build a strong foundation for their marriage by exploring expectations, building communication skills, and addressing potential conflicts. Benefits may include improved relationship satisfaction, reduced likelihood of divorce, and a greater sense of commitment to the relationship.",
+        "beneficiaries": [
+            "Engaged couples preparing for marriage",
+            "Partners seeking to strengthen their relationship before taking the next step",
+            "Those who want to develop essential skills for a successful and lasting marriage"
+        ],
         "benefits": [
             {
                 "title": "Premarital education",
