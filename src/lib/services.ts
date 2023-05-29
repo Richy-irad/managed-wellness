@@ -30,5 +30,5 @@ export const getAllServices = () => {
 
 // geMinServices
 export const getMinServices = () => {
-  return services.slice(3);
+  return services.slice(0, 3);
 };
