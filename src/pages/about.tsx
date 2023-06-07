@@ -82,7 +82,7 @@ const About = () => {
                   purpose
                 </span>
                 <h2 className="text-3xl lg:text-6xl font-medium text-black">
-                  To rekindle our client’s lost hope.
+                  To rekindle our client&apos;s lost hope.
                 </h2>
               </div>
             </div>
@@ -101,10 +101,10 @@ const About = () => {
           <div className="flex flex-wrap gap-x-32 justify-start items-center py-4 mx-5 lg:justify-between lg:mx-40 lg:py-18 lg:flex-nowrap">
             <div className=" basis-full lg:basis-7/12 px-7 py-8 bg-sage-green/30 rounded-md">
               <p className="text-base lg:text-2xl text-dark font-regular text-center lg:text-start">
-                The motto "It's okay not to be okay" reflects the fundamental
+                The motto &quot;It&apos;s okay not to be okay&quot; reflects the fundamental
                 belief of Managed Wellness Centre that mental health struggles are a
                 normal and common part of the human experience. This motto
-                encourages clients to recognize that it's okay to seek help and
+                encourages clients to recognize that it&apos;s okay to seek help and
                 support when facing emotional or mental challenges.u
               </p>
             </div>
@@ -112,7 +112,7 @@ const About = () => {
               <div className="flex flex-col gap-y-4 w-96 py-8 text-center lg:text-start">
                 <span className="text-warm-grey font-2xl uppercase">motto</span>
                 <h2 className="text-3xl lg:text-6xl font-medium text-black">
-                  It's okay not to be okay
+                  It&apos;s okay not to be okay
                 </h2>
               </div>
             </div>
