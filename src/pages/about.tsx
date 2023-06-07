@@ -184,7 +184,7 @@ const About = () => {
                   we do. We genuinely care for each patient and strive to
                   enhance the quality of their lives through customized care and
                   a supportive, empathetic approach. By taking the time to truly
-                  understand each individual's unique needs and goals, we help
+                  understand each individual&apos;s unique needs and goals, we help
                   them achieve lasting wellness and a brighter future.
                 </p>
               </div>
