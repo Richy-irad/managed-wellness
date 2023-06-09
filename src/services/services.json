@@ -1,7 +1,7 @@
 [
     {
-        "service": "Trauma Counseling",
-        "slug": "trauma-counseling",
+        "service": "Trauma and Psychological debriefing",
+        "slug": "trauma-and-psychological-debriefing",
         "metaDescription": "Heal from past traumas in a safe, nurturing environment. Our counselors help reduce PTSD symptoms, increase safety, and develop coping skills for transformative healing.",
         "description": "Trauma counseling can help individuals process traumatic experiences and build resilience. Benefits may include reduced symptoms of anxiety and depression, improved self-esteem, and a greater sense of control over one's life",
         "beneficiaries": [
@@ -140,6 +140,14 @@
             {
                 "title": "Collaboration and teamwork",
                 "description": "Foster effective collaboration, communication, and teamwork skills, facilitating harmonious and productive work relationships."
+            },
+            {
+                "title": "Basic counseling skils",
+                "description": "Develop fundamental counseling skills, such as active listening, empathy, and non-judgmental communication, empowering you to effectively connect with and support others in various professional settings."
+            },
+            {
+                "title": "Life skills",
+                "description": "Enhance life skills such as decision-making, problem-solving, and goal setting, enabling you to take control of your life, make informed choices, and achieve your aspirations."
             }
         ]
     },
