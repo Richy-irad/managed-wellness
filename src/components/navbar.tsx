@@ -58,7 +58,13 @@ export default function Navbar() {
                     href="/"
                     className="font-bold text-xl flex gap-x-2 items-center lg:text-2xl"
                   >
-                    <Image src={favIcon} width={40} height={40} alt="" />
+                    <Image
+                      src={favIcon}
+                      width={40}
+                      height={40}
+                      alt=""
+                      className="rounded-full"
+                    />
                     <span className="text-black capitalize">
                       Managed Wellness Centre
                     </span>
