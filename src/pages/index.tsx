@@ -126,7 +126,7 @@ const Home: FC<IndexProps> = ({ services }) => {
                     href="mailto:info@managedwellness.com"
                     className="font-regular text-2xl hover:text-sage-green"
                   >
-                    info@managedwellness.com
+                    info@managedwellness.fit
                   </Link>
                 </div>
               </div>

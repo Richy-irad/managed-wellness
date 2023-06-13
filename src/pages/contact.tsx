@@ -50,7 +50,7 @@ const Contact = () => {
                     href="mailto:info@managedwellness.com"
                     className="font-regular text-xl lg:text-2xl hover:text-sage-green"
                   >
-                    info@managedwellness.com
+                    info@managedwellness.fit
                   </Link>
                 </div>
               </div>
