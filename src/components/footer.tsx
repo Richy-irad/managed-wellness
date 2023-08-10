@@ -12,9 +12,9 @@ export default function Footer() {
   return (
     <footer className="bg-sage-green/30 font-josefin-sans text-dark">
       <div className="px-5 lg:px-0 py-6 lg:mx-40">
-        <div className="flex gap-x-6 justify-start md:justify-between mb-10">
+        <div className="flex gap-x-6 gap-y-6 justify-start md:justify-between mb-10 flex-wrap">
           {/* sitemap */}
-          <div className="basis-full md:basis-1/2 lg:basis-1/4 flex gap-x-12">
+          <div className="flex gap-x-12">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -43,7 +43,7 @@ export default function Footer() {
         </div>
 
         {/* copyright */}
-        <div className="flex gap-0.5 items-center">
+        <div className="flex gap-0.5 items-start lg:items-center">
           <Copyright size={20} /> Managed Wellness Centre. All rights Reserved
         </div>
       </div>
