@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { InstagramLogo, TwitterLogo, Copyright } from "@phosphor-icons/react";
+import { InstagramLogo, TwitterLogo, FacebookLogo, Copyright } from "@phosphor-icons/react";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -38,6 +38,12 @@ export default function Footer() {
               className="hover:text-black"
             >
               <InstagramLogo size={32} />
+            </Link>
+            <Link
+              href="https://www.facebook.com/profile.php?id=100093634478554"
+              className="hover:text-black"
+            >
+              <FacebookLogo size={32} />
             </Link>
           </div>
         </div>
