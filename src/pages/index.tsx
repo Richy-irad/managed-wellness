@@ -114,7 +114,7 @@ const Home: FC<IndexProps> = ({ services }) => {
                 <div className="flex flex-col gap-y-3 items-start lg:items-end text-start lg:text-end w-full">
                   <p className="font-semibold text-3xl">Phone</p>
                   <p className="font-regular text-xl">
-                    +254&nbsp;777&nbsp;720&nbsp;072
+                    +254&nbsp;722&nbsp;720&nbsp;072
                   </p>
                   <p className="font-regular text-xl">
                     +254&nbsp;780&nbsp;838&nbsp;333
