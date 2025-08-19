@@ -19,11 +19,11 @@ const postmarkApp = new postmark.ServerClient(
  */
 export default async function handler(
   request: NextApiRequest,
-  resesponse: NextApiResponse
+  response: NextApiResponse
 ) {
   // Check the current request method.
   if ("POST" !== request.method) {
-    return resesponse
+    return response
       .status(405)
       .send(`${request.method} requests are not allowed.`);
   }
@@ -33,27 +33,27 @@ export default async function handler(
 
   // Prevent spam from bots (Honeypot technique).
   if (inspector) {
-    return resesponse.status(400).send("Message not sent.");
+    return response.status(400).send("Message not sent.");
   }
 
   // Make sure we have the sender's name.
   if (!name || "" === name) {
-    return resesponse.status(400).send("Message not sent.");
+    return response.status(400).send("Message not sent.");
   }
 
   // Make sure email address is added.
   if (!email || "" === email) {
-    return resesponse.status(400).send("Message not sent.");
+    return response.status(400).send("Message not sent.");
   }
 
   // Make sure the email has a subject.
   if (!subject || "" === subject) {
-    return resesponse.status(400).send("Message not sent.");
+    return response.status(400).send("Message not sent.");
   }
 
   // Make sure email has a content.
   if (!message || "" === message) {
-    return resesponse.status(400).send("Message not sent.");
+    return response.status(400).send("Message not sent.");
   }
 
   try {
@@ -71,11 +71,11 @@ export default async function handler(
 
     // Check if the email was sent without any issues.
     if (!postmarkResponse.ErrorCode) {
-      resesponse.status(200).send("Message sent successfully.");
+      response.status(200).send("Message sent successfully.");
     } else {
-      resesponse.status(400).send("Message not sent.");
+      response.status(400).send("Message not sent.");
     }
   } catch (error) {
-    resesponse.status(400).send("Message not sent.");
+    response.status(400).send("Message not sent.");
   }
 }

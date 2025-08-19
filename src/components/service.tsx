@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import Link from "next/link";
 import { ServiceProps } from "@/lib/types";
 
@@ -6,7 +6,7 @@ const Service: FC<ServiceProps> = ({ service }): JSX.Element => {
   return (
     <div
       key={service.service}
-      className="bg-dull-yellow px-7 py-8 rounded-md flex flex-col gap-y-6 lg:gap-y-12"
+      className="bg-dull-yellow px-7 py-8 rounded-sm-md flex flex-col gap-y-6 lg:gap-y-12"
     >
       <div className="flex justify-between items-center">
         <h3 className="basis-9/12 text-dark text-xl lg:text-3xl font-medium">
@@ -27,7 +27,7 @@ const Service: FC<ServiceProps> = ({ service }): JSX.Element => {
             {service.benefits.map((benefit) => (
               <span
                 key={benefit.title}
-                className="bg-deep-blue text-white text-sm font-semibold text-center p-2.5 rounded-md"
+                className="bg-deep-blue text-white text-sm font-semibold text-center p-2.5 rounded-sm-md"
               >
                 {benefit.title}
               </span>

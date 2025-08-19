@@ -43,7 +43,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="basis-full lg:basis-7/12 px-7 py-8 bg-sage-green/30 rounded-md">
+            <div className="basis-full lg:basis-7/12 px-7 py-8 bg-sage-green/30 rounded-sm-md">
               <p className="text-base lg:text-2xl text-dark font-regular text-center lg:text-start">
                 Together we spark solutions that create a better, healthier
                 world as every person makes use of their unique experiences and
@@ -54,7 +54,7 @@ const About = () => {
 
           {/* Mission */}
           <div className="flex flex-wrap gap-x-32 justify-start items-center py-4 mx-5 lg:justify-between lg:mx-40 lg:py-18 lg:flex-nowrap">
-            <div className="basis-full lg:basis-7/12 px-7 py-8 bg-sage-green/30 rounded-md">
+            <div className="basis-full lg:basis-7/12 px-7 py-8 bg-sage-green/30 rounded-sm-md">
               <p className="text-base lg:text-2xl text-dark font-regular text-center lg:text-start">
                 Because not all wounds are visible, we, are dedicated to healing
                 the unseen by helping our clients overcome mental health
@@ -62,7 +62,7 @@ const About = () => {
                 and approachable in our services and interventions.
               </p>
             </div>
-            <div className="basis-full w-full order-first lg:basis-4/12 lg:w-96 lg:order-none">
+            <div className="basis-full w-full order-first lg:basis-4/12 lg:w-96 lg:order-0">
               <div className="flex flex-col gap-y-4 py-8 text-center lg:text-start">
                 <h2 className="text-3xl lg:text-6xl font-medium text-black">
                   Our Mission
@@ -86,7 +86,7 @@ const About = () => {
                 </h2>
               </div>
             </div>
-            <div className="basis-full lg:basis-7/12 px-7 py-8 bg-sage-green/30 rounded-md">
+            <div className="basis-full lg:basis-7/12 px-7 py-8 bg-sage-green/30 rounded-sm-md">
               <p className="text-base lg:text-2xl text-dark font-regular text-center lg:text-start">
                 Our purpose is to provide compassionate support and
                 evidence-based interventions that help rekindle hope in our
@@ -99,7 +99,7 @@ const About = () => {
           {/* Motto */}
 
           <div className="flex flex-wrap gap-x-32 justify-start items-center py-4 mx-5 lg:justify-between lg:mx-40 lg:py-18 lg:flex-nowrap">
-            <div className=" basis-full lg:basis-7/12 px-7 py-8 bg-sage-green/30 rounded-md">
+            <div className=" basis-full lg:basis-7/12 px-7 py-8 bg-sage-green/30 rounded-sm-md">
               <p className="text-base lg:text-2xl text-dark font-regular text-center lg:text-start">
                 The motto &quot;It&apos;s okay not to be okay&quot; reflects the fundamental
                 belief of Managed Wellness Centre that mental health struggles are a
@@ -108,7 +108,7 @@ const About = () => {
                 support when facing emotional or mental challenges.u
               </p>
             </div>
-            <div className="basis-full order-first lg:order-none lg:basis-4/12">
+            <div className="basis-full order-first lg:order-0 lg:basis-4/12">
               <div className="flex flex-col gap-y-4 w-96 py-8 text-center lg:text-start">
                 <span className="text-warm-grey font-2xl uppercase">motto</span>
                 <h2 className="text-3xl lg:text-6xl font-medium text-black">

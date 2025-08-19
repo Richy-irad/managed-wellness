@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { InstagramLogo, TwitterLogo, FacebookLogo, Copyright } from "@phosphor-icons/react";
+import {
+  InstagramLogoIcon,
+  TwitterLogoIcon,
+  FacebookLogoIcon,
+  CopyrightIcon,
+} from "@phosphor-icons/react";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -31,26 +36,27 @@ export default function Footer() {
               href="https://twitter.com/ManagedWellness"
               className="hover:text-black"
             >
-              <TwitterLogo size={32} />
+              <TwitterLogoIcon size={32} />
             </Link>
             <Link
               href="https://www.instagram.com/managed_wellness/"
               className="hover:text-black"
             >
-              <InstagramLogo size={32} />
+              <InstagramLogoIcon size={32} />
             </Link>
             <Link
               href="https://www.facebook.com/profile.php?id=100093634478554"
               className="hover:text-black"
             >
-              <FacebookLogo size={32} />
+              <FacebookLogoIcon size={32} />
             </Link>
           </div>
         </div>
 
         {/* copyright */}
         <div className="flex gap-0.5 items-start lg:items-center">
-          <Copyright size={20} /> Managed Wellness Centre. All rights Reserved
+          <CopyrightIcon size={20} /> Managed Wellness Centre. All rights
+          Reserved
         </div>
       </div>
     </footer>
