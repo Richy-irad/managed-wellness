@@ -1,6 +1,5 @@
-import React, { FC } from "react";
+import { FC, JSX } from "react";
 import Head from "next/head";
-import Link from "next/link";
 import { GetStaticProps } from "next";
 import { getAllServicesSlugs, getService } from "@/lib/services";
 import { ServiceProps } from "@/lib/types";
