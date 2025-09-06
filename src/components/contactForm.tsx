@@ -1,4 +1,4 @@
-import React, { useState, useRef, FormEvent } from "react";
+import React, { useState, useRef, FormEvent, JSX } from "react";
 import { CheckCircleIcon, WarningIcon } from "@phosphor-icons/react";
 
 import { MessageType } from "@/lib/types";
@@ -40,7 +40,7 @@ const ContactForm = () => {
 
     // Notice
     const notice = (type: string, message: MessageType) => {
-      let cssClasses = "border border-solid p-4 rounded-sm mb-4 text-sm";
+      let cssClasses = "border border-solid p-4 rounded-xs mb-4 text-sm";
 
       switch (type) {
         case "success":
@@ -228,7 +228,7 @@ const ContactForm = () => {
             <input
               type="text"
               ref={firstNameInputRef}
-              className="border-0.5 border-light rounded-sm-md block w-full px-2.5 py-3.5"
+              className="border-0.5 border-light rounded-xs-md block w-full px-2.5 py-3.5"
               name="firstName"
               value={firstName}
               placeholder="First Name"
@@ -245,7 +245,7 @@ const ContactForm = () => {
             <input
               type="text"
               ref={lastNameInputRef}
-              className="border-0.5 border-light rounded-sm-md block w-full px-2.5 py-3.5"
+              className="border-0.5 border-light rounded-xs-md block w-full px-2.5 py-3.5"
               name="lastName"
               value={lastName}
               placeholder="First Name"
@@ -263,7 +263,7 @@ const ContactForm = () => {
           <input
             type="email"
             ref={emailInputRef}
-            className="border-0.5 border-light rounded-sm-md block w-full px-2.5 py-3.5"
+            className="border-0.5 border-light rounded-xs-md block w-full px-2.5 py-3.5"
             name="email"
             value={email}
             placeholder="e.g. john.doe@example.com"
@@ -280,7 +280,7 @@ const ContactForm = () => {
           <input
             type="text"
             ref={subjectInputRef}
-            className="border-0.5 border-light rounded-sm-md block w-full px-2.5 py-3.5"
+            className="border-0.5 border-light rounded-xs-md block w-full px-2.5 py-3.5"
             name="subject"
             value={subject}
             placeholder="Subject"
@@ -295,7 +295,7 @@ const ContactForm = () => {
         <div className="space-y-3">
           <label htmlFor="message ">Message</label>
           <textarea
-            className="border-0.5 border-light rounded-sm-md block w-full px-2.5 py-3.5"
+            className="border-0.5 border-light rounded-xs-md block w-full px-2.5 py-3.5"
             name="message"
             ref={messageInputRef}
             rows={4}
@@ -311,7 +311,7 @@ const ContactForm = () => {
 
       <button
         type="submit"
-        className="bg-light-blue text-deep-blue font-semibold px-4 py-5 rounded-sm-md"
+        className="bg-light-blue text-deep-blue font-semibold px-4 py-5 rounded-xs-md"
         onClick={(event) => handleSubmit(event)}
       >
         Send Message

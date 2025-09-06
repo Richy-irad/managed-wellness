@@ -51,7 +51,7 @@ const Home: FC<IndexProps> = ({ services }) => {
 
               <Link
                 href="/services"
-                className="bg-light-blue text-deep-blue font-semibold px-4 py-5 rounded-sm-md"
+                className="bg-light-blue text-deep-blue font-semibold px-4 py-5 rounded-xs-md"
               >
                 Browse our Services
               </Link>
@@ -61,7 +61,7 @@ const Home: FC<IndexProps> = ({ services }) => {
                 src={heroImage}
                 priority
                 alt=""
-                className="w-full h-full object-cover object-top rounded-sm-tl-[259px] rounded-sm-tr-[98px] rounded-sm-bl-[259px] rounded-sm-br-[250px]"
+                className="w-full h-full object-cover object-top rounded-xs-tl-[259px] rounded-xs-tr-[98px] rounded-xs-bl-[259px] rounded-xs-br-[250px]"
               />
             </div>
           </div>
@@ -92,7 +92,7 @@ const Home: FC<IndexProps> = ({ services }) => {
               ))}
               <Link
                 href="/services"
-                className="bg-light-blue text-deep-blue font-semibold px-4 py-5 rounded-sm-md"
+                className="bg-light-blue text-deep-blue font-semibold px-4 py-5 rounded-xs-md"
               >
                 View all Services
               </Link>

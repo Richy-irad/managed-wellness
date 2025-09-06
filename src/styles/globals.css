@@ -23,7 +23,7 @@
   --padding-18: 72px;
 
   /* extend background */
-  --bg-hero-pattern: "url('/src/assets/hero-pattern.jpg')";}
+  --bg-hero-pattern: url('/src/assets/hero-pattern.jpg');}
 
 body {
   width: 100vw;
