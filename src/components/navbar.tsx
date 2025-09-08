@@ -42,7 +42,7 @@ const CustomLink = ({ children, href }: CustomLinkProps) => {
             : "hover:border-b-3 hover:border-sage-green font-medium",
           "mx-2 lg:mx-4"
         )}
-      >
+        legacyBehavior>
         {children}
       </Link>
     </>
@@ -61,7 +61,7 @@ export default function Navbar() {
                   <Link
                     href="/"
                     className="font-bold text-xl flex gap-x-2 items-center lg:text-2xl"
-                  >
+                    legacyBehavior>
                     <Image
                       src={favIcon}
                       width={40}

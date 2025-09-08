@@ -25,7 +25,7 @@ export default function Footer() {
                 key={item.name}
                 href={item.href}
                 className="text-dark hover:text-black font-medium"
-              >
+                legacyBehavior>
                 {item.name}
               </Link>
             ))}
@@ -35,19 +35,19 @@ export default function Footer() {
             <Link
               href="https://twitter.com/ManagedWellness"
               className="hover:text-black"
-            >
+              legacyBehavior>
               <TwitterLogoIcon size={32} />
             </Link>
             <Link
               href="https://www.instagram.com/managed_wellness/"
               className="hover:text-black"
-            >
+              legacyBehavior>
               <InstagramLogoIcon size={32} />
             </Link>
             <Link
               href="https://www.facebook.com/profile.php?id=100093634478554"
               className="hover:text-black"
-            >
+              legacyBehavior>
               <FacebookLogoIcon size={32} />
             </Link>
           </div>

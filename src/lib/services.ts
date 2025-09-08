@@ -1,4 +1,4 @@
-import services from "../services/services.json" assert { type: "json" };
+import services from "../services/services.json" with { type: "json" };
 
 // getAllServicesSlugs
 export const getAllServicesSlugs = () => {
