@@ -1,4 +1,6 @@
-import { useRouter } from "next/router";
+"use client";
+
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -19,32 +21,19 @@ const navigation = [
   { name: "Contact", href: "/contact" },
 ];
 
-const classNames = (...classes: string[]) => {
-  return classes.filter(Boolean).join(" ");
-};
-
 const CustomLink = ({ children, href }: CustomLinkProps) => {
-  const router = useRouter();
-
-  const handleClick = (event: React.SyntheticEvent) => {
-    event.preventDefault();
-    router.push(href);
-  };
-
+  const pathname = usePathname();
   return (
-    <>
-      <Link
-        href={href}
-        onClick={handleClick}
-        className={classNames(
-          router.asPath === href
-            ? "font-bold border-b-3 border-sage-green"
-            : "hover:border-b-3 hover:border-sage-green font-medium",
-          "mx-2 lg:mx-4"
-        )}>
-        {children}
-      </Link>
-    </>
+    <Link
+      href={href}
+      className={
+        pathname === href
+          ? "font-bold border-b-3 border-sage-green mx-2 lg:mx-4"
+          : "hover:border-b-3 hover:border-sage-green font-medium mx-2 lg:mx-4"
+      }
+    >
+      {children}
+    </Link>
   );
 };
 

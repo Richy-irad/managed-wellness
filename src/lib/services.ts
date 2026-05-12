@@ -32,3 +32,7 @@ export const getAllServices = () => {
 export const getMinServices = () => {
   return services.slice(0, 3);
 };
+
+export const getServiceParams = (): { slug: string }[] => {
+  return services.map((service) => ({ slug: service.slug }));
+};
