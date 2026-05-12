@@ -1,0 +1,50 @@
+[
+  {
+    "id": "faq1",
+    "question": "How do I book a session?",
+    "answer": "You can book a session by filling out our contact form, calling us directly at +254 722 720 072, or sending us a WhatsApp message. We will get back to you within 24 hours to confirm your appointment.",
+    "category": "Booking"
+  },
+  {
+    "id": "faq2",
+    "question": "What happens in a first session?",
+    "answer": "Your first session is an intake appointment. Your therapist will take time to understand your background, current concerns, and goals. There is no pressure — it is a safe space to share as much or as little as you feel comfortable with. Together, you will agree on a plan for subsequent sessions.",
+    "category": "Sessions"
+  },
+  {
+    "id": "faq3",
+    "question": "How long is each session?",
+    "answer": "Individual therapy sessions are typically 50 minutes. Couples therapy sessions run for 60–90 minutes. Psychometric assessments may take 2–3 hours depending on the battery of tests required. We will confirm the duration when you book.",
+    "category": "Sessions"
+  },
+  {
+    "id": "faq4",
+    "question": "Is everything confidential?",
+    "answer": "Absolutely. Everything shared in therapy is strictly confidential. The only exceptions — required by law and professional ethics — are situations involving a credible risk of harm to you or others, or where a court order compels disclosure. Your therapist will discuss the limits of confidentiality with you in your first session.",
+    "category": "Confidentiality"
+  },
+  {
+    "id": "faq5",
+    "question": "Do you offer virtual sessions?",
+    "answer": "Yes. We offer both in-person sessions at our Nairobi centre and virtual sessions via a secure video platform. Virtual sessions are equally effective and give you the flexibility to attend from wherever you are most comfortable.",
+    "category": "Sessions"
+  },
+  {
+    "id": "faq6",
+    "question": "What is your cancellation policy?",
+    "answer": "We ask that you give at least 24 hours' notice if you need to cancel or reschedule. Late cancellations (under 24 hours) or no-shows may be charged a cancellation fee equivalent to 50% of the session fee. We understand that emergencies happen — please reach out and we will do our best to accommodate you.",
+    "category": "Booking"
+  },
+  {
+    "id": "faq7",
+    "question": "Do you accept insurance?",
+    "answer": "We are working on partnering with select medical insurance providers. At this time, most clients pay out of pocket. We can provide an official receipt for you to submit to your insurer for potential reimbursement. Please contact us to discuss your specific insurance plan.",
+    "category": "Billing"
+  },
+  {
+    "id": "faq8",
+    "question": "What ages do you work with?",
+    "answer": "We work with clients across the lifespan — from adolescents (13+) through to older adults. Our therapists have experience with a wide range of presentations across different life stages. For children under 13, please contact us to discuss appropriate referral options.",
+    "category": "Sessions"
+  }
+]

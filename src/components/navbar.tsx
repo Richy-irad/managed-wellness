@@ -18,6 +18,8 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
   { name: "About", href: "/about" },
+  { name: "Blog", href: "/blog" },
+  { name: "Team", href: "/team" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -48,7 +50,8 @@ export default function Navbar() {
                 <div className="shrink-0">
                   <Link
                     href="/"
-                    className="font-bold text-xl flex gap-x-2 items-center lg:text-2xl">
+                    className="font-bold text-xl flex gap-x-2 items-center lg:text-2xl"
+                  >
                     <Image
                       src={favIcon}
                       width={40}
@@ -61,44 +64,52 @@ export default function Navbar() {
                     </span>
                   </Link>
                 </div>
-                <div className="hidden md:block">
-                  <div className="ml-10 flex items-center gap-x-4">
-                    {navigation.map((item) => (
-                      <CustomLink key={item.name} href={item.href}>
-                        {item.name}
-                      </CustomLink>
-                    ))}
-                  </div>
+
+                <div className="hidden md:flex items-center gap-x-2">
+                  {navigation.map((item) => (
+                    <CustomLink key={item.name} href={item.href}>
+                      {item.name}
+                    </CustomLink>
+                  ))}
+                  <Link
+                    href="/contact"
+                    className="ml-4 px-5 py-2 rounded-full bg-deep-blue text-white text-sm font-bold tracking-wide hover:bg-deep-blue-dark transition-colors whitespace-nowrap"
+                  >
+                    Book a Consultation →
+                  </Link>
                 </div>
               </div>
 
+              {/* Mobile menu button — uses outer Disclosure */}
               <div className="flex md:hidden">
-                {/* Mobile menu button */}
-                <Disclosure>
-                  <DisclosureButton className="inline-flex items-center justify-center text-black">
-                    <span className="sr-only">Open main menu</span>
-                    {open ? (
-                      <XIcon className="block h-6 w-6" aria-hidden="true" />
-                    ) : (
-                      <ListIcon className="block h-6 w-6" aria-hidden="true" />
-                    )}
-                  </DisclosureButton>
-                </Disclosure>
+                <DisclosureButton className="inline-flex items-center justify-center text-black">
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <ListIcon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </DisclosureButton>
               </div>
             </div>
           </div>
 
-          <Disclosure>
-            <DisclosurePanel className="md:hidden">
-              <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3 flex flex-col">
-                {navigation.map((item) => (
-                  <CustomLink key={item.name} href={item.href}>
-                    {item.name}
-                  </CustomLink>
-                ))}
-              </div>
-            </DisclosurePanel>
-          </Disclosure>
+          {/* Mobile menu panel — uses outer Disclosure */}
+          <DisclosurePanel className="md:hidden">
+            <div className="space-y-1 px-5 pb-4 pt-2 flex flex-col">
+              {navigation.map((item) => (
+                <CustomLink key={item.name} href={item.href}>
+                  {item.name}
+                </CustomLink>
+              ))}
+              <Link
+                href="/contact"
+                className="mt-3 self-start px-5 py-2 rounded-full bg-deep-blue text-white text-sm font-bold tracking-wide hover:bg-deep-blue-dark transition-colors"
+              >
+                Book a Consultation →
+              </Link>
+            </div>
+          </DisclosurePanel>
         </>
       )}
     </Disclosure>
