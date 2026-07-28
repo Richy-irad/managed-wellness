@@ -16,7 +16,7 @@ export default function BlogPage() {
       <Hero
         title="Insights from our therapists and wellness experts."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Blog" }]}
-        label="Our Blog"
+        label="Our blog"
       />
 
       <section className="py-20 px-5 lg:px-0 bg-white">

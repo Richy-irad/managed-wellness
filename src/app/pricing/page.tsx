@@ -77,7 +77,7 @@ export default function PricingPage() {
                     href={`/services/${entry.serviceSlug}`}
                     className="text-sm font-semibold text-deep-blue hover:text-deep-blue-dark transition-colors mt-auto"
                   >
-                    Learn about this service →
+                    learn about this service
                   </Link>
                 )}
               </div>

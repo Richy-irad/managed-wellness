@@ -108,6 +108,43 @@ export function EnvelopeIcon({ size = 20, className }: IconProps) {
   );
 }
 
+export function ArrowUpRightIcon({ size = 20, className }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 15 13" fill="currentColor" className={className}>
+      <path
+        fillRule="evenodd"
+        d="M8.363.017a.732.732 0 0 0-.154.086.496.496 0 0 0-.171.592c.028.065.805.859 2.644 2.699L13.287 6l-6.475.006-6.474.007-.117.08a.496.496 0 0 0 .021.835l.096.06 6.474.006L13.287 7l-2.605 2.606c-1.839 1.84-2.616 2.634-2.644 2.699-.16.388.197.78.612.671.104-.027.354-.271 3.17-3.084 1.682-1.68 3.079-3.09 3.106-3.133a.562.562 0 0 0 .05-.409c-.027-.104-.27-.353-3.059-3.146C10.251 1.536 8.839.137 8.78.096a.578.578 0 0 0-.417-.079"
+      />
+    </svg>
+  );
+}
+
+export function QuoteIcon({ size = 20, className }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 26 24" fill="currentColor" className={className}>
+      <path d="M6.801 0a2 2 0 0 1 1.95 2.445l-1.788 7.84a1.946 1.946 0 0 0 1.897 2.379c1.075 0 1.947.871 1.947 1.946V22a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-6.44a2 2 0 0 1 .057-.475l3.315-13.56A2 2 0 0 1 5.315 0H6.8zm15.193 0a2 2 0 0 1 1.95 2.445l-1.788 7.84a1.946 1.946 0 0 0 1.898 2.379c1.075 0 1.946.871 1.946 1.946V22a2 2 0 0 1-2 2h-6.807a2 2 0 0 1-2-2v-6.44a2 2 0 0 1 .058-.475l3.315-13.56A2 2 0 0 1 20.508 0h1.486z" />
+    </svg>
+  );
+}
+
+export function LinkedInIcon({ size = 20, className }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 13 13" fill="currentColor" className={className}>
+      <path d="M2.734 12.605H.191V4.43h2.543v8.175zM1.45 3.335C.656 3.336 0 2.653 0 1.833A1.45 1.45 0 0 1 2.188.574c.464.246.738.739.738 1.258 0 .82-.656 1.504-1.477 1.504zm10.774 9.27H9.707V8.641c0-.957-.027-2.16-1.34-2.16-1.312 0-1.504 1.011-1.504 2.078v4.046H4.32V4.43h2.434v1.12h.027c.356-.628 1.176-1.312 2.407-1.312 2.57 0 3.062 1.696 3.062 3.883v4.484h-.027z" />
+    </svg>
+  );
+}
+
+// Sparkle — no direct Spirito-source equivalent for the IconBox eyebrow glyph;
+// hand-drawn to match the curated set's thin single-color style.
+export function SparkleIcon({ size = 20, className }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 20 20" fill="currentColor" className={className}>
+      <path d="M10 2l1.8 5.2L17 9l-5.2 1.8L10 16l-1.8-5.2L3 9l5.2-1.8L10 2z" />
+    </svg>
+  );
+}
+
 // Not part of the Spirito curated icon set (no TikTok/WhatsApp/clock/warning
 // glyphs shipped) — hand-drawn to match its thin-stroke, single-color style.
 

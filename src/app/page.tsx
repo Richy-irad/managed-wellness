@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 
 import { getMinServices } from "@/lib/services";
 import team from "@/data/team.json";
@@ -16,6 +14,8 @@ import DarkCTA from "@/components/darkCTA";
 import Ticker from "@/components/ticker";
 import JourneyAccordion from "@/components/journeyAccordion";
 import TestimonialsCarousel from "@/components/testimonialsCarousel";
+import TeamCard from "@/components/teamCard";
+import Button from "@/components/button";
 
 import heroImage from "../../public/assets/hero-image.jpg";
 
@@ -52,13 +52,13 @@ export default function Home() {
   return (
     <main>
       <Hero
-        label="Mental Health Centre — Nairobi"
+        label="Mental health centre — Nairobi"
         title="Experience the difference of authentic, empathetic care."
         subtext="Evidence-based counselling and therapy — in person and virtually. We meet you where you are."
         image={heroImage}
         ctas={[
-          { label: "Book a Consultation →", href: "/contact", variant: "primary" },
-          { label: "Browse Services", href: "/services", variant: "outline" },
+          { label: "book a consultation", href: "/contact", variant: "primary" },
+          { label: "browse services", href: "/services", variant: "outline" },
         ]}
       />
 
@@ -66,7 +66,7 @@ export default function Home() {
       <section className="py-20 px-5 lg:px-0 bg-white">
         <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div className="flex flex-col gap-y-6">
-            <SectionLabel label="Your Therapeutic Journey" />
+            <SectionLabel label="Your therapeutic journey" />
             <h2 className="font-bold text-dark leading-tight">
               What to expect when you work with us
             </h2>
@@ -87,7 +87,7 @@ export default function Home() {
       <section className="py-20 px-5 lg:px-0 bg-section-wash">
         <div className="lg:mx-40 flex flex-col gap-y-10">
           <div className="flex flex-col gap-y-4">
-            <SectionLabel label="Our Services" />
+            <SectionLabel label="Our services" />
             <h2 className="font-bold text-dark leading-tight max-w-lg">
               Comprehensive support for every stage of your journey
             </h2>
@@ -101,12 +101,7 @@ export default function Home() {
               <SvcCard key={service.slug} service={service} index={i} />
             ))}
           </div>
-          <Link
-            href="/services"
-            className="inline-flex items-center gap-2 text-sm font-bold text-deep-blue uppercase tracking-widest hover:text-deep-blue/70 transition-colors"
-          >
-            View All Services →
-          </Link>
+          <Button href="/services">view all services</Button>
         </div>
       </section>
 
@@ -114,46 +109,17 @@ export default function Home() {
       <section className="py-20 px-5 lg:px-0 bg-white">
         <div className="lg:mx-40 flex flex-col gap-y-10">
           <div className="flex flex-col gap-y-4">
-            <SectionLabel label="Our Team" />
+            <SectionLabel label="Our team" />
             <h2 className="font-bold text-dark leading-tight max-w-lg">
               Therapists who genuinely care about your growth
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamPreview.map((member) => (
-              <div key={member.slug} className="flex flex-col gap-y-4">
-                <div className="relative h-72 rounded-xl overflow-hidden">
-                  <Image
-                    src={member.photoUrl}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-                <div className="flex flex-col gap-y-1">
-                  <p className="font-bold text-dark">{member.name}</p>
-                  <p className="text-sm text-warm-grey">{member.title}</p>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {member.specialisations.slice(0, 2).map((s) => (
-                    <span
-                      key={s}
-                      className="px-3 py-1 rounded-full bg-section-sage text-xs font-semibold text-sage-dark"
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              <TeamCard key={member.slug} member={member} />
             ))}
           </div>
-          <Link
-            href="/team"
-            className="inline-flex items-center gap-2 text-sm font-bold text-deep-blue uppercase tracking-widest hover:text-deep-blue/70 transition-colors"
-          >
-            Meet the Full Team →
-          </Link>
+          <Button href="/team">meet the full team</Button>
         </div>
       </section>
 
@@ -164,7 +130,7 @@ export default function Home() {
       <section className="py-20 px-5 lg:px-0 bg-section-sage">
         <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col gap-y-6">
-            <SectionLabel label="Why Choose Us" />
+            <SectionLabel label="Why choose us" />
             <h2 className="font-bold text-dark leading-tight">
               Evidence-based care, delivered with compassion
             </h2>
@@ -192,7 +158,7 @@ export default function Home() {
       <section className="py-20 px-5 lg:px-0 bg-white">
         <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="flex flex-col gap-y-6">
-            <SectionLabel label="What Clients Say" />
+            <SectionLabel label="What clients say" />
             <h2 className="font-bold text-dark leading-tight max-w-lg">
               Real stories from people who&apos;ve found healing here
             </h2>
@@ -209,7 +175,7 @@ export default function Home() {
       <section className="py-20 px-5 lg:px-0 bg-section-wash">
         <div className="lg:mx-40 flex flex-col gap-y-10">
           <div className="flex flex-col gap-y-4">
-            <SectionLabel label="From the Blog" />
+            <SectionLabel label="From the blog" />
             <h2 className="font-bold text-dark leading-tight max-w-lg">
               Resources to support your mental wellness
             </h2>
@@ -219,12 +185,7 @@ export default function Home() {
               <BlogCard key={post.slug} post={post} />
             ))}
           </div>
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 text-sm font-bold text-deep-blue uppercase tracking-widest hover:text-deep-blue/70 transition-colors"
-          >
-            Read All Articles →
-          </Link>
+          <Button href="/blog">read all articles</Button>
         </div>
       </section>
 

@@ -45,7 +45,7 @@ export default function ContactPage() {
       <Hero
         title="Get in touch — we're here to help."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}
-        label="Contact Us"
+        label="Contact us"
       />
 
       {/* Contact info row */}
@@ -77,7 +77,7 @@ export default function ContactPage() {
       <section className="py-16 px-5 lg:px-0 bg-white">
         <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div className="flex flex-col gap-y-6">
-            <SectionLabel label="Opening Hours" />
+            <SectionLabel label="Opening hours" />
             <div className="flex flex-col gap-y-3">
               <div className="flex items-center gap-x-2 text-warm-grey">
                 <ClockIcon size={18} />
@@ -101,7 +101,7 @@ export default function ContactPage() {
       <section className="py-20 px-5 lg:px-0 bg-section-wash">
         <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="flex flex-col gap-y-6">
-            <SectionLabel label="Send a Message" />
+            <SectionLabel label="Send a message" />
             <h2 className="font-bold text-dark leading-tight">
               We&apos;ll get back to you within 24 hours
             </h2>

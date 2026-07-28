@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 
 import team from "@/data/team.json";
 
@@ -9,6 +8,7 @@ import SectionLabel from "@/components/sectionLabel";
 import StatsBanner from "@/components/statsBanner";
 import JourneyAccordion from "@/components/journeyAccordion";
 import DarkCTA from "@/components/darkCTA";
+import Button from "@/components/button";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -79,7 +79,7 @@ export default function AboutPage() {
       <Hero
         title="Empowering lives through compassionate, authentic care that honours diversity and builds trust."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}
-        label="About Us"
+        label="About us"
       />
 
       {/* Vision / Mission / Purpose / Motto */}
@@ -108,7 +108,7 @@ export default function AboutPage() {
       <section className="py-20 px-5 lg:px-0 bg-section-wash">
         <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="flex flex-col gap-y-6 lg:sticky lg:top-24">
-            <SectionLabel label="Core Values" />
+            <SectionLabel label="Core values" />
             <h2 className="font-bold text-dark leading-tight">
               The principles that guide every session
             </h2>
@@ -135,7 +135,7 @@ export default function AboutPage() {
       <section className="py-20 px-5 lg:px-0 bg-white">
         <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div className="flex flex-col gap-y-6">
-            <SectionLabel label="Our Approach" />
+            <SectionLabel label="Our approach" />
             <h2 className="font-bold text-dark leading-tight">
               A structured, collaborative therapeutic process
             </h2>
@@ -151,7 +151,7 @@ export default function AboutPage() {
       <section className="py-20 px-5 lg:px-0 bg-section-sage">
         <div className="lg:mx-40 flex flex-col gap-y-10">
           <div className="flex flex-col gap-y-4">
-            <SectionLabel label="The Team" />
+            <SectionLabel label="The team" />
             <h2 className="font-bold text-dark leading-tight max-w-lg">
               Qualified therapists committed to your well-being
             </h2>
@@ -186,12 +186,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-          <Link
-            href="/team"
-            className="inline-flex items-center gap-2 text-sm font-bold text-deep-blue uppercase tracking-widest hover:text-deep-blue/70 transition-colors"
-          >
-            Meet the Full Team →
-          </Link>
+          <Button href="/team">meet the full team</Button>
         </div>
       </section>
 

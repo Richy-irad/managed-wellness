@@ -13,10 +13,9 @@ const words = [
 
 export default function Ticker() {
   return (
-    <div className="bg-section-sage py-4 overflow-hidden">
+    <div className="ticker-wrap">
       <div
-        className="flex gap-x-8 whitespace-nowrap font-josefin-sans text-sm font-semibold tracking-wide uppercase text-sage-dark"
-        style={{ animation: "ticker 20s linear infinite", display: "inline-flex" }}
+        className="ticker-inner font-josefin-sans text-sm font-semibold tracking-wide uppercase text-sage-dark"
         aria-hidden="true"
       >
         {/* duplicated for seamless loop */}

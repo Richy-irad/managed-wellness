@@ -33,9 +33,9 @@ export default function FAQsPage() {
                 href="/contact"
                 className="text-deep-blue underline hover:text-deep-blue-dark transition-colors"
               >
-                Contact us
+                contact us
               </Link>{" "}
-              and we'll get back to you within 24 hours.
+              and we&apos;ll get back to you within 24 hours.
             </p>
           </div>
           <div className="lg:col-span-2">

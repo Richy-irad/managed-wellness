@@ -12,28 +12,30 @@ export default function SvcCard({ service, index }: SvcCardProps) {
   return (
     <Link
       href={`/services/${service.slug}`}
-      className="group flex flex-col bg-surface rounded-xl border border-cool-grey overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-250"
+      className="group relative flex flex-col justify-between rounded-2xl overflow-hidden min-h-[22.5rem] p-6 hover:-translate-y-1 transition-transform duration-250"
     >
-      <div className="flex flex-col gap-y-3 p-6 flex-1">
-        <div className="flex items-start justify-between">
-          <span className="text-sage-green">
-            <HeartIcon size={32} />
-          </span>
-          <span className="w-8 h-8 rounded-full border border-cool-grey flex items-center justify-center text-xs font-semibold text-dark shrink-0">
-            {index + 1}
-          </span>
-        </div>
-        <h3 className="text-h4 font-bold text-dark leading-snug">{service.service}</h3>
-        <p className="text-sm text-warm-grey leading-relaxed line-clamp-3">{service.description}</p>
+      <Image
+        src={`https://picsum.photos/seed/${service.slug}/400/500`}
+        alt=""
+        fill
+        className="object-cover"
+        sizes="(max-width: 768px) 100vw, 33vw"
+      />
+      <div
+        className="absolute inset-0 z-10"
+        style={{ background: "linear-gradient(to top, var(--color-overlay-photo) 0%, transparent 60%)" }}
+      />
+
+      <div className="relative z-20 flex items-center justify-between">
+        <span className="w-11 h-11 rounded-full bg-surface flex items-center justify-center text-sage-green shrink-0">
+          <HeartIcon size={20} />
+        </span>
+        <span className="text-sm text-white/70">{String(index + 1).padStart(2, "0")}</span>
       </div>
-      <div className="relative h-44 w-full shrink-0">
-        <Image
-          src={`https://picsum.photos/seed/${service.slug}/400/180`}
-          alt={service.service}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 33vw"
-        />
+
+      <div className="relative z-20 flex flex-col gap-y-1">
+        <h3 className="text-h4 font-bold text-white leading-snug">{service.service}</h3>
+        <p className="text-sm text-white/80 leading-relaxed line-clamp-2">{service.description}</p>
       </div>
     </Link>
   );

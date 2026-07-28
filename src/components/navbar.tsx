@@ -9,6 +9,7 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { CloseIcon } from "@/components/icons";
+import Button from "@/components/button";
 
 import { CustomLinkProps } from "@/lib/types";
 
@@ -41,7 +42,7 @@ const CustomLink = ({ children, href }: CustomLinkProps) => {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-muted-yellow font-josefin-sans">
+    <Disclosure as="nav" className="bg-surface font-josefin-sans border-b border-cool-grey">
       {({ open }) => (
         <>
           <div className="px-5 lg:px-0 py-6 lg:mx-40">
@@ -59,7 +60,7 @@ export default function Navbar() {
                       alt=""
                       className="rounded-sm-full"
                     />
-                    <span className="text-black capitalize">
+                    <span className="text-dark capitalize">
                       Managed Wellness Centre
                     </span>
                   </Link>
@@ -71,18 +72,17 @@ export default function Navbar() {
                       {item.name}
                     </CustomLink>
                   ))}
-                  <Link
-                    href="/contact"
-                    className="ml-4 px-5 py-2 rounded-full bg-deep-blue text-white text-sm font-bold tracking-wide hover:bg-deep-blue-dark transition-colors whitespace-nowrap"
-                  >
-                    Book a Consultation →
-                  </Link>
+                  <div className="ml-4">
+                    <Button href="/contact" variant="solid" size="sm">
+                      book a consultation
+                    </Button>
+                  </div>
                 </div>
               </div>
 
               {/* Mobile menu button — uses outer Disclosure */}
               <div className="flex md:hidden">
-                <DisclosureButton className="inline-flex items-center justify-center text-black">
+                <DisclosureButton className="inline-flex items-center justify-center text-dark">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <span aria-hidden="true">
@@ -108,12 +108,11 @@ export default function Navbar() {
                   {item.name}
                 </CustomLink>
               ))}
-              <Link
-                href="/contact"
-                className="mt-3 self-start px-5 py-2 rounded-full bg-deep-blue text-white text-sm font-bold tracking-wide hover:bg-deep-blue-dark transition-colors"
-              >
-                Book a Consultation →
-              </Link>
+              <div className="mt-3 self-start">
+                <Button href="/contact" variant="solid" size="sm">
+                  book a consultation
+                </Button>
+              </div>
             </div>
           </DisclosurePanel>
         </>

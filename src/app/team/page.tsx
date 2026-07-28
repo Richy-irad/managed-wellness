@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import team from "@/data/team.json";
 import Hero from "@/components/hero";
 import SectionLabel from "@/components/sectionLabel";
 import DarkCTA from "@/components/darkCTA";
+import TeamCard from "@/components/teamCard";
 
 export const metadata: Metadata = {
   title: "Our Team",
@@ -17,7 +17,7 @@ export default function TeamPage() {
       <Hero
         title="A team of dedicated, compassionate mental health professionals."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Our Team" }]}
-        label="Our Team"
+        label="Our team"
       />
 
       <section className="py-20 px-5 lg:px-0 bg-white">
@@ -29,42 +29,9 @@ export default function TeamPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member) => (
-              <div
-                key={member.slug}
-                className="flex flex-col sm:flex-row gap-6 bg-concrete rounded-2xl p-6"
-              >
-                <div className="relative w-full sm:w-40 h-48 sm:h-auto shrink-0 rounded-xl overflow-hidden">
-                  <Image
-                    src={member.photoUrl}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, 160px"
-                  />
-                </div>
-                <div className="flex flex-col gap-y-3">
-                  <div>
-                    <h3 className="text-h4 font-bold text-dark">{member.name}</h3>
-                    <p className="text-sm text-sage-dark font-semibold font-josefin-sans">
-                      {member.title}
-                    </p>
-                    <p className="text-xs text-warm-grey mt-0.5">{member.credentials}</p>
-                  </div>
-                  <p className="text-sm text-warm-grey leading-relaxed">{member.bio}</p>
-                  <div className="flex flex-wrap gap-2 mt-1">
-                    {member.specialisations.map((spec) => (
-                      <span
-                        key={spec}
-                        className="px-3 py-1 rounded-full bg-sage-light text-sage-dark text-xs font-semibold font-josefin-sans"
-                      >
-                        {spec}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <TeamCard key={member.slug} member={member} />
             ))}
           </div>
         </div>

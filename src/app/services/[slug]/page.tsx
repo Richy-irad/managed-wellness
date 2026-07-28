@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { CheckCircleIcon } from "@/components/icons";
 
 import { getService, getServiceParams, getAllServices } from "@/lib/services";
@@ -8,6 +7,7 @@ import { getService, getServiceParams, getAllServices } from "@/lib/services";
 import Hero from "@/components/hero";
 import SvcCard from "@/components/svcCard";
 import DarkCTA from "@/components/darkCTA";
+import Button from "@/components/button";
 
 export function generateStaticParams() {
   return getServiceParams();
@@ -50,7 +50,7 @@ export default async function ServicePage({
           { label: "Services", href: "/services" },
           { label: service.service },
         ]}
-        label="Our Services"
+        label="Our services"
       />
 
       {/* Main content */}
@@ -108,12 +108,9 @@ export default async function ServicePage({
               <p className="text-sm text-white/70">
                 Book a free 15-minute consultation to see if this service is right for you.
               </p>
-              <Link
-                href="/contact"
-                className="self-start px-6 py-3 rounded-full bg-muted-yellow text-primary font-bold text-sm tracking-widest uppercase hover:bg-accent-dark transition-colors"
-              >
-                Book Now →
-              </Link>
+              <Button href="/contact" variant="solid" onDark>
+                book now
+              </Button>
             </div>
           </div>
         </div>

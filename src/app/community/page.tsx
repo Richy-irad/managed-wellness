@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import Hero from "@/components/hero";
 import SectionLabel from "@/components/sectionLabel";
 import DarkCTA from "@/components/darkCTA";
+import Button from "@/components/button";
 
 export const metadata: Metadata = {
   title: "Community",
@@ -36,12 +36,11 @@ export default function CommunityPage() {
               Interested in being part of our founding community? Sign up to our newsletter to be
               the first to know when we launch.
             </p>
-            <Link
-              href="/contact"
-              className="self-start inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-muted-yellow text-primary font-bold text-sm tracking-widest uppercase hover:bg-accent-dark transition-colors"
-            >
-              Get notified →
-            </Link>
+            <div className="self-start">
+              <Button href="/contact" variant="solid">
+                get notified
+              </Button>
+            </div>
           </div>
 
           <div className="relative h-80 lg:h-[500px] rounded-2xl overflow-hidden">

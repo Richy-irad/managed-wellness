@@ -21,7 +21,7 @@ export default function ServicesPage() {
       <Hero
         title="Holistic mental health support for every stage of your journey."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Services" }]}
-        label="Our Services"
+        label="Our services"
       />
 
       <section className="py-20 px-5 lg:px-0 bg-white">

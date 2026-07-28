@@ -27,7 +27,7 @@ export default function HowToGetStarted() {
     <section className="bg-section-wash py-20 px-5 lg:px-0">
       <div className="lg:mx-40 flex flex-col gap-y-12">
         <div className="flex flex-col gap-y-4">
-          <SectionLabel label="How To Get Started" />
+          <SectionLabel label="How to get started" />
           <h2 className="text-h2 font-bold text-dark leading-tight max-w-lg">
             Take the first step towards supporting your mental health
           </h2>

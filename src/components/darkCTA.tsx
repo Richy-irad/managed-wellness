@@ -1,5 +1,5 @@
-import Link from "next/link";
 import SectionLabel from "@/components/sectionLabel";
+import Button from "@/components/button";
 
 type DarkCTAProps = {
   heading?: string;
@@ -21,12 +21,9 @@ export default function DarkCTA({
 
         <p className="text-body-lg text-white/60 max-w-xl">{subtext}</p>
 
-        <Link
-          href="/contact"
-          className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-muted-yellow text-primary font-bold text-sm tracking-widest uppercase hover:bg-accent-dark transition-colors shadow-accent"
-        >
-          Book Now →
-        </Link>
+        <Button href="/contact" variant="solid" onDark>
+          book now
+        </Button>
       </div>
     </section>
   );

@@ -99,7 +99,7 @@ export default async function BlogPostPage({ params }: Props) {
         <section className="py-20 px-5 lg:px-0 bg-section-wash">
           <div className="lg:mx-40 flex flex-col gap-y-10">
             <div className="flex flex-col gap-y-3">
-              <SectionLabel label="More Articles" />
+              <SectionLabel label="More articles" />
               <h2 className="text-h3 font-bold text-dark">Related reading</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

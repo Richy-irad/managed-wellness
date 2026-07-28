@@ -49,6 +49,11 @@ export type BlogPost = {
   readingTimeMinutes: number;
 };
 
+export type TeamMemberSocial = {
+  platform: "facebook" | "instagram" | "twitter" | "linkedin";
+  href: string;
+};
+
 export type TeamMember = {
   slug: string;
   name: string;
@@ -57,6 +62,7 @@ export type TeamMember = {
   specialisations: string[];
   bio: string;
   photoUrl: string;
+  socials?: TeamMemberSocial[];
 };
 
 export type Testimonial = {
