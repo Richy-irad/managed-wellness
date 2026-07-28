@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HeartIcon } from "@phosphor-icons/react/dist/ssr";
+import { HeartIcon } from "@/components/icons";
 import { ServiceType } from "@/lib/types";
 
 type SvcCardProps = {

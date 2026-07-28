@@ -1,11 +1,10 @@
 import Link from "next/link";
 import {
-  InstagramLogoIcon,
-  TwitterLogoIcon,
-  FacebookLogoIcon,
-  TiktokLogoIcon,
-  CopyrightIcon,
-} from "@phosphor-icons/react/dist/ssr";
+  InstagramIcon,
+  TwitterIcon,
+  FacebookIcon,
+  TikTokIcon,
+} from "@/components/icons";
 import NewsletterForm from "@/components/newsletterForm";
 
 const navCol1 = [
@@ -38,16 +37,16 @@ export default function Footer() {
             </p>
             <div className="flex gap-x-4 items-center text-dark">
               <Link href="https://twitter.com/ManagedWellness" className="hover:text-black" aria-label="Twitter">
-                <TwitterLogoIcon size={24} />
+                <TwitterIcon size={20} />
               </Link>
               <Link href="https://www.instagram.com/managed_wellness/" className="hover:text-black" aria-label="Instagram">
-                <InstagramLogoIcon size={24} />
+                <InstagramIcon size={20} />
               </Link>
               <Link href="https://www.facebook.com/profile.php?id=100093634478554" className="hover:text-black" aria-label="Facebook">
-                <FacebookLogoIcon size={24} />
+                <FacebookIcon size={20} />
               </Link>
               <Link href="https://www.tiktok.com/@managedwellness" className="hover:text-black" aria-label="TikTok">
-                <TiktokLogoIcon size={24} />
+                <TikTokIcon size={20} />
               </Link>
             </div>
           </div>
@@ -90,8 +89,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-cool-grey flex gap-1 items-center text-sm text-warm-grey">
-          <CopyrightIcon size={16} />
-          <span>{new Date().getFullYear()} Managed Wellness Centre. All rights reserved.</span>
+          <span>&copy; {new Date().getFullYear()} Managed Wellness Centre. All rights reserved.</span>
         </div>
       </div>
     </footer>

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import team from "@/data/team.json";
 
-import HeroPageBanner from "@/components/heroPageBanner";
+import Hero from "@/components/hero";
 import SectionLabel from "@/components/sectionLabel";
 import StatsBanner from "@/components/statsBanner";
 import JourneyAccordion from "@/components/journeyAccordion";
@@ -76,7 +76,7 @@ export default function AboutPage() {
 
   return (
     <main>
-      <HeroPageBanner
+      <Hero
         title="Empowering lives through compassionate, authentic care that honours diversity and builds trust."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}
         label="About Us"

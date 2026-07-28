@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import HeroPageBanner from "@/components/heroPageBanner";
+import Hero from "@/components/hero";
 import SectionLabel from "@/components/sectionLabel";
 import DarkCTA from "@/components/darkCTA";
 
@@ -27,7 +27,7 @@ const perks = [
 export default function CareersPage() {
   return (
     <main>
-      <HeroPageBanner
+      <Hero
         title="Build your career where it matters most."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Careers" }]}
         label="Careers"

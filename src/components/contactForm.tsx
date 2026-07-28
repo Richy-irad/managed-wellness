@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, FormEvent, JSX } from "react";
-import { CheckCircleIcon, WarningIcon } from "@phosphor-icons/react";
+import { CheckCircleIcon, WarningIcon } from "@/components/icons";
 
 import { MessageType } from "@/lib/types";
 

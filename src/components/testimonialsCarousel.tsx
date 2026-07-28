@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { CaretLeftIcon, CaretRightIcon } from "@phosphor-icons/react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@/components/icons";
 import testimonials from "@/data/testimonials.json";
 
 function StarRating({ rating }: { rating: number }) {
@@ -70,7 +70,7 @@ export default function TestimonialsCarousel() {
           aria-label="Previous testimonial"
           className="w-10 h-10 rounded-full border border-cool-grey flex items-center justify-center text-warm-grey hover:border-deep-blue hover:text-deep-blue transition-colors"
         >
-          <CaretLeftIcon size={18} />
+          <ChevronLeftIcon size={12} />
         </button>
         <div className="flex gap-x-2">
           {testimonials.map((_, i) => (
@@ -89,7 +89,7 @@ export default function TestimonialsCarousel() {
           aria-label="Next testimonial"
           className="w-10 h-10 rounded-full border border-cool-grey flex items-center justify-center text-warm-grey hover:border-deep-blue hover:text-deep-blue transition-colors"
         >
-          <CaretRightIcon size={18} />
+          <ChevronRightIcon size={12} />
         </button>
       </div>
     </div>

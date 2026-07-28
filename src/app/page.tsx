@@ -6,6 +6,7 @@ import { getMinServices } from "@/lib/services";
 import team from "@/data/team.json";
 import blog from "@/data/blog.json";
 
+import Hero from "@/components/hero";
 import SectionLabel from "@/components/sectionLabel";
 import StatsBanner from "@/components/statsBanner";
 import SvcCard from "@/components/svcCard";
@@ -50,44 +51,16 @@ export default function Home() {
 
   return (
     <main>
-      {/* Hero */}
-      <section className="bg-hero-bg py-20 lg:py-32 px-5 lg:px-0 overflow-hidden">
-        <div className="lg:mx-40 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          <div className="flex flex-col gap-y-6 lg:basis-1/2">
-            <SectionLabel label="Mental Health Centre — Nairobi" inverted />
-            <h1 className="font-bold text-white leading-tight">
-              Experience the difference of authentic, empathetic care.
-            </h1>
-            <p className="text-body-lg text-white/70 max-w-md">
-              Evidence-based counselling and therapy — in person and virtually.
-              We meet you where you are.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="px-8 py-3.5 rounded-full bg-muted-yellow text-primary font-bold text-sm tracking-widest uppercase hover:bg-accent-dark transition-colors shadow-accent"
-              >
-                Book a Consultation →
-              </Link>
-              <Link
-                href="/services"
-                className="px-8 py-3.5 rounded-full border border-white/30 text-white font-bold text-sm tracking-widest uppercase hover:border-white/60 transition-colors"
-              >
-                Browse Services
-              </Link>
-            </div>
-          </div>
-          <div className="hidden lg:block lg:basis-1/2 h-[520px] relative rounded-3xl overflow-hidden">
-            <Image
-              src={heroImage}
-              alt=""
-              fill
-              priority
-              className="object-cover object-top"
-            />
-          </div>
-        </div>
-      </section>
+      <Hero
+        label="Mental Health Centre — Nairobi"
+        title="Experience the difference of authentic, empathetic care."
+        subtext="Evidence-based counselling and therapy — in person and virtually. We meet you where you are."
+        image={heroImage}
+        ctas={[
+          { label: "Book a Consultation →", href: "/contact", variant: "primary" },
+          { label: "Browse Services", href: "/services", variant: "outline" },
+        ]}
+      />
 
       {/* Journey intro */}
       <section className="py-20 px-5 lg:px-0 bg-white">

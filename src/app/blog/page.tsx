@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import blog from "@/data/blog.json";
-import HeroPageBanner from "@/components/heroPageBanner";
+import Hero from "@/components/hero";
 import DarkCTA from "@/components/darkCTA";
 import BlogFilter from "@/components/blogFilter";
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <main>
-      <HeroPageBanner
+      <Hero
         title="Insights from our therapists and wellness experts."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Blog" }]}
         label="Our Blog"

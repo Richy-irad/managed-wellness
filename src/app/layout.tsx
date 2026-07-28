@@ -6,45 +6,39 @@ import AnnouncementBar from "@/components/announcementBar";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-const josefinSans = localFont({
+const ltMuseum = localFont({
+  src: "../../public/fonts/spirito/LTMuseumMedium.woff2",
+  weight: "500",
+  style: "normal",
+  variable: "--font-display",
+  adjustFontFallback: false,
+});
+
+const switzer = localFont({
   src: [
     {
-      path: "../../public/fonts/static/JosefinSans-Thin.ttf",
-      weight: "100",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/static/JosefinSans-ExtraLight.ttf",
-      weight: "200",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/static/JosefinSans-Light.ttf",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/static/JosefinSans-Regular.ttf",
+      path: "../../public/fonts/spirito/Switzer-Regular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/static/JosefinSans-Medium.ttf",
+      path: "../../public/fonts/spirito/Switzer-Medium.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../../public/fonts/static/JosefinSans-SemiBold.ttf",
+      path: "../../public/fonts/spirito/Switzer-Semibold.woff2",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../../public/fonts/static/JosefinSans-Bold.ttf",
+      path: "../../public/fonts/spirito/Switzer-Bold.woff2",
       weight: "700",
       style: "normal",
     },
   ],
-  variable: "--font-josefin-sans",
+  variable: "--font-body",
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
@@ -67,7 +61,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${josefinSans.variable} overflow-x-hidden`}>
+      <body className={`${ltMuseum.variable} ${switzer.variable} overflow-x-hidden`}>
         <AnnouncementBar />
         <Navbar />
         {children}

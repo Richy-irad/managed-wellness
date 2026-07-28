@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { PlusIcon, MinusIcon } from "@phosphor-icons/react";
+import { PlusIcon, MinusIcon } from "@/components/icons";
 import faqs from "@/data/faqs.json";
 
 export default function FAQAccordion() {

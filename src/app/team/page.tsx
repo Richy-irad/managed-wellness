@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import team from "@/data/team.json";
-import HeroPageBanner from "@/components/heroPageBanner";
+import Hero from "@/components/hero";
 import SectionLabel from "@/components/sectionLabel";
 import DarkCTA from "@/components/darkCTA";
 
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function TeamPage() {
   return (
     <main>
-      <HeroPageBanner
+      <Hero
         title="A team of dedicated, compassionate mental health professionals."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Our Team" }]}
         label="Our Team"

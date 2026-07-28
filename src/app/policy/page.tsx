@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import HeroPageBanner from "@/components/heroPageBanner";
+import Hero from "@/components/hero";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function PolicyPage() {
   return (
     <main>
-      <HeroPageBanner
+      <Hero
         title="Privacy Policy"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Privacy Policy" }]}
         label="Legal"

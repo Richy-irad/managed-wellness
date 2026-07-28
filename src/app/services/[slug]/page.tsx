@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { CheckCircleIcon } from "@phosphor-icons/react/dist/ssr";
+import { CheckCircleIcon } from "@/components/icons";
 
 import { getService, getServiceParams, getAllServices } from "@/lib/services";
 
-import HeroPageBanner from "@/components/heroPageBanner";
+import Hero from "@/components/hero";
 import SvcCard from "@/components/svcCard";
 import DarkCTA from "@/components/darkCTA";
 
@@ -43,7 +43,7 @@ export default async function ServicePage({
 
   return (
     <main>
-      <HeroPageBanner
+      <Hero
         title={service.service}
         breadcrumbs={[
           { label: "Home", href: "/" },
@@ -73,7 +73,6 @@ export default async function ServicePage({
                       <CheckCircleIcon
                         size={20}
                         className="text-sage-green shrink-0 mt-0.5"
-                        weight="fill"
                       />
                       <div>
                         <span className="font-bold text-dark">{benefit.title}: </span>

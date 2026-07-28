@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import pricing from "@/data/pricing.json";
-import HeroPageBanner from "@/components/heroPageBanner";
+import Hero from "@/components/hero";
 import SectionLabel from "@/components/sectionLabel";
 import DarkCTA from "@/components/darkCTA";
 
@@ -22,7 +22,7 @@ function formatKES(amount: number) {
 export default function PricingPage() {
   return (
     <main>
-      <HeroPageBanner
+      <Hero
         title="Transparent pricing — no surprises, just support."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Pricing" }]}
         label="Pricing"

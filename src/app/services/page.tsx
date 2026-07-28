@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { getAllServices } from "@/lib/services";
 
-import HeroPageBanner from "@/components/heroPageBanner";
+import Hero from "@/components/hero";
 import SvcCard from "@/components/svcCard";
 import HowToGetStarted from "@/components/howToGetStarted";
 import DarkCTA from "@/components/darkCTA";
@@ -18,7 +18,7 @@ export default function ServicesPage() {
 
   return (
     <main>
-      <HeroPageBanner
+      <Hero
         title="Holistic mental health support for every stage of your journey."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Services" }]}
         label="Our Services"

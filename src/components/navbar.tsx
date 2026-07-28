@@ -8,7 +8,7 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
-import { ListIcon, XIcon } from "@phosphor-icons/react";
+import { CloseIcon } from "@/components/icons";
 
 import { CustomLinkProps } from "@/lib/types";
 
@@ -85,9 +85,15 @@ export default function Navbar() {
                 <DisclosureButton className="inline-flex items-center justify-center text-black">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                    <span aria-hidden="true">
+                      <CloseIcon size={20} />
+                    </span>
                   ) : (
-                    <ListIcon className="block h-6 w-6" aria-hidden="true" />
+                    <span aria-hidden="true" className="flex flex-col gap-1.5">
+                      <span className="block w-5 h-0.5 bg-current" />
+                      <span className="block w-5 h-0.5 bg-current" />
+                      <span className="block w-5 h-0.5 bg-current" />
+                    </span>
                   )}
                 </DisclosureButton>
               </div>

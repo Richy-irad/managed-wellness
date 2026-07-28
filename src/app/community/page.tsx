@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import HeroPageBanner from "@/components/heroPageBanner";
+import Hero from "@/components/hero";
 import SectionLabel from "@/components/sectionLabel";
 import DarkCTA from "@/components/darkCTA";
 
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function CommunityPage() {
   return (
     <main>
-      <HeroPageBanner
+      <Hero
         title="A safe space to connect, share, and grow together."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Community" }]}
         label="Community"

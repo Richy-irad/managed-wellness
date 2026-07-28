@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import testimonials from "@/data/testimonials.json";
-import HeroPageBanner from "@/components/heroPageBanner";
+import Hero from "@/components/hero";
 import SectionLabel from "@/components/sectionLabel";
 import DarkCTA from "@/components/darkCTA";
 
@@ -34,7 +34,7 @@ function StarRating({ rating }: { rating: number }) {
 export default function TestimonialsPage() {
   return (
     <main>
-      <HeroPageBanner
+      <Hero
         title="Real stories from people who chose to invest in their wellbeing."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Testimonials" }]}
         label="Client Stories"

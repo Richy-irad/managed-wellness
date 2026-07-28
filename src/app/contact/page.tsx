@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   PhoneIcon,
-  EnvelopeSimpleIcon,
-  WhatsappLogoIcon,
+  EnvelopeIcon,
+  WhatsAppIcon,
   ClockIcon,
-} from "@phosphor-icons/react/dist/ssr";
+} from "@/components/icons";
 
-import HeroPageBanner from "@/components/heroPageBanner";
+import Hero from "@/components/hero";
 import SectionLabel from "@/components/sectionLabel";
 import ContactForm from "@/components/contactForm";
 import DarkCTA from "@/components/darkCTA";
@@ -26,13 +26,13 @@ const contactInfo = [
     href: "tel:+254722720072",
   },
   {
-    icon: EnvelopeSimpleIcon,
+    icon: EnvelopeIcon,
     label: "Email",
     lines: ["info@managedwellness.fit"],
     href: "mailto:info@managedwellness.fit",
   },
   {
-    icon: WhatsappLogoIcon,
+    icon: WhatsAppIcon,
     label: "WhatsApp",
     lines: ["+254 722 720 072"],
     href: "https://wa.me/254722720072",
@@ -42,7 +42,7 @@ const contactInfo = [
 export default function ContactPage() {
   return (
     <main>
-      <HeroPageBanner
+      <Hero
         title="Get in touch — we're here to help."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}
         label="Contact Us"

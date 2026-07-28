@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import HeroPageBanner from "@/components/heroPageBanner";
+import Hero from "@/components/hero";
 import FAQAccordion from "@/components/faqAccordion";
 import SectionLabel from "@/components/sectionLabel";
 import DarkCTA from "@/components/darkCTA";
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function FAQsPage() {
   return (
     <main>
-      <HeroPageBanner
+      <Hero
         title="Answers to your most common questions."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "FAQs" }]}
         label="FAQs"
