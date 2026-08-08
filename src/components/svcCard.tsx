@@ -34,14 +34,14 @@ export default function SvcCard({ service, index }: SvcCardProps) {
   return (
     <Link
       href={`/services/${service.slug}`}
-      className="bg-surface rounded-xl border border-cool-grey overflow-hidden flex flex-col transition duration-250 ease-smooth hover:shadow-lg hover:-translate-y-[3px]"
+      className="bg-section-wash rounded-xl overflow-hidden flex flex-col transition duration-250 ease-smooth hover:shadow-lg hover:-translate-y-[3px]"
     >
       <div className="p-6 flex flex-col gap-3 flex-1">
         <div className="flex items-start justify-between">
           <span className="text-sage-green w-8 h-8 flex items-center justify-center shrink-0">
             <Icon size={32} />
           </span>
-          <span className="w-8 h-8 rounded-full border border-warm-grey flex items-center justify-center font-josefin-sans text-xs font-semibold text-dark shrink-0">
+          <span className="w-10 h-10 rounded-full border border-warm-grey flex items-center justify-center font-josefin-sans text-base font-semibold text-dark shrink-0">
             {String(index + 1).padStart(2, "0")}
           </span>
         </div>
@@ -50,14 +50,16 @@ export default function SvcCard({ service, index }: SvcCardProps) {
         <p className="text-sm text-dark leading-relaxed line-clamp-2">{service.description}</p>
       </div>
 
-      <div className="w-full h-45 relative overflow-hidden shrink-0">
-        <Image
-          src={`https://picsum.photos/seed/${service.slug}/400/500`}
-          alt=""
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 33vw"
-        />
+      <div className="p-2 shrink-0">
+        <div className="relative aspect-square w-full rounded-xl overflow-hidden">
+          <Image
+            src={`https://picsum.photos/seed/${service.slug}/400/500`}
+            alt=""
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
+        </div>
       </div>
     </Link>
   );

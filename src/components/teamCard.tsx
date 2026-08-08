@@ -17,14 +17,16 @@ const socialIcons = {
 export default function TeamCard({ member }: TeamCardProps) {
   return (
     <div className="flex flex-col bg-concrete rounded-2xl overflow-hidden">
-      <div className="relative aspect-[4/5] w-full shrink-0">
-        <Image
-          src={member.photoUrl}
-          alt={member.name}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 33vw"
-        />
+      <div className="p-2 shrink-0">
+        <div className="relative aspect-square w-full rounded-2xl overflow-hidden">
+          <Image
+            src={member.photoUrl}
+            alt={member.name}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
+        </div>
       </div>
       <div className="flex flex-col gap-y-3 p-6">
         <div>
