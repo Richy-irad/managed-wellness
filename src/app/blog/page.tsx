@@ -19,8 +19,8 @@ export default function BlogPage() {
         label="Our blog"
       />
 
-      <section className="py-20 px-5 lg:px-0 bg-white">
-        <div className="lg:mx-40">
+      <section className="py-20 bg-white">
+        <div className="container">
           <BlogFilter posts={blog} />
         </div>
       </section>

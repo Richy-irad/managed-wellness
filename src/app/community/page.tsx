@@ -20,8 +20,8 @@ export default function CommunityPage() {
         label="Community"
       />
 
-      <section className="py-20 px-5 lg:px-0 bg-white">
-        <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="py-20 bg-white">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="flex flex-col gap-y-6">
             <SectionLabel label="Coming soon" />
             <h2 className="text-h2 font-bold text-dark leading-tight">

@@ -11,9 +11,10 @@ export default function SectionLabel({ label, inverted = false, icon }: SectionL
   return (
     <div className="inline-flex items-center gap-2.5">
       <span
-        className={`inline-flex items-center justify-center w-9 h-9 rounded-full shrink-0 ${
+        className={`inline-flex items-center justify-center w-9 h-9 rounded-full shrink-0 animate-spin ${
           inverted ? "bg-white/15 text-white" : "bg-sage-green text-primary"
         }`}
+        style={{ animationDuration: "3s" }}
       >
         {icon ?? <SparkleIcon size={18} />}
       </span>

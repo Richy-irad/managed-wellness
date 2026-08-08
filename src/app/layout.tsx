@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "@/styles/globals.css";
 
 import AnnouncementBar from "@/components/announcementBar";
-import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 const ltMuseum = localFont({
@@ -63,7 +62,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${ltMuseum.variable} ${switzer.variable} overflow-x-hidden`}>
         <AnnouncementBar />
-        <Navbar />
         {children}
         <Footer />
       </body>

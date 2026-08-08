@@ -83,8 +83,8 @@ export default function AboutPage() {
       />
 
       {/* Vision / Mission / Purpose / Motto */}
-      <section className="py-20 px-5 lg:px-0 bg-white">
-        <div className="lg:mx-40 flex flex-col gap-y-16">
+      <section className="py-20 bg-white">
+        <div className="container flex flex-col gap-y-16">
           {pillars.map((p, i) => (
             <div
               key={p.label}
@@ -105,8 +105,8 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 px-5 lg:px-0 bg-section-wash">
-        <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <section className="py-20 bg-section-wash">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="flex flex-col gap-y-6 lg:sticky lg:top-24">
             <SectionLabel label="Core values" />
             <h2 className="font-bold text-dark leading-tight">
@@ -132,8 +132,8 @@ export default function AboutPage() {
       <StatsBanner />
 
       {/* Therapeutic Journey */}
-      <section className="py-20 px-5 lg:px-0 bg-white">
-        <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <section className="py-20 bg-white">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div className="flex flex-col gap-y-6">
             <SectionLabel label="Our approach" />
             <h2 className="font-bold text-dark leading-tight">
@@ -148,8 +148,8 @@ export default function AboutPage() {
       </section>
 
       {/* Team preview */}
-      <section className="py-20 px-5 lg:px-0 bg-section-sage">
-        <div className="lg:mx-40 flex flex-col gap-y-10">
+      <section className="py-20 bg-section-sage">
+        <div className="container flex flex-col gap-y-10">
           <div className="flex flex-col gap-y-4">
             <SectionLabel label="The team" />
             <h2 className="font-bold text-dark leading-tight max-w-lg">

@@ -17,8 +17,8 @@ export default function PolicyPage() {
         label="Legal"
       />
 
-      <section className="py-20 px-5 lg:px-0 bg-white">
-        <div className="lg:mx-40 max-w-3xl flex flex-col gap-y-12">
+      <section className="py-20 bg-white">
+        <div className="container-narrow flex flex-col gap-y-12">
           <div className="flex flex-col gap-y-4">
             <h2 className="text-h3 font-bold text-dark">1. Data Collection</h2>
             <p className="text-body text-warm-grey leading-relaxed">

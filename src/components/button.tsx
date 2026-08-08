@@ -29,7 +29,9 @@ export default function Button({
   // Solid buttons on a dark (forest) surface need to invert so they don't
   // blend into the background — the chip then flips too, for contrast against the fill.
   const solidOnDark = variant === "solid" && onDark;
-  const chipColors = solidOnDark ? "bg-primary text-surface" : "bg-sage-green text-primary";
+  const chipColors = solidOnDark
+    ? "bg-primary text-surface"
+    : "bg-sage-green text-primary";
 
   const chip = (
     <span
@@ -72,7 +74,12 @@ export default function Button({
   }
 
   return (
-    <button type="button" className={classes} disabled={disabled} onClick={onClick}>
+    <button
+      type="button"
+      className={classes}
+      disabled={disabled}
+      onClick={onClick}
+    >
       {content}
     </button>
   );

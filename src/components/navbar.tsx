@@ -31,8 +31,8 @@ const CustomLink = ({ children, href }: CustomLinkProps) => {
       href={href}
       className={
         pathname === href
-          ? "font-bold border-b-3 border-sage-green mx-2 lg:mx-4"
-          : "hover:border-b-3 hover:border-sage-green font-medium mx-2 lg:mx-4"
+          ? "rounded-full px-4 py-2 text-sm font-semibold bg-white text-dark"
+          : "rounded-full px-4 py-2 text-sm font-medium bg-white/10 text-white/80 hover:bg-white/20 transition-colors"
       }
     >
       {children}
@@ -42,10 +42,10 @@ const CustomLink = ({ children, href }: CustomLinkProps) => {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-surface font-josefin-sans border-b border-cool-grey">
+    <Disclosure as="nav" className="relative font-josefin-sans border-b border-dashed border-white/25">
       {({ open }) => (
         <>
-          <div className="px-5 lg:px-0 py-6 lg:mx-40">
+          <div className="container py-6">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center justify-between w-full">
                 <div className="shrink-0">
@@ -60,7 +60,7 @@ export default function Navbar() {
                       alt=""
                       className="rounded-sm-full"
                     />
-                    <span className="text-dark capitalize">
+                    <span className="text-white capitalize">
                       Managed Wellness Centre
                     </span>
                   </Link>
@@ -73,7 +73,7 @@ export default function Navbar() {
                     </CustomLink>
                   ))}
                   <div className="ml-4">
-                    <Button href="/contact" variant="solid" size="sm">
+                    <Button href="/contact" variant="solid" size="sm" onDark>
                       book a consultation
                     </Button>
                   </div>
@@ -82,7 +82,7 @@ export default function Navbar() {
 
               {/* Mobile menu button — uses outer Disclosure */}
               <div className="flex md:hidden">
-                <DisclosureButton className="inline-flex items-center justify-center text-dark">
+                <DisclosureButton className="inline-flex items-center justify-center text-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <span aria-hidden="true">
@@ -102,14 +102,14 @@ export default function Navbar() {
 
           {/* Mobile menu panel — uses outer Disclosure */}
           <DisclosurePanel className="md:hidden">
-            <div className="space-y-1 px-5 pb-4 pt-2 flex flex-col">
+            <div className="mx-4 mt-2 mb-4 rounded-2xl bg-black/20 backdrop-blur-sm p-4 space-y-1 flex flex-col items-start">
               {navigation.map((item) => (
                 <CustomLink key={item.name} href={item.href}>
                   {item.name}
                 </CustomLink>
               ))}
               <div className="mt-3 self-start">
-                <Button href="/contact" variant="solid" size="sm">
+                <Button href="/contact" variant="solid" size="sm" onDark>
                   book a consultation
                 </Button>
               </div>

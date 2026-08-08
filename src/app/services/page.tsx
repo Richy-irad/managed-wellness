@@ -24,8 +24,8 @@ export default function ServicesPage() {
         label="Our services"
       />
 
-      <section className="py-20 px-5 lg:px-0 bg-white">
-        <div className="lg:mx-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="py-20 bg-white">
+        <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, i) => (
             <SvcCard key={service.slug} service={service} index={i} />
           ))}

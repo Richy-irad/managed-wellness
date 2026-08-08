@@ -20,8 +20,8 @@ export default function FAQsPage() {
         label="FAQs"
       />
 
-      <section className="py-20 px-5 lg:px-0 bg-white">
-        <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <section className="py-20 bg-white">
+        <div className="container grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="flex flex-col gap-y-3">
             <SectionLabel label="Common questions" />
             <h2 className="text-h3 font-bold text-dark leading-tight">

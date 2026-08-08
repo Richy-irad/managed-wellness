@@ -1,6 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HeartIcon } from "@/components/icons";
+import {
+  ArrowUpRightIcon,
+  CheckCircleIcon,
+  ClockIcon,
+  HeartIcon,
+  QuoteIcon,
+  SparkleIcon,
+  WarningIcon,
+} from "@/components/icons";
 import { ServiceType } from "@/lib/types";
 
 type SvcCardProps = {
@@ -8,34 +16,48 @@ type SvcCardProps = {
   index: number;
 };
 
+const SERVICE_ICONS: Record<string, typeof HeartIcon> = {
+  "trauma-and-psychological-debriefing": WarningIcon,
+  "psychometric-testing": CheckCircleIcon,
+  "career-counseling": ArrowUpRightIcon,
+  "capacity-building": SparkleIcon,
+  "sexual-and-gender-based-violence-counseling": HeartIcon,
+  "loss-and-grief-counseling": QuoteIcon,
+  "couples-therapy": HeartIcon,
+  "sex-therapy": HeartIcon,
+  "pre-marital-counseling": ClockIcon,
+};
+
 export default function SvcCard({ service, index }: SvcCardProps) {
+  const Icon = SERVICE_ICONS[service.slug] ?? HeartIcon;
+
   return (
     <Link
       href={`/services/${service.slug}`}
-      className="group relative flex flex-col justify-between rounded-2xl overflow-hidden min-h-[22.5rem] p-6 hover:-translate-y-1 transition-transform duration-250"
+      className="bg-surface rounded-xl border border-cool-grey overflow-hidden flex flex-col transition duration-250 ease-smooth hover:shadow-lg hover:-translate-y-[3px]"
     >
-      <Image
-        src={`https://picsum.photos/seed/${service.slug}/400/500`}
-        alt=""
-        fill
-        className="object-cover"
-        sizes="(max-width: 768px) 100vw, 33vw"
-      />
-      <div
-        className="absolute inset-0 z-10"
-        style={{ background: "linear-gradient(to top, var(--color-overlay-photo) 0%, transparent 60%)" }}
-      />
+      <div className="p-6 flex flex-col gap-3 flex-1">
+        <div className="flex items-start justify-between">
+          <span className="text-sage-green w-8 h-8 flex items-center justify-center shrink-0">
+            <Icon size={32} />
+          </span>
+          <span className="w-8 h-8 rounded-full border border-warm-grey flex items-center justify-center font-josefin-sans text-xs font-semibold text-dark shrink-0">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+        </div>
 
-      <div className="relative z-20 flex items-center justify-between">
-        <span className="w-11 h-11 rounded-full bg-surface flex items-center justify-center text-sage-green shrink-0">
-          <HeartIcon size={20} />
-        </span>
-        <span className="text-sm text-white/70">{String(index + 1).padStart(2, "0")}</span>
+        <h3 className="text-h4 leading-snug text-dark">{service.service}</h3>
+        <p className="text-sm text-dark leading-relaxed line-clamp-2">{service.description}</p>
       </div>
 
-      <div className="relative z-20 flex flex-col gap-y-1">
-        <h3 className="text-h4 font-bold text-white leading-snug">{service.service}</h3>
-        <p className="text-sm text-white/80 leading-relaxed line-clamp-2">{service.description}</p>
+      <div className="w-full h-45 relative overflow-hidden shrink-0">
+        <Image
+          src={`https://picsum.photos/seed/${service.slug}/400/500`}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
       </div>
     </Link>
   );

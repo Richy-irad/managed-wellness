@@ -11,8 +11,8 @@ export default function DarkCTA({
   subtext = "Psychotherapy is a profound experience that helps individuals make lasting life changes.",
 }: DarkCTAProps) {
   return (
-    <section className="bg-cta-bg py-20 px-5 lg:px-0">
-      <div className="lg:mx-40 flex flex-col items-center text-center gap-y-6">
+    <section className="bg-cta-bg py-20">
+      <div className="container flex flex-col items-center text-center gap-y-6">
         <SectionLabel label="Share. Understand. Heal." inverted />
 
         <h2 className="text-h2 font-bold text-white leading-tight max-w-2xl">

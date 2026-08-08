@@ -54,8 +54,8 @@ export default async function ServicePage({
       />
 
       {/* Main content */}
-      <section className="py-20 px-5 lg:px-0 bg-white">
-        <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-20">
+      <section className="py-20 bg-white">
+        <div className="container grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-20">
           {/* Left — description + benefits */}
           <div className="lg:col-span-3 flex flex-col gap-y-10">
             <div className="flex flex-col gap-y-4">
@@ -118,8 +118,8 @@ export default async function ServicePage({
 
       {/* Related services */}
       {related.length > 0 && (
-        <section className="py-20 px-5 lg:px-0 bg-section-wash">
-          <div className="lg:mx-40 flex flex-col gap-y-10">
+        <section className="py-20 bg-section-wash">
+          <div className="container flex flex-col gap-y-10">
             <h2 className="font-bold text-dark leading-tight">
               You might also be interested in
             </h2>

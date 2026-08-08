@@ -49,8 +49,8 @@ export default function ContactPage() {
       />
 
       {/* Contact info row */}
-      <section className="py-16 px-5 lg:px-0 bg-section-wash border-b border-cool-grey">
-        <div className="lg:mx-40 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="py-20 bg-section-wash border-b border-cool-grey">
+        <div className="container grid grid-cols-1 md:grid-cols-3 gap-8">
           {contactInfo.map(({ icon: Icon, label, lines, href }) => (
             <Link
               key={label}
@@ -74,8 +74,8 @@ export default function ContactPage() {
       </section>
 
       {/* Hours + map placeholder */}
-      <section className="py-16 px-5 lg:px-0 bg-white">
-        <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <section className="py-20 bg-white">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div className="flex flex-col gap-y-6">
             <SectionLabel label="Opening hours" />
             <div className="flex flex-col gap-y-3">
@@ -98,8 +98,8 @@ export default function ContactPage() {
       </section>
 
       {/* Form */}
-      <section className="py-20 px-5 lg:px-0 bg-section-wash">
-        <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <section className="py-20 bg-section-wash">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="flex flex-col gap-y-6">
             <SectionLabel label="Send a message" />
             <h2 className="font-bold text-dark leading-tight">

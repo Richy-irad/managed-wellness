@@ -1,6 +1,6 @@
 export default function AnnouncementBar() {
   return (
-    <div className="bg-deep-blue text-white text-sm font-josefin-sans">
+    <div className="text-sm font-josefin-sans">
       <p className="px-5 py-2.5 lg:px-10 text-center tracking-wide">
         Immediate availability for in-person and virtual sessions.{" "}
         <a

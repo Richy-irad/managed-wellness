@@ -20,8 +20,8 @@ export default function TestimonialsPage() {
         label="Client stories"
       />
 
-      <section className="py-20 px-5 lg:px-0 bg-white">
-        <div className="lg:mx-40 flex flex-col gap-y-12">
+      <section className="py-20 bg-white">
+        <div className="container flex flex-col gap-y-12">
           <div className="flex flex-col gap-y-3 max-w-xl">
             <SectionLabel label="What clients say" />
             <h2 className="text-h2 font-bold text-dark leading-tight">

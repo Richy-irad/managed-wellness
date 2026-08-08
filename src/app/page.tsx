@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 import { getMinServices } from "@/lib/services";
 import team from "@/data/team.json";
@@ -6,6 +7,7 @@ import blog from "@/data/blog.json";
 
 import Hero from "@/components/hero";
 import SectionLabel from "@/components/sectionLabel";
+import { SparkleIcon } from "@/components/icons";
 import StatsBanner from "@/components/statsBanner";
 import SvcCard from "@/components/svcCard";
 import BlogCard from "@/components/blogCard";
@@ -49,13 +51,31 @@ export default function Home() {
   const teamPreview = team.slice(0, 3);
   const blogPreview = blog.slice(0, 3);
 
+  const trustBadge = (
+    <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full pl-2 pr-4 py-2 w-fit">
+      <div className="flex -space-x-3">
+        {teamPreview.map((member) => (
+          <div key={member.slug} className="relative w-8 h-8 rounded-full ring-2 ring-white overflow-hidden">
+            <Image src={member.photoUrl} alt="" fill className="object-cover" sizes="32px" />
+          </div>
+        ))}
+        <span className="w-8 h-8 rounded-full ring-2 ring-white bg-sage-green text-primary flex items-center justify-center shrink-0">
+          <SparkleIcon size={14} />
+        </span>
+      </div>
+      <span className="text-sm font-semibold text-white">1000+ Trusted Patients</span>
+    </div>
+  );
+
   return (
     <main>
       <Hero
+        variant="home"
         label="Mental health centre — Nairobi"
         title="Experience the difference of authentic, empathetic care."
         subtext="Evidence-based counselling and therapy — in person and virtually. We meet you where you are."
         image={heroImage}
+        trustBadge={trustBadge}
         ctas={[
           { label: "book a consultation", href: "/contact", variant: "primary" },
           { label: "browse services", href: "/services", variant: "outline" },
@@ -63,8 +83,8 @@ export default function Home() {
       />
 
       {/* Journey intro */}
-      <section className="py-20 px-5 lg:px-0 bg-white">
-        <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <section className="py-20 bg-white">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div className="flex flex-col gap-y-6">
             <SectionLabel label="Your therapeutic journey" />
             <h2 className="font-bold text-dark leading-tight">
@@ -84,8 +104,8 @@ export default function Home() {
       <StatsBanner />
 
       {/* Services grid */}
-      <section className="py-20 px-5 lg:px-0 bg-section-wash">
-        <div className="lg:mx-40 flex flex-col gap-y-10">
+      <section className="py-20">
+        <div className="container flex flex-col gap-y-10">
           <div className="flex flex-col gap-y-4">
             <SectionLabel label="Our services" />
             <h2 className="font-bold text-dark leading-tight max-w-lg">
@@ -106,8 +126,8 @@ export default function Home() {
       </section>
 
       {/* Team preview */}
-      <section className="py-20 px-5 lg:px-0 bg-white">
-        <div className="lg:mx-40 flex flex-col gap-y-10">
+      <section className="py-20 bg-section-wash">
+        <div className="container flex flex-col gap-y-10">
           <div className="flex flex-col gap-y-4">
             <SectionLabel label="Our team" />
             <h2 className="font-bold text-dark leading-tight max-w-lg">
@@ -127,8 +147,8 @@ export default function Home() {
       <Ticker />
 
       {/* Differentiators */}
-      <section className="py-20 px-5 lg:px-0 bg-section-sage">
-        <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="py-20 bg-section-sage">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col gap-y-6">
             <SectionLabel label="Why choose us" />
             <h2 className="font-bold text-dark leading-tight">
@@ -155,8 +175,8 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-5 lg:px-0 bg-white">
-        <div className="lg:mx-40 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <section className="py-20 bg-white">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="flex flex-col gap-y-6">
             <SectionLabel label="What clients say" />
             <h2 className="font-bold text-dark leading-tight max-w-lg">
@@ -172,8 +192,8 @@ export default function Home() {
       </section>
 
       {/* Blog preview */}
-      <section className="py-20 px-5 lg:px-0 bg-section-wash">
-        <div className="lg:mx-40 flex flex-col gap-y-10">
+      <section className="py-20 bg-section-wash">
+        <div className="container flex flex-col gap-y-10">
           <div className="flex flex-col gap-y-4">
             <SectionLabel label="From the blog" />
             <h2 className="font-bold text-dark leading-tight max-w-lg">

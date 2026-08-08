@@ -25,8 +25,8 @@ const navCol2 = [
 
 export default function Footer() {
   return (
-    <footer className="px-5 lg:px-0 pb-8 lg:pb-12">
-      <div className="lg:mx-40 bg-cta-bg rounded-3xl px-6 py-12 lg:px-16 lg:py-16 font-josefin-sans">
+    <footer className="pb-8 lg:pb-12">
+      <div className="container bg-cta-bg rounded-3xl px-6 py-12 lg:px-16 lg:py-16 font-josefin-sans">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
           {/* Col 1 — Brand + Socials */}
