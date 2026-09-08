@@ -1,4 +1,4 @@
-import { QuoteIcon } from "@/components/icons";
+import { Quote } from "lucide-react";
 
 type TestimonialCardProps = {
   testimonial: {
@@ -22,7 +22,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
     <div className="flex flex-col gap-y-5 bg-surface border border-cool-grey rounded-2xl p-8 h-full">
       <span className="text-sage-green">
-        <QuoteIcon size={32} />
+        <Quote size={32} />
       </span>
       <blockquote className="text-body-lg text-dark leading-relaxed flex-1">
         &ldquo;{testimonial.quote}&rdquo;

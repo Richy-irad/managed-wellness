@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { CheckCircleIcon } from "@/components/icons";
+import { CircleCheck } from "lucide-react";
 
 import { getService, getServiceParams, getAllServices } from "@/lib/services";
 
@@ -70,7 +70,7 @@ export default async function ServicePage({
                 <div className="flex flex-col gap-y-4">
                   {service.benefits.map((benefit) => (
                     <div key={benefit.title} className="flex gap-x-3 items-start">
-                      <CheckCircleIcon
+                      <CircleCheck
                         size={20}
                         className="text-sage-green shrink-0 mt-0.5"
                       />

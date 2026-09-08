@@ -48,13 +48,18 @@ export default function Counter({ value, label }: CounterProps) {
   const formatted = hasCommas ? n.toLocaleString() : String(n);
 
   return (
-    <div ref={ref} className="flex flex-col items-center text-center gap-y-1">
-      <span className="text-h2 font-bold text-muted-yellow leading-none">
+    <div
+      ref={ref}
+      className="flex flex-col items-center justify-between text-center aspect-square rounded-2xl bg-white/10 backdrop-blur-sm p-5"
+    >
+      <span className="text-7xl font-bold text-muted-yellow leading-none">
         {prefix}
         {formatted}
         {suffix}
       </span>
-      <span className="text-sm text-white/70 font-josefin-sans uppercase tracking-widest">{label}</span>
+      <span className="w-full text-sm text-white/70 font-josefin-sans capitalize tracking-widest border-t border-dotted border-white/30 pt-3">
+        {label}
+      </span>
     </div>
   );
 }

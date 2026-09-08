@@ -8,7 +8,7 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
-import { CloseIcon } from "@/components/icons";
+import { X } from "lucide-react";
 import Button from "@/components/button";
 
 import { CustomLinkProps } from "@/lib/types";
@@ -32,7 +32,7 @@ const CustomLink = ({ children, href }: CustomLinkProps) => {
       className={
         pathname === href
           ? "rounded-full px-4 py-2 text-sm font-semibold bg-white text-dark"
-          : "rounded-full px-4 py-2 text-sm font-medium bg-white/10 text-white/80 hover:bg-white/20 transition-colors"
+          : "rounded-full px-4 py-2 text-sm font-medium bg-white/10 text-white/80 hover:bg-white hover:text-dark transition-colors"
       }
     >
       {children}
@@ -86,7 +86,7 @@ export default function Navbar() {
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <span aria-hidden="true">
-                      <CloseIcon size={20} />
+                      <X size={20} />
                     </span>
                   ) : (
                     <span aria-hidden="true" className="flex flex-col gap-1.5">

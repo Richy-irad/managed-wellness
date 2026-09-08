@@ -7,9 +7,14 @@ type StepPhotoCardProps = {
   imageUrl: string;
 };
 
-export default function StepPhotoCard({ step, title, description, imageUrl }: StepPhotoCardProps) {
+export default function StepPhotoCard({
+  step,
+  title,
+  description,
+  imageUrl,
+}: StepPhotoCardProps) {
   return (
-    <div className="relative rounded-3xl overflow-hidden min-h-96 flex flex-col justify-between p-5">
+    <div className="relative rounded-3xl overflow-hidden aspect-[3/4] flex flex-col justify-between p-5">
       <Image
         src={imageUrl}
         alt={title}
@@ -22,7 +27,7 @@ export default function StepPhotoCard({ step, title, description, imageUrl }: St
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to top, oklch(0.72 0.22 140) 0%, oklch(0.72 0.22 140 / 0.85) 35%, transparent 65%)",
+            "linear-gradient(to top, oklch(0.72 0.22 140) 0%, oklch(0.72 0.22 140 / 0.85) 5%, transparent 40%)",
         }}
       />
       {/* step badge */}

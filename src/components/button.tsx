@@ -1,6 +1,6 @@
 import { ReactNode, MouseEventHandler } from "react";
 import Link from "next/link";
-import { ArrowUpRightIcon } from "@/components/icons";
+import { ArrowUpRight } from "lucide-react";
 
 type ButtonProps = {
   children?: ReactNode;
@@ -35,15 +35,15 @@ export default function Button({
 
   const chip = (
     <span
-      className={`inline-flex items-center justify-center ${chipSize} rounded-full ${chipColors} shrink-0 transition-transform duration-250 group-hover:rotate-45`}
+      className={`inline-flex items-center justify-center ${chipSize} rounded-full ${chipColors} shrink-0 transition-transform duration-250 group-hover:rotate-45 group-hover:bg-accent group-hover:text-primary`}
     >
-      {icon ?? <ArrowUpRightIcon size={iconSize} />}
+      {icon ?? <ArrowUpRight size={iconSize} />}
     </span>
   );
 
-  const solidPadding = size === "sm" ? "py-2.5 pl-5 pr-2" : "py-4 pl-6 pr-2";
+  const solidPadding = size === "sm" ? "py-2.5 pl-5 pr-2" : "py-2 pl-6 pr-2";
   const solidColors = solidOnDark
-    ? "bg-sage-green text-primary hover:bg-sage-dark"
+    ? "bg-white text-primary hover:bg-sage-green hover:text-sage-dark"
     : "bg-primary text-surface hover:bg-dark";
 
   const baseClasses =
@@ -56,7 +56,7 @@ export default function Button({
         } ${onDark ? "text-white" : "text-dark"} transition-[gap] duration-250 hover:gap-4`;
 
   const disabledClasses = disabled ? "opacity-45 pointer-events-none" : "";
-  const classes = `${baseClasses} ${disabledClasses}`;
+  const classes = `${baseClasses} ${disabledClasses} self-start capitalize`;
 
   const content = (
     <>

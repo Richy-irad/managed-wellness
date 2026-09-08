@@ -1,26 +1,30 @@
 import { ReactNode } from "react";
-import { SparkleIcon } from "@/components/icons";
+import { Sparkle } from "lucide-react";
 
 type SectionLabelProps = {
   label: string;
-  inverted?: boolean;
+  variant?: "default" | "inverted" | "surface";
   icon?: ReactNode;
 };
 
-export default function SectionLabel({ label, inverted = false, icon }: SectionLabelProps) {
+const textColor: Record<NonNullable<SectionLabelProps["variant"]>, string> = {
+  default: "text-dark",
+  inverted: "text-white",
+  surface: "text-surface",
+};
+
+export default function SectionLabel({ label, variant = "default", icon }: SectionLabelProps) {
   return (
     <div className="inline-flex items-center gap-2.5">
       <span
         className={`inline-flex items-center justify-center w-9 h-9 rounded-full shrink-0 animate-spin ${
-          inverted ? "bg-white/15 text-white" : "bg-sage-green text-primary"
+          variant === "default" ? "bg-sage-green text-primary" : "bg-white/15 text-white"
         }`}
         style={{ animationDuration: "3s" }}
       >
-        {icon ?? <SparkleIcon size={18} />}
+        {icon ?? <Sparkle size={18} />}
       </span>
-      <span
-        className={`font-josefin-sans font-semibold text-sm ${inverted ? "text-white" : "text-dark"}`}
-      >
+      <span className={`font-josefin-sans font-semibold text-base ${textColor[variant]}`}>
         {label}
       </span>
     </div>

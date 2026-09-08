@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  PhoneIcon,
-  EnvelopeIcon,
-  WhatsAppIcon,
-  ClockIcon,
-} from "@/components/icons";
+import { Clock, Mail, Phone } from "lucide-react";
+import { WhatsAppIcon } from "@/components/icons";
 
 import Hero from "@/components/hero";
 import SectionLabel from "@/components/sectionLabel";
@@ -20,13 +16,13 @@ export const metadata: Metadata = {
 
 const contactInfo = [
   {
-    icon: PhoneIcon,
+    icon: Phone,
     label: "Phone",
     lines: ["+254 722 720 072", "+254 780 838 333"],
     href: "tel:+254722720072",
   },
   {
-    icon: EnvelopeIcon,
+    icon: Mail,
     label: "Email",
     lines: ["info@managedwellness.fit"],
     href: "mailto:info@managedwellness.fit",
@@ -80,7 +76,7 @@ export default function ContactPage() {
             <SectionLabel label="Opening hours" />
             <div className="flex flex-col gap-y-3">
               <div className="flex items-center gap-x-2 text-warm-grey">
-                <ClockIcon size={18} />
+                <Clock size={18} />
                 <span className="text-sm font-semibold uppercase tracking-widest">
                   Hours to be confirmed
                 </span>

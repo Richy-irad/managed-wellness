@@ -1,72 +1,12 @@
+// Brand/social marks — lucide ships no logo icons by design, so these stay
+// hand-drawn. Everything else previously here has a direct lucide-react
+// equivalent and is imported straight from "lucide-react" at each call site
+// instead of being re-exported through this file.
+
 type IconProps = {
   size?: number;
   className?: string;
 };
-
-export function HeartIcon({ size = 20, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 20 17" fill="currentColor" className={className}>
-      <path
-        fillRule="evenodd"
-        d="M4.545.032C2.776.236 1.35 1.261.581 2.881a6.042 6.042 0 0 0-.4 4.042c.479 1.891 1.811 3.56 4.969 6.228.427.361 3.53 2.919 4.171 3.44.346.281.568.307.858.1.374-.268 4.645-3.812 5.354-4.444.65-.579 1.569-1.481 1.965-1.93 1.146-1.299 1.757-2.409 2.026-3.682.08-.376.089-.49.091-1.135.002-.772-.032-1.046-.204-1.667-.415-1.5-1.338-2.662-2.628-3.308-1.367-.686-3.12-.692-4.466-.017-.876.439-1.724 1.241-2.298 2.172l-.198.321-.067-.109C8.788 1.312 7.581.387 6.11.099 5.707.021 4.931-.013 4.545.032m1.356 1.25c1.022.198 1.91.849 2.633 1.931.207.31.523.937.647 1.284.113.318.167.405.305.5.239.164.633.11.792-.108.042-.058.126-.241.187-.406.508-1.376 1.465-2.499 2.527-2.965.862-.378 2.006-.411 2.9-.083 1.26.463 2.179 1.638 2.462 3.148.083.445.084 1.338.001 1.759-.35 1.778-1.628 3.371-4.905 6.111-1.934 1.617-3.632 2.987-3.671 2.959-.07-.049-2.385-1.955-3.296-2.713C3.445 10.17 2.155 8.75 1.556 7.275c-.502-1.236-.453-2.749.127-3.916.221-.445.435-.746.767-1.08a3.568 3.568 0 0 1 2.133-1.043c.336-.04.992-.017 1.318.046"
-      />
-    </svg>
-  );
-}
-
-export function CloseIcon({ size = 20, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 320 512" fill="currentColor" className={className}>
-      <path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" />
-    </svg>
-  );
-}
-
-export function PlusIcon({ size = 20, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 6 6" fill="currentColor" className={className}>
-      <path d="M1.84 5.456V0h1.904v5.456H1.84zM0 3.648v-1.84h5.584v1.84H0z" />
-    </svg>
-  );
-}
-
-export function MinusIcon({ size = 20, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 6 6" fill="currentColor" className={className}>
-      <path d="M0 3.648v-1.84h5.584v1.84H0z" />
-    </svg>
-  );
-}
-
-export function CheckCircleIcon({ size = 20, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 512 512" fill="currentColor" className={className}>
-      <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z" />
-    </svg>
-  );
-}
-
-export function ChevronLeftIcon({ size = 20, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 7 12" fill="currentColor" className={className}>
-      <path
-        fillRule="evenodd"
-        d="M5.594.017a.66.66 0 0 0-.247.104C5.258.18.648 4.311.512 4.454a1.99 1.99 0 0 0-.282.388 2.259 2.259 0 0 0-.209.618c-.022.127-.019.481.006.613.071.382.239.719.489.984.074.078 4.636 4.176 4.777 4.29a.747.747 0 0 0 1.203-.551.712.712 0 0 0-.176-.526c-.034-.036-1.1-.997-2.369-2.136a365.965 365.965 0 0 1-2.345-2.111.362.362 0 0 1-.101-.275c0-.096.032-.185.091-.253.024-.028 1.079-.98 2.344-2.115a522.494 522.494 0 0 0 2.357-2.119.66.66 0 0 0 .195-.52c-.001-.138-.004-.16-.034-.239a.758.758 0 0 0-.864-.485"
-      />
-    </svg>
-  );
-}
-
-export function ChevronRightIcon({ size = 20, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 7 12" fill="currentColor" className={className}>
-      <path
-        fillRule="evenodd"
-        d="M.598.017A.758.758 0 0 0 .08.412a.75.75 0 0 0 .104.826c.037.04 1.099.998 2.36 2.128a439.274 439.274 0 0 1 2.341 2.107c.084.088.102.138.102.279 0 .107-.003.129-.028.179a.59.59 0 0 1-.076.106c-.026.027-1.084.978-2.351 2.114a278.509 278.509 0 0 0-2.36 2.127.753.753 0 0 0 .336 1.186.55.55 0 0 0 .239.033.63.63 0 0 0 .382-.095c.111-.068 4.809-4.284 4.916-4.413.211-.252.348-.535.421-.867a1.46 1.46 0 0 0 .026-.37 1.542 1.542 0 0 0-.026-.368 1.975 1.975 0 0 0-.454-.906A529.813 529.813 0 0 0 1.19.144a.924.924 0 0 0-.239-.12A1.062 1.062 0 0 0 .598.017"
-      />
-    </svg>
-  );
-}
 
 export function FacebookIcon({ size = 20, className }: IconProps) {
   return (
@@ -92,41 +32,6 @@ export function TwitterIcon({ size = 20, className }: IconProps) {
   );
 }
 
-export function PhoneIcon({ size = 20, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 25 25" fill="currentColor" className={className}>
-      <path d="M12.75 1c2.094.031 3.984.547 5.672 1.547 1.687 1 3.031 2.344 4.031 4.031 1 1.688 1.516 3.578 1.547 5.672-.031.469-.281.719-.75.75-.469-.031-.719-.281-.75-.75-.063-2.75-1.016-5.047-2.86-6.89-1.843-1.844-4.14-2.798-6.89-2.86-.469-.031-.719-.281-.75-.75.031-.469.281-.719.75-.75zm.75 9c.438 0 .797.14 1.078.422.281.281.422.64.422 1.078 0 .438-.14.797-.422 1.078-.281.281-.64.422-1.078.422-.438 0-.797-.14-1.078-.422-.281-.281-.422-.64-.422-1.078 0-.438.14-.797.422-1.078.281-.281.64-.422 1.078-.422zM12 6.25c.031-.469.281-.719.75-.75 1.906.063 3.5.719 4.781 1.969 1.25 1.281 1.907 2.875 1.969 4.781-.031.469-.281.719-.75.75-.469-.031-.719-.281-.75-.75-.031-1.5-.547-2.734-1.547-3.703-.969-1-2.203-1.516-3.703-1.547-.469-.031-.719-.281-.75-.75zm3.422 8.203c.625-.687 1.36-.875 2.203-.562l5.25 2.25c.406.187.719.484.938.89.187.375.234.782.14 1.219l-1.125 5.25c-.25.938-.86 1.438-1.828 1.5h-.844a4.64 4.64 0 0 0-.656-.047c-3.688-.312-6.984-1.422-9.89-3.328a21.016 21.016 0 0 1-6.985-7.453C.906 11.14.031 7.75 0 4c.063-.969.563-1.578 1.5-1.828l5.25-1.125a1.804 1.804 0 0 1 1.219.14c.406.22.703.532.89.938l2.25 5.25c.313.844.125 1.578-.562 2.203l-1.875 1.547a14.322 14.322 0 0 0 5.203 5.203l1.547-1.875zM21 23.5c.188 0 .313-.094.375-.281l1.125-5.25c.031-.188-.047-.328-.234-.422l-5.25-2.25c-.157-.063-.297-.031-.422.094l-1.547 1.921c-.563.563-1.203.672-1.922.329a15.469 15.469 0 0 1-5.766-5.766c-.343-.719-.234-1.344.329-1.875l1.921-1.594c.125-.125.157-.265.094-.422l-2.25-5.25c-.062-.187-.203-.265-.422-.234l-5.25 1.125c-.187.063-.281.188-.281.375.031 3.625.922 6.906 2.672 9.844a19.192 19.192 0 0 0 6.984 6.984c2.938 1.75 6.219 2.64 9.844 2.672z" />
-    </svg>
-  );
-}
-
-export function EnvelopeIcon({ size = 20, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 32 32" fill="currentColor" className={className}>
-      <path d="M29 4H3C1.344 4 0 5.344 0 7v18c0 1.656 1.344 3 3 3h26c1.656 0 3-1.344 3-3V7c0-1.656-1.344-3-3-3zM3 6h26c.55 0 1 .45 1 1v2.588c-1.369 1.156-3.325 2.75-9.413 7.581-1.056.837-3.137 2.856-4.588 2.831-1.45.025-3.537-1.994-4.588-2.831-6.088-4.831-8.044-6.425-9.412-7.581V7c0-.55.45-1 1-1zm26 20H3c-.55 0-1-.45-1-1V12.187c1.425 1.169 3.675 2.975 8.169 6.544C11.45 19.756 13.713 22.012 16 22c2.275.019 4.519-2.219 5.831-3.269 4.494-3.569 6.744-5.375 8.169-6.544V25c0 .55-.45 1-1 1z" />
-    </svg>
-  );
-}
-
-export function ArrowUpRightIcon({ size = 20, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 15 13" fill="currentColor" className={className}>
-      <path
-        fillRule="evenodd"
-        d="M8.363.017a.732.732 0 0 0-.154.086.496.496 0 0 0-.171.592c.028.065.805.859 2.644 2.699L13.287 6l-6.475.006-6.474.007-.117.08a.496.496 0 0 0 .021.835l.096.06 6.474.006L13.287 7l-2.605 2.606c-1.839 1.84-2.616 2.634-2.644 2.699-.16.388.197.78.612.671.104-.027.354-.271 3.17-3.084 1.682-1.68 3.079-3.09 3.106-3.133a.562.562 0 0 0 .05-.409c-.027-.104-.27-.353-3.059-3.146C10.251 1.536 8.839.137 8.78.096a.578.578 0 0 0-.417-.079"
-      />
-    </svg>
-  );
-}
-
-export function QuoteIcon({ size = 20, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 26 24" fill="currentColor" className={className}>
-      <path d="M6.801 0a2 2 0 0 1 1.95 2.445l-1.788 7.84a1.946 1.946 0 0 0 1.897 2.379c1.075 0 1.947.871 1.947 1.946V22a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-6.44a2 2 0 0 1 .057-.475l3.315-13.56A2 2 0 0 1 5.315 0H6.8zm15.193 0a2 2 0 0 1 1.95 2.445l-1.788 7.84a1.946 1.946 0 0 0 1.898 2.379c1.075 0 1.946.871 1.946 1.946V22a2 2 0 0 1-2 2h-6.807a2 2 0 0 1-2-2v-6.44a2 2 0 0 1 .058-.475l3.315-13.56A2 2 0 0 1 20.508 0h1.486z" />
-    </svg>
-  );
-}
-
 export function LinkedInIcon({ size = 20, className }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 13 13" fill="currentColor" className={className}>
@@ -134,19 +39,6 @@ export function LinkedInIcon({ size = 20, className }: IconProps) {
     </svg>
   );
 }
-
-// Sparkle — no direct Spirito-source equivalent for the IconBox eyebrow glyph;
-// hand-drawn to match the curated set's thin single-color style.
-export function SparkleIcon({ size = 20, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 20 20" fill="currentColor" className={className}>
-      <path d="M10 2l1.8 5.2L17 9l-5.2 1.8L10 16l-1.8-5.2L3 9l5.2-1.8L10 2z" />
-    </svg>
-  );
-}
-
-// Not part of the Spirito curated icon set (no TikTok/WhatsApp/clock/warning
-// glyphs shipped) — hand-drawn to match its thin-stroke, single-color style.
 
 export function TikTokIcon({ size = 20, className }: IconProps) {
   return (
@@ -162,25 +54,6 @@ export function WhatsAppIcon({ size = 20, className }: IconProps) {
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
       <path d="M4 20l1.3-3.9A7.9 7.9 0 1 1 8.6 19L4 20z" />
       <path d="M8.5 8.7c0 3 2.3 6 5.7 6 .8 0 1.3-.8.9-1.5l-.6-1a.8.8 0 0 0-.9-.3l-.9.3a5.6 5.6 0 0 1-2.8-2.8l.3-.9a.8.8 0 0 0-.3-.9l-1-.6c-.7-.4-1.5.1-1.5.9z" />
-    </svg>
-  );
-}
-
-export function ClockIcon({ size = 20, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M12 7v5l3.5 2" />
-    </svg>
-  );
-}
-
-export function WarningIcon({ size = 20, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d="M12 3.5l9.5 16.5H2.5L12 3.5z" />
-      <path d="M12 10v4" />
-      <circle cx="12" cy="17" r="0.75" fill="currentColor" stroke="none" />
     </svg>
   );
 }

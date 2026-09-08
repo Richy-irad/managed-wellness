@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 
 import team from "@/data/team.json";
 
@@ -9,6 +8,7 @@ import StatsBanner from "@/components/statsBanner";
 import JourneyAccordion from "@/components/journeyAccordion";
 import DarkCTA from "@/components/darkCTA";
 import Button from "@/components/button";
+import TeamCard from "@/components/teamCard";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -94,10 +94,14 @@ export default function AboutPage() {
                 <span className="text-xs font-bold tracking-widest uppercase text-warm-grey">
                   {p.sub}
                 </span>
-                <h2 className="font-bold text-dark leading-tight">{p.heading}</h2>
+                <h2 className="font-bold text-dark leading-tight">
+                  {p.heading}
+                </h2>
               </div>
               <div className="lg:basis-7/12 px-8 py-8 bg-sage-green/20 rounded-2xl">
-                <p className="text-body-lg text-dark leading-relaxed">{p.body}</p>
+                <p className="text-body-lg text-dark leading-relaxed">
+                  {p.body}
+                </p>
               </div>
             </div>
           ))}
@@ -105,7 +109,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-section-wash">
+      <section className="py-20 bg-section-wash/30">
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="flex flex-col gap-y-6 lg:sticky lg:top-24">
             <SectionLabel label="Core values" />
@@ -113,15 +117,21 @@ export default function AboutPage() {
               The principles that guide every session
             </h2>
             <p className="text-body text-warm-grey leading-relaxed">
-              Our values aren&apos;t statements on a wall — they shape every interaction, every session, and every decision we make as a practice.
+              Our values aren&apos;t statements on a wall — they shape every
+              interaction, every session, and every decision we make as a
+              practice.
             </p>
           </div>
           <div className="flex flex-col divide-y divide-cool-grey">
             {coreValues.map((v) => (
               <div key={v.title} className="flex flex-col gap-y-3 py-8">
                 <h3 className="font-bold text-dark">{v.title}</h3>
-                <p className="text-sm font-semibold text-warm-grey">{v.subtitle}</p>
-                <p className="text-body text-warm-grey leading-relaxed">{v.body}</p>
+                <p className="text-sm font-semibold text-warm-grey">
+                  {v.subtitle}
+                </p>
+                <p className="text-body text-warm-grey leading-relaxed">
+                  {v.body}
+                </p>
               </div>
             ))}
           </div>
@@ -140,7 +150,8 @@ export default function AboutPage() {
               A structured, collaborative therapeutic process
             </h2>
             <p className="text-body text-warm-grey leading-relaxed">
-              We believe lasting change comes from a clear, trusting process. Here&apos;s what your journey with us looks like.
+              We believe lasting change comes from a clear, trusting process.
+              Here&apos;s what your journey with us looks like.
             </p>
           </div>
           <JourneyAccordion />
@@ -158,32 +169,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamPreview.map((member) => (
-              <div key={member.slug} className="flex flex-col gap-y-4">
-                <div className="relative h-72 rounded-xl overflow-hidden">
-                  <Image
-                    src={member.photoUrl}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-                <div className="flex flex-col gap-y-1">
-                  <p className="font-bold text-dark">{member.name}</p>
-                  <p className="text-sm text-warm-grey">{member.title}</p>
-                  <p className="text-xs text-warm-grey/80">{member.credentials}</p>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {member.specialisations.slice(0, 2).map((s) => (
-                    <span
-                      key={s}
-                      className="px-3 py-1 rounded-full bg-white text-xs font-semibold text-sage-dark border border-cool-grey"
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              <TeamCard key={member.slug} member={member} />
             ))}
           </div>
           <Button href="/team">meet the full team</Button>

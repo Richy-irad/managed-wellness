@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { PlusIcon } from "@/components/icons";
+import { Plus } from "lucide-react";
 import faqs from "@/data/faqs.json";
 
 export default function FAQAccordion() {
@@ -24,7 +24,7 @@ export default function FAQAccordion() {
                   isOpen ? "rotate-45" : ""
                 }`}
               >
-                <PlusIcon size={20} />
+                <Plus size={20} />
               </span>
             </button>
             {isOpen && (

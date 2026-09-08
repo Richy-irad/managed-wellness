@@ -11,94 +11,94 @@
      COLORS
   ---------------------------------------------------------- */
 
-  /* Spirito base palette — see tokens/colors.css in the Spirito Design System */
-  --sage-100: #EAF3E7;
-  --sage-300: #B7E6A9;
-  --sage-500: #90D77D;
-  --mint-500: #96FE81;
-  --forest-900: #355244;
-  --forest-700: #3F6353;
-  --stone-600: #899790;
-  --stone-300: #CDD2CF;
-  --stone-100: #F3F5F3;
-  --sun-400: #EED869;
-  --sky-100: #DFECF0;
+  /* Spirito base palette — see tokens/colors.css in the Spirito Design System.
+     Namespaced under --color-* so Tailwind generates real utilities for them
+     (bg-sage-100, text-forest-900, fill-mint-500, etc) — every alias below
+     just points back at one of these, so each literal value lives here once. */
+  --color-sage-100: oklch(95.41% 0.0185 137.80);
+  --color-sage-300: oklch(87.65% 0.0954 138.59);
+  --color-sage-500: oklch(81.08% 0.1409 139.23);
+  --color-mint-500: oklch(90.61% 0.1892 140.33);
+  --color-forest-900: oklch(41.10% 0.0421 162.91);
+  --color-forest-700: oklch(46.72% 0.0492 164.73);
+  --color-stone-600: oklch(66.30% 0.0190 164.37);
+  --color-stone-300: oklch(85.90% 0.0068 160.05);
+  --color-stone-100: oklch(96.81% 0.0034 145.55);
+  --color-sun-400: oklch(87.87% 0.1333 98.27);
+  --color-sky-100: oklch(93.45% 0.0149 218.05);
 
   /* Core Neutrals */
-  --color-primary: #355244;
-  /* forest-900 — near-black text/headings */
-  --color-dark: #355244;
-  /* forest-900 — headings on light bg */
-  --color-warm-grey: #899790;
-  /* stone-600 — body/secondary text */
-  --color-cool-grey: #CDD2CF;
-  /* stone-300 — borders, dividers */
-  --color-light: #CDD2CF;
-  /* stone-300 — disabled states, placeholder */
-  --color-concrete: #F3F5F3;
-  /* stone-100 — near-white background */
-  --color-surface: #FFFFFF;
+  --color-primary: var(--color-forest-900);
+  /* near-black text/headings */
+  --color-dark: var(--color-forest-900);
+  /* headings on light bg */
+  --color-warm-grey: var(--color-stone-600);
+  /* body/secondary text */
+  --color-cool-grey: var(--color-stone-300);
+  /* borders, dividers */
+  --color-light: var(--color-stone-300);
+  /* disabled states, placeholder */
+  --color-concrete: var(--color-stone-100);
+  /* near-white background */
+  --color-surface: oklch(100% 0 0);
   /* paper-0 — pure white, cards, modals */
 
   /* Brand — Forest (hero, nav, dark sections; replaces "deep blue") */
-  --color-deep-blue: #355244;
-  /* forest-900 */
-  --color-deep-blue-dark: #355244;
-  /* forest-900 */
-  --color-deep-blue-mid: #3F6353;
-  /* forest-700 — mid tone for overlays */
+  --color-deep-blue: var(--color-forest-900);
+  --color-deep-blue-dark: var(--color-forest-900);
+  --color-deep-blue-mid: var(--color-forest-700);
+  /* mid tone for overlays */
 
   /* Brand — Sky Wash (light section backgrounds; replaces "light blue") */
-  --color-light-blue: #DFECF0;
-  /* sky-100 */
-  --color-blue-wash: #EAF3E7;
-  /* sage-100 — very light section tint */
+  --color-light-blue: var(--color-sky-100);
+  --color-blue-wash: var(--color-sage-100);
+  /* very light section tint */
 
   /* Brand — Sage Green (icons, tags, accents) */
-  --color-sage-green: #90D77D;
-  /* sage-500 */
-  --color-sage-light: #EAF3E7;
-  /* sage-100 — sage tint for backgrounds */
-  --color-sage-dark: #3F6353;
-  /* forest-700 — deeper sage for hover */
+  --color-sage-green: var(--color-sage-500);
+  --color-sage-light: var(--color-sage-100);
+  /* sage tint for backgrounds */
+  --color-sage-dark: var(--color-forest-700);
+  /* deeper sage for hover */
+  --color-mint: var(--color-mint-500);
+  /* Spirito two-tone service-icon accent */
 
   /* Accent — Sun Yellow (CTA buttons, highlights, used sparingly) */
-  --color-muted-yellow: #EED869;
-  /* sun-400 — primary CTA */
-  --color-dull-yellow: #EAF3E7;
-  /* sage-100 — light accent surface */
-  --color-accent: #EED869;
+  --color-muted-yellow: var(--color-sun-400);
+  /* primary CTA */
+  --color-dull-yellow: var(--color-sage-100);
+  /* light accent surface */
+  --color-accent: var(--color-sun-400);
   /* alias for CTA colour */
-  --color-accent-light: #EAF3E7;
+  --color-accent-light: var(--color-sage-100);
   /* alias for light accent */
-  --color-accent-dark: #3F6353;
-  /* forest-700 — hover / pressed state */
+  --color-accent-dark: var(--color-forest-700);
+  /* hover / pressed state */
 
   /* Semantic Aliases */
-  --color-hero-bg: #355244;
-  /* forest-900 — hero section background */
-  --color-section-wash: #DFECF0;
-  /* sky-100 — alternating section bg */
-  --color-section-sage: #EAF3E7;
-  /* sage-100 — sage-tinted section bg */
-  --color-cta-bg: #355244;
-  /* forest-900 — dark CTA section bg */
-  --color-text-heading: #355244;
-  /* forest-900 */
-  --color-text-body: #355244;
-  /* forest-900 — Spirito uses one ink for body + heading */
-  --color-text-muted: #899790;
-  /* stone-600 — muted / placeholder text */
-  --color-text-inverted: #FFFFFF;
-  /* paper-0 — text on dark backgrounds */
-  --color-border: #CDD2CF;
-  /* stone-300 — default border */
-  --color-border-strong: #899790;
-  /* stone-600 — emphasized border */
-  --color-icon-ink: #000000;
+  --color-hero-bg: var(--color-forest-900);
+  /* hero section background */
+  --color-section-wash: var(--color-sky-100);
+  /* alternating section bg */
+  --color-section-sage: var(--color-sage-100);
+  /* sage-tinted section bg */
+  --color-cta-bg: var(--color-forest-900);
+  /* dark CTA section bg */
+  --color-text-heading: var(--color-forest-900);
+  --color-text-body: var(--color-forest-900);
+  /* Spirito uses one ink for body + heading */
+  --color-text-muted: var(--color-stone-600);
+  /* muted / placeholder text */
+  --color-text-inverted: var(--color-surface);
+  /* text on dark backgrounds */
+  --color-border: var(--color-stone-300);
+  /* default border */
+  --color-border-strong: var(--color-stone-600);
+  /* emphasized border */
+  --color-icon-ink: oklch(0% 0 0);
   /* Spirito --color-dark — icon glyph on sage-green chip */
-  --color-overlay-photo: #35524499;
-  /* forest-900 @ 60% — gradient scrim on photo cards */
+  --color-overlay-photo: color-mix(in oklch, var(--color-forest-900) 60%, transparent);
+  /* gradient scrim on photo cards */
 
   /* ----------------------------------------------------------
      TYPOGRAPHY
@@ -210,17 +210,15 @@
      SHADOWS
   ---------------------------------------------------------- */
 
-  --shadow-xs: 0 1px 2px rgba(53, 82, 68, 0.04);
-  --shadow-sm: 0 1px 3px rgba(53, 82, 68, 0.06), 0 1px 2px rgba(53, 82, 68, 0.04);
-  --shadow-md: 0 20px 40px -20px rgba(53, 82, 68, 0.18);
+  --shadow-xs: 0 1px 2px color-mix(in oklch, var(--color-forest-900) 4%, transparent);
+  --shadow-sm: 0 1px 3px color-mix(in oklch, var(--color-forest-900) 6%, transparent), 0 1px 2px color-mix(in oklch, var(--color-forest-900) 4%, transparent);
+  --shadow-md: 0 20px 40px -20px color-mix(in oklch, var(--color-forest-900) 18%, transparent);
   /* Spirito --shadow-card */
-  --shadow-lg: 0 24px 48px -20px rgba(53, 82, 68, 0.22);
-  --shadow-xl: 0 30px 60px -25px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 24px 48px -20px color-mix(in oklch, var(--color-forest-900) 22%, transparent);
+  --shadow-xl: 0 30px 60px -25px oklch(0% 0 0 / 25%);
   /* Spirito --shadow-pop */
-  --shadow-accent: 0 8px 24px rgba(238, 216, 105, 0.40);
-  /* sun-400 */
-  --shadow-sage: 0 8px 24px rgba(144, 215, 125, 0.30);
-  /* sage-500 */
+  --shadow-accent: 0 8px 24px color-mix(in oklch, var(--color-sun-400) 40%, transparent);
+  --shadow-sage: 0 8px 24px color-mix(in oklch, var(--color-sage-500) 30%, transparent);
 
   /* ----------------------------------------------------------
      TRANSITIONS

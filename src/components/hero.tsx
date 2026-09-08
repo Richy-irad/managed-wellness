@@ -79,12 +79,7 @@ export default function Hero({
         />
         <div
           className="absolute inset-0"
-          style={{
-            background:
-              variant === "home"
-                ? "linear-gradient(to right, var(--color-overlay-photo) 0%, var(--color-overlay-photo) 35%, transparent 75%)"
-                : "var(--color-overlay-photo)",
-          }}
+          style={{ background: "var(--color-overlay-photo)" }}
         />
 
         {variant === "home" ? (
@@ -93,7 +88,7 @@ export default function Hero({
             {trustBadge && (
               <div className="px-6 lg:px-16 pt-8">{trustBadge}</div>
             )}
-            <div className="flex-1 flex flex-col justify-end gap-y-6 px-6 lg:px-16 pb-10 lg:pb-16 max-w-xl">
+            <div className="flex-1 flex flex-col justify-end gap-y-6 px-6 lg:px-16 pb-10 lg:pb-16 max-w-1/2">
               <h1 className="font-bold text-white leading-tight tracking-tight">
                 {title}
               </h1>
@@ -107,7 +102,7 @@ export default function Hero({
           <div className="relative z-10 flex flex-col min-h-[420px] lg:min-h-[520px]">
             <Navbar />
             <div className="flex-1 flex flex-col items-center justify-center text-center gap-y-4 px-6">
-              {label && <SectionLabel label={label} inverted />}
+              {label && <SectionLabel label={label} variant="inverted" />}
               <h1 className="font-bold text-white leading-tight tracking-tight max-w-2xl">
                 {title}
               </h1>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@/components/icons";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import TestimonialCard from "@/components/testimonialCard";
 import testimonials from "@/data/testimonials.json";
 
@@ -13,7 +13,7 @@ export default function TestimonialsCarousel() {
     if (!autoPlay) return;
     const id = setInterval(() => {
       setCurrent((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 12000);
     return () => clearInterval(id);
   }, [autoPlay]);
 
@@ -39,7 +39,7 @@ export default function TestimonialsCarousel() {
           aria-label="Previous testimonial"
           className="w-10 h-10 rounded-full border border-cool-grey flex items-center justify-center text-warm-grey hover:border-deep-blue hover:text-deep-blue transition-colors"
         >
-          <ChevronLeftIcon size={12} />
+          <ChevronLeft size={12} />
         </button>
         <div className="flex gap-x-2">
           {testimonials.map((_, i) => (
@@ -58,7 +58,7 @@ export default function TestimonialsCarousel() {
           aria-label="Next testimonial"
           className="w-10 h-10 rounded-full border border-cool-grey flex items-center justify-center text-warm-grey hover:border-deep-blue hover:text-deep-blue transition-colors"
         >
-          <ChevronRightIcon size={12} />
+          <ChevronRight size={12} />
         </button>
       </div>
     </div>

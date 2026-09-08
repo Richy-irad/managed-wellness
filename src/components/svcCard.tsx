@@ -1,14 +1,18 @@
+import type { ComponentType } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Heart } from "lucide-react";
 import {
-  ArrowUpRightIcon,
-  CheckCircleIcon,
-  ClockIcon,
-  HeartIcon,
-  QuoteIcon,
-  SparkleIcon,
-  WarningIcon,
-} from "@/components/icons";
+  CapacityBuildingIcon,
+  CareerLadderIcon,
+  CoupleTherapyIcon,
+  FlameIcon,
+  LossAndGriefIcon,
+  PsychometricTestingIcon,
+  SgbvSupportIcon,
+  TraumaDebriefingIcon,
+  WeddingRingsIcon,
+} from "@/components/serviceIcons";
 import { ServiceType } from "@/lib/types";
 
 type SvcCardProps = {
@@ -16,30 +20,30 @@ type SvcCardProps = {
   index: number;
 };
 
-const SERVICE_ICONS: Record<string, typeof HeartIcon> = {
-  "trauma-and-psychological-debriefing": WarningIcon,
-  "psychometric-testing": CheckCircleIcon,
-  "career-counseling": ArrowUpRightIcon,
-  "capacity-building": SparkleIcon,
-  "sexual-and-gender-based-violence-counseling": HeartIcon,
-  "loss-and-grief-counseling": QuoteIcon,
-  "couples-therapy": HeartIcon,
-  "sex-therapy": HeartIcon,
-  "pre-marital-counseling": ClockIcon,
+const SERVICE_ICONS: Record<string, ComponentType<{ size?: number; className?: string }>> = {
+  "trauma-and-psychological-debriefing": TraumaDebriefingIcon,
+  "psychometric-testing": PsychometricTestingIcon,
+  "career-counseling": CareerLadderIcon,
+  "capacity-building": CapacityBuildingIcon,
+  "sexual-and-gender-based-violence-counseling": SgbvSupportIcon,
+  "loss-and-grief-counseling": LossAndGriefIcon,
+  "couples-therapy": CoupleTherapyIcon,
+  "sex-therapy": FlameIcon,
+  "pre-marital-counseling": WeddingRingsIcon,
 };
 
 export default function SvcCard({ service, index }: SvcCardProps) {
-  const Icon = SERVICE_ICONS[service.slug] ?? HeartIcon;
+  const Icon = SERVICE_ICONS[service.slug] ?? Heart;
 
   return (
     <Link
       href={`/services/${service.slug}`}
-      className="bg-section-wash rounded-xl overflow-hidden flex flex-col transition duration-250 ease-smooth hover:shadow-lg hover:-translate-y-[3px]"
+      className="bg-sage-100 rounded-xl overflow-hidden flex flex-col transition duration-250 ease-smooth hover:shadow-lg hover:-translate-y-[3px]"
     >
       <div className="p-6 flex flex-col gap-3 flex-1">
         <div className="flex items-start justify-between">
-          <span className="text-sage-green w-8 h-8 flex items-center justify-center shrink-0">
-            <Icon size={32} />
+          <span className="text-sage-green flex items-center justify-center shrink-0">
+            <Icon size={54} />
           </span>
           <span className="w-10 h-10 rounded-full border border-warm-grey flex items-center justify-center font-josefin-sans text-base font-semibold text-dark shrink-0">
             {String(index + 1).padStart(2, "0")}

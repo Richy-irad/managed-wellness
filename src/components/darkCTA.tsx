@@ -13,7 +13,7 @@ export default function DarkCTA({
   return (
     <section className="bg-cta-bg py-20">
       <div className="container flex flex-col items-center text-center gap-y-6">
-        <SectionLabel label="Share. Understand. Heal." inverted />
+        <SectionLabel label="Share. Understand. Heal." variant="inverted" />
 
         <h2 className="text-h2 font-bold text-white leading-tight max-w-2xl">
           {heading}
@@ -21,9 +21,11 @@ export default function DarkCTA({
 
         <p className="text-body-lg text-white/60 max-w-xl">{subtext}</p>
 
-        <Button href="/contact" variant="solid" onDark>
-          book now
-        </Button>
+        <div className="flex justify-center">
+          <Button href="/contact" variant="solid" onDark>
+            book now
+          </Button>
+        </div>
       </div>
     </section>
   );

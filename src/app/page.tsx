@@ -5,9 +5,9 @@ import { getMinServices } from "@/lib/services";
 import team from "@/data/team.json";
 import blog from "@/data/blog.json";
 
+import { Sparkle } from "lucide-react";
 import Hero from "@/components/hero";
 import SectionLabel from "@/components/sectionLabel";
-import { SparkleIcon } from "@/components/icons";
 import StatsBanner from "@/components/statsBanner";
 import SvcCard from "@/components/svcCard";
 import BlogCard from "@/components/blogCard";
@@ -20,6 +20,7 @@ import TeamCard from "@/components/teamCard";
 import Button from "@/components/button";
 
 import heroImage from "../../public/assets/hero-image.jpg";
+import journeyImage from "../../public/assets/hero-image-sm.jpg";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -55,15 +56,26 @@ export default function Home() {
     <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full pl-2 pr-4 py-2 w-fit">
       <div className="flex -space-x-3">
         {teamPreview.map((member) => (
-          <div key={member.slug} className="relative w-8 h-8 rounded-full ring-2 ring-white overflow-hidden">
-            <Image src={member.photoUrl} alt="" fill className="object-cover" sizes="32px" />
+          <div
+            key={member.slug}
+            className="relative w-8 h-8 rounded-full ring-2 ring-white overflow-hidden"
+          >
+            <Image
+              src={member.photoUrl}
+              alt=""
+              fill
+              className="object-cover"
+              sizes="32px"
+            />
           </div>
         ))}
         <span className="w-8 h-8 rounded-full ring-2 ring-white bg-sage-green text-primary flex items-center justify-center shrink-0">
-          <SparkleIcon size={14} />
+          <Sparkle size={14} />
         </span>
       </div>
-      <span className="text-sm font-semibold text-white">1000+ Trusted Patients</span>
+      <span className="text-sm font-semibold text-white">
+        1000+ Trusted Patients
+      </span>
     </div>
   );
 
@@ -77,69 +89,95 @@ export default function Home() {
         image={heroImage}
         trustBadge={trustBadge}
         ctas={[
-          { label: "book a consultation", href: "/contact", variant: "primary" },
-          { label: "browse services", href: "/services", variant: "outline" },
+          {
+            label: "book a consultation",
+            href: "/contact",
+            variant: "primary",
+          },
         ]}
       />
 
       {/* Journey intro */}
-      <section className="py-20 bg-white">
-        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          <div className="flex flex-col gap-y-6">
-            <SectionLabel label="Your therapeutic journey" />
-            <h2 className="font-bold text-dark leading-tight">
-              What to expect when you work with us
+      <section className="py-20 bg-white flex flex-col gap-y-12">
+        <div className="container flex flex-row">
+          <div className="flex basis-full lg:basis-3/4 flex-col gap-y-8">
+            <SectionLabel label="Unlock Your Health" />
+            <h2 className="font-bold text-6xl text-dark leading-tight">
+              We support you on your journey to great mental wellbeing
             </h2>
-            <p className="text-body text-warm-grey leading-relaxed">
+          </div>
+        </div>
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div className="relative aspect-square w-full rounded-3xl overflow-hidden">
+            <Image
+              src={journeyImage}
+              alt=""
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+          <div className="flex flex-col gap-y-8">
+            <p className="text-lg text-forest-900 leading-relaxed">
               We believe therapy works best when you understand the process.
               Here&apos;s how we walk alongside you — from your very first
               session to lasting change.
             </p>
+            <JourneyAccordion />
           </div>
-          <JourneyAccordion />
         </div>
       </section>
-
-      {/* Stats */}
-      <StatsBanner />
 
       {/* Services grid */}
       <section className="py-20">
         <div className="container flex flex-col gap-y-10">
-          <div className="flex flex-col gap-y-4">
-            <SectionLabel label="Our services" />
-            <h2 className="font-bold text-dark leading-tight max-w-lg">
-              Comprehensive support for every stage of your journey
-            </h2>
-            <p className="text-body text-warm-grey max-w-xl">
-              We offer a full range of evidence-based mental health services
-              delivered by qualified therapists.
-            </p>
+          <div className="flex flex-row">
+            <div className="flex basis-full lg:basis-2/3 flex-col gap-y-8">
+              <SectionLabel label="Our Areas of Focus" />
+              <h2 className="font-bold text-6xl text-dark leading-tight">
+                Comprehensive support for every stage of your journey
+              </h2>
+              <p className="text-lg text-forest-900 leading-relaxed">
+                We specialize in recognizing and addressing these less visible
+                challenges, because they can make all the difference in your
+                healing journey.
+              </p>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {services.map((service, i) => (
               <SvcCard key={service.slug} service={service} index={i} />
             ))}
           </div>
-          <Button href="/services">view all services</Button>
+          <Button variant="solid" href="/services">
+            view all services
+          </Button>
         </div>
       </section>
 
+      {/* How to get started */}
+      <HowToGetStarted />
+
+      {/* Stats */}
+      <StatsBanner />
+
       {/* Team preview */}
       <section className="py-20 bg-section-wash">
-        <div className="container flex flex-col gap-y-10">
-          <div className="flex flex-col gap-y-4">
-            <SectionLabel label="Our team" />
-            <h2 className="font-bold text-dark leading-tight max-w-lg">
-              Therapists who genuinely care about your growth
-            </h2>
-          </div>
+        <div className="container flex flex-col gap-y-10 items-center">
+          <SectionLabel label="Our team" />
+          <h2 className="font-bold text-6xl text-dark leading-tight max-w-2/3">
+            Therapists who genuinely care about your growth
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamPreview.map((member) => (
               <TeamCard key={member.slug} member={member} />
             ))}
           </div>
-          <Button href="/team">meet the full team</Button>
+          <div className="flex justify-center">
+            <Button variant="solid" href="/team">
+              meet the full team
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -150,11 +188,11 @@ export default function Home() {
       <section className="py-20 bg-section-sage">
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col gap-y-6">
-            <SectionLabel label="Why choose us" />
-            <h2 className="font-bold text-dark leading-tight">
+            <SectionLabel label="What Makes us Different" />
+            <h2 className="font-bold text-6xl text-dark leading-tight">
               Evidence-based care, delivered with compassion
             </h2>
-            <p className="text-body text-warm-grey leading-relaxed">
+            <p className="text-lg text-forest-900 leading-relaxed">
               We combine clinical expertise with genuine human warmth. Every
               session is confidential, culturally sensitive, and tailored to
               your unique needs.
@@ -167,7 +205,9 @@ export default function Home() {
                 className="bg-white rounded-xl p-6 flex flex-col gap-y-2 border border-cool-grey"
               >
                 <p className="font-bold text-dark">{d.title}</p>
-                <p className="text-sm text-warm-grey leading-relaxed">{d.body}</p>
+                <p className="text-sm text-warm-grey leading-relaxed">
+                  {d.body}
+                </p>
               </div>
             ))}
           </div>
@@ -179,10 +219,10 @@ export default function Home() {
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="flex flex-col gap-y-6">
             <SectionLabel label="What clients say" />
-            <h2 className="font-bold text-dark leading-tight max-w-lg">
+            <h2 className="font-bold text-6xl text-dark leading-tight max-w-lg">
               Real stories from people who&apos;ve found healing here
             </h2>
-            <p className="text-body text-warm-grey leading-relaxed max-w-md">
+            <p className="text-lg text-forest-900 leading-relaxed max-w-md">
               Our clients&apos; words reflect the heart of what we do — building
               trust, creating safety, and facilitating lasting change.
             </p>
@@ -205,12 +245,11 @@ export default function Home() {
               <BlogCard key={post.slug} post={post} />
             ))}
           </div>
-          <Button href="/blog">read all articles</Button>
+          <Button href="/blog" variant="solid" onDark>
+            read all articles
+          </Button>
         </div>
       </section>
-
-      {/* How to get started */}
-      <HowToGetStarted />
 
       {/* Dark CTA */}
       <DarkCTA />
