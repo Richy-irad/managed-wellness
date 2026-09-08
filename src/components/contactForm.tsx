@@ -57,13 +57,13 @@ const ContactForm = () => {
     // Add CSS classes to the element.
     element.classList.add("placeholder:text-red-700", "border-red-400");
     // Remove CSS classes in the element.
-    element.classList.remove("border-cool-grey");
+    element.classList.remove("border-dark");
   };
 
   // Clear error in input field.
   const clearInputError = (element: HTMLInputElement) => {
     // Add CSS classes to the element.
-    element.classList.add("border-cool-grey");
+    element.classList.add("border-dark");
     // Remove CSS classes in the element.
     element.classList.remove("border-red-400");
   };
@@ -196,13 +196,13 @@ const ContactForm = () => {
         {/* first and last names */}
         <div className="flex gap-x-4">
           <div className="basis-1/2 space-y-2">
-            <label htmlFor="firstName" className="block text-sm text-warm-grey">
+            <label htmlFor="firstName" className="block text-sm text-dark">
               First name
             </label>
             <input
               type="text"
               ref={firstNameInputRef}
-              className="border border-cool-grey rounded-sm block w-full px-3.5 py-3 text-sm focus:outline-none focus:border-dark"
+              className="border border-dark rounded-sm block w-full px-3.5 py-3 text-sm focus:outline-none focus:border-dark"
               name="firstName"
               value={firstName}
               placeholder="First name"
@@ -213,13 +213,13 @@ const ContactForm = () => {
             />
           </div>
           <div className="basis-1/2 space-y-2">
-            <label htmlFor="lastName" className="block text-sm text-warm-grey">
+            <label htmlFor="lastName" className="block text-sm text-dark">
               Last name
             </label>
             <input
               type="text"
               ref={lastNameInputRef}
-              className="border border-cool-grey rounded-sm block w-full px-3.5 py-3 text-sm focus:outline-none focus:border-dark"
+              className="border border-dark rounded-sm block w-full px-3.5 py-3 text-sm focus:outline-none focus:border-dark"
               name="lastName"
               value={lastName}
               placeholder="Last name"
@@ -233,13 +233,13 @@ const ContactForm = () => {
 
         {/* email */}
         <div className="space-y-2">
-          <label htmlFor="email" className="block text-sm text-warm-grey">
+          <label htmlFor="email" className="block text-sm text-dark">
             Email
           </label>
           <input
             type="email"
             ref={emailInputRef}
-            className="border border-cool-grey rounded-sm block w-full px-3.5 py-3 text-sm focus:outline-none focus:border-dark"
+            className="border border-dark rounded-sm block w-full px-3.5 py-3 text-sm focus:outline-none focus:border-dark"
             name="email"
             value={email}
             placeholder="e.g. john.doe@example.com"
@@ -252,13 +252,13 @@ const ContactForm = () => {
 
         {/* subject */}
         <div className="space-y-2">
-          <label htmlFor="subject" className="block text-sm text-warm-grey">
+          <label htmlFor="subject" className="block text-sm text-dark">
             Subject
           </label>
           <input
             type="text"
             ref={subjectInputRef}
-            className="border border-cool-grey rounded-sm block w-full px-3.5 py-3 text-sm focus:outline-none focus:border-dark"
+            className="border border-dark rounded-sm block w-full px-3.5 py-3 text-sm focus:outline-none focus:border-dark"
             name="subject"
             value={subject}
             placeholder="Subject"
@@ -271,11 +271,11 @@ const ContactForm = () => {
 
         {/* message */}
         <div className="space-y-2">
-          <label htmlFor="message" className="block text-sm text-warm-grey">
+          <label htmlFor="message" className="block text-sm text-dark">
             What brings you here?
           </label>
           <textarea
-            className="border border-cool-grey rounded-sm block w-full px-3.5 py-3 text-sm focus:outline-none focus:border-dark"
+            className="border border-dark rounded-sm block w-full px-3.5 py-3 text-sm focus:outline-none focus:border-dark"
             name="message"
             ref={messageInputRef}
             rows={4}

@@ -15,7 +15,7 @@ export default function DarkCTA({
       <div className="container flex flex-col items-center text-center gap-y-6">
         <SectionLabel label="Share. Understand. Heal." variant="inverted" />
 
-        <h2 className="text-h2 font-bold text-white leading-tight max-w-2xl">
+        <h2 className="text-h2 font-bold text-white leading-tight lg:max-w-2xl">
           {heading}
         </h2>
 

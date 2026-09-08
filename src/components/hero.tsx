@@ -88,7 +88,7 @@ export default function Hero({
             {trustBadge && (
               <div className="px-6 lg:px-16 pt-8">{trustBadge}</div>
             )}
-            <div className="flex-1 flex flex-col justify-end gap-y-6 px-6 lg:px-16 pb-10 lg:pb-16 max-w-1/2">
+            <div className="flex-1 flex flex-col justify-end gap-y-6 px-6 lg:px-16 pb-10 lg:pb-16 w-full lg:max-w-1/2">
               <h1 className="font-bold text-white leading-tight tracking-tight">
                 {title}
               </h1>

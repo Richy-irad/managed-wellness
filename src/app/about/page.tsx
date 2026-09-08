@@ -163,7 +163,7 @@ export default function AboutPage() {
         <div className="container flex flex-col gap-y-10">
           <div className="flex flex-col gap-y-4">
             <SectionLabel label="The team" />
-            <h2 className="font-bold text-dark leading-tight max-w-lg">
+            <h2 className="font-bold text-dark leading-tight lg:max-w-lg">
               Qualified therapists committed to your well-being
             </h2>
           </div>

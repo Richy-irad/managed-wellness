@@ -102,7 +102,7 @@ export default function Home() {
         <div className="container flex flex-row">
           <div className="flex basis-full lg:basis-3/4 flex-col gap-y-8">
             <SectionLabel label="Unlock Your Health" />
-            <h2 className="font-bold text-6xl text-dark leading-tight">
+            <h2 className="font-bold text-4xl lg:text-6xl text-dark leading-tight">
               We support you on your journey to great mental wellbeing
             </h2>
           </div>
@@ -134,7 +134,7 @@ export default function Home() {
           <div className="flex flex-row">
             <div className="flex basis-full lg:basis-2/3 flex-col gap-y-8">
               <SectionLabel label="Our Areas of Focus" />
-              <h2 className="font-bold text-6xl text-dark leading-tight">
+              <h2 className="font-bold text-4xl lg:text-6xl text-dark leading-tight">
                 Comprehensive support for every stage of your journey
               </h2>
               <p className="text-lg text-forest-900 leading-relaxed">
@@ -165,7 +165,7 @@ export default function Home() {
       <section className="py-20 bg-section-wash">
         <div className="container flex flex-col gap-y-10 items-center">
           <SectionLabel label="Our team" />
-          <h2 className="font-bold text-6xl text-dark leading-tight max-w-2/3">
+          <h2 className="font-bold text-4xl lg:text-6xl text-dark leading-tight lg:max-w-2/3">
             Therapists who genuinely care about your growth
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -189,7 +189,7 @@ export default function Home() {
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col gap-y-6">
             <SectionLabel label="What Makes us Different" />
-            <h2 className="font-bold text-6xl text-dark leading-tight">
+            <h2 className="font-bold text-4xl lg:text-6xl text-dark leading-tight">
               Evidence-based care, delivered with compassion
             </h2>
             <p className="text-lg text-forest-900 leading-relaxed">
@@ -219,7 +219,7 @@ export default function Home() {
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="flex flex-col gap-y-6">
             <SectionLabel label="What clients say" />
-            <h2 className="font-bold text-6xl text-dark leading-tight max-w-lg">
+            <h2 className="font-bold text-4xl lg:text-6xl text-dark leading-tight lg:max-w-lg">
               Real stories from people who&apos;ve found healing here
             </h2>
             <p className="text-lg text-forest-900 leading-relaxed max-w-md">
@@ -236,7 +236,7 @@ export default function Home() {
         <div className="container flex flex-col gap-y-10">
           <div className="flex flex-col gap-y-4">
             <SectionLabel label="From the blog" />
-            <h2 className="font-bold text-dark leading-tight max-w-lg">
+            <h2 className="font-bold text-dark leading-tight lg:max-w-lg">
               Resources to support your mental wellness
             </h2>
           </div>

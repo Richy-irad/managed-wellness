@@ -101,7 +101,7 @@ export default function ContactPage() {
             <h2 className="font-bold text-dark leading-tight">
               We&apos;ll get back to you within 24 hours
             </h2>
-            <p className="text-body text-warm-grey leading-relaxed">
+            <p className="text-body text-dark leading-relaxed">
               Fill in the form and one of our team will be in touch shortly.
               All enquiries are strictly confidential.
             </p>

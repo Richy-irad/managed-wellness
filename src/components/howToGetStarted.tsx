@@ -31,7 +31,7 @@ export default function HowToGetStarted() {
       <div className="container flex flex-col gap-y-12">
         <div className="flex flex-col gap-y-4 items-center text-center">
           <SectionLabel label="How to get started" />
-          <h2 className="text-6xl font-bold text-dark leading-tight max-w-2/3">
+          <h2 className="text-4xl lg:text-6xl font-bold text-dark leading-tight lg:max-w-2/3">
             Take the first step towards supporting your mental health
           </h2>
           <p className="text-xl text-forest-900 max-w-xl">

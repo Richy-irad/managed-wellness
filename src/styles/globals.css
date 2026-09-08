@@ -283,7 +283,6 @@
   }
 
   body {
-    width: 100vw;
     overflow-x: hidden;
     font-family: var(--font-josefin-sans);
     font-size: var(--text-body);

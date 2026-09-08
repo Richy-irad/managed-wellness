@@ -14,7 +14,7 @@ export default function StatsBanner() {
     <section className="bg-deep-blue py-12">
       <div className="container flex flex-col gap-y-12">
         <SectionLabel variant="inverted" label="Our Journey" />
-        <h2 className="text-6xl font-bold text-surface leading-tight max-w-2/3">
+        <h2 className="text-4xl lg:text-6xl font-bold text-surface leading-tight lg:max-w-2/3">
           Our Goal is to Ensure that everyone has access to high-quality therapy
           services.
         </h2>
