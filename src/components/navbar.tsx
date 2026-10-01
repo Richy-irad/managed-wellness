@@ -15,6 +15,7 @@ import favIcon from "../../public/favicon.ico";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
+  { name: "Pricing", href: "/pricing" },
   { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
   { name: "Team", href: "/team" },
@@ -24,7 +25,9 @@ const navigation = [
 const CustomLink = ({ children, href }: CustomLinkProps) => {
   const pathname = usePathname();
   const isActive =
-    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/");
+    href === "/"
+      ? pathname === "/"
+      : pathname === href || pathname.startsWith(href + "/");
   return (
     <Link
       href={href}
@@ -103,7 +106,11 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu drawer */}
-      <Dialog open={mobileOpen} onClose={setMobileOpen} className="relative z-50 md:hidden">
+      <Dialog
+        open={mobileOpen}
+        onClose={setMobileOpen}
+        className="relative z-50 md:hidden"
+      >
         <DialogBackdrop
           transition
           className="fixed inset-0 bg-black/50 transition-opacity duration-300 data-closed:opacity-0"
