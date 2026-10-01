@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "mindfulness-101-daily-practice",
+    "title": "Mindfulness 101: How to Practice Daily",
+    "excerpt": "Simple, evidence-based techniques to bring presence and calm into your everyday routine — no meditation cushion required.",
+    "content": "Placeholder content for Mindfulness 101 article.",
+    "coverImage": "https://picsum.photos/seed/blog-mindfulness/800/500",
+    "category": "Mindfulness",
+    "author": "Dr. Amara Osei",
+    "publishedAt": "2026-04-15",
+    "readingTimeMinutes": 5
+  },
+  {
+    "slug": "understanding-emotional-wellbeing",
+    "title": "Understanding Emotional Well-Being & Mental Balance",
+    "excerpt": "What emotional balance really means and practical steps to cultivate it — even on the hard days.",
+    "content": "Placeholder content for emotional well-being article.",
+    "coverImage": "https://picsum.photos/seed/blog-emotional/800/500",
+    "category": "Wellness",
+    "author": "Cynthia Njoroge",
+    "publishedAt": "2026-03-28",
+    "readingTimeMinutes": 6
+  },
+  {
+    "slug": "stress-management-strategies",
+    "title": "5 Stress Management Strategies That Actually Work",
+    "excerpt": "Evidence-backed techniques from our therapists to help you reclaim calm when life feels overwhelming.",
+    "content": "Placeholder content for stress management article.",
+    "coverImage": "https://picsum.photos/seed/blog-stress/800/500",
+    "category": "Mental Health",
+    "author": "James Mwangi",
+    "publishedAt": "2026-03-10",
+    "readingTimeMinutes": 4
+  },
+  {
+    "slug": "couples-communication-guide",
+    "title": "The Couples Communication Guide: Listening to Understand",
+    "excerpt": "Most relationship conflicts stem from communication breakdowns. Here's how to listen — and speak — more effectively with your partner.",
+    "content": "Placeholder content for couples communication article.",
+    "coverImage": "https://picsum.photos/seed/blog-couples/800/500",
+    "category": "Relationships",
+    "author": "James Mwangi",
+    "publishedAt": "2026-02-14",
+    "readingTimeMinutes": 7
+  }
+]

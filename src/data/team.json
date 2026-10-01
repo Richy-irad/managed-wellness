@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "amara-osei",
+    "name": "Dr. Amara Osei",
+    "title": "Lead Clinical Psychologist",
+    "credentials": "Ph.D. Clinical Psychology",
+    "specialisations": ["Trauma & PTSD", "Anxiety Disorders", "Grief Counselling"],
+    "bio": "Dr. Amara brings over 12 years of experience in evidence-based trauma therapy. She is passionate about creating safe, affirming spaces where clients can explore their inner world and build lasting resilience.",
+    "photoUrl": "https://picsum.photos/seed/amara/400/500"
+  },
+  {
+    "slug": "james-mwangi",
+    "name": "James Mwangi",
+    "title": "Senior Counselling Psychologist",
+    "credentials": "M.Sc. Counselling Psychology",
+    "specialisations": ["Couples Therapy", "Pre-Marital Counselling", "Sexual Health"],
+    "bio": "James specialises in relationship and sexual health counselling, helping couples and individuals navigate intimacy challenges with empathy and clinical precision. He is trained in Emotionally Focused Therapy (EFT).",
+    "photoUrl": "https://picsum.photos/seed/james/400/500"
+  },
+  {
+    "slug": "cynthia-njoroge",
+    "name": "Cynthia Njoroge",
+    "title": "Psychologist & SGBV Specialist",
+    "credentials": "M.A. Psychology, Cert. SGBV Counselling",
+    "specialisations": ["SGBV Counselling", "Trauma Recovery", "Adolescent Therapy"],
+    "bio": "Cynthia is a trauma-informed psychologist with a decade of experience supporting survivors of sexual and gender-based violence. She combines evidence-based modalities with culturally sensitive care.",
+    "photoUrl": "https://picsum.photos/seed/cynthia/400/500"
+  },
+  {
+    "slug": "david-kamau",
+    "name": "David Kamau",
+    "title": "Career & Organisational Psychologist",
+    "credentials": "M.B.A., B.Sc. Psychology",
+    "specialisations": ["Career Counselling", "Capacity Building", "Psychometric Testing"],
+    "bio": "David bridges the worlds of psychology and organisational development, supporting individuals and teams through career transitions, burnout recovery, and skills assessments grounded in validated psychometrics.",
+    "photoUrl": "https://picsum.photos/seed/david/400/500"
+  }
+]

@@ -1,4 +1,4 @@
-import services from "../services/services.json" assert { type: "json" };
+import services from "../services/services.json" with { type: "json" };
 
 // getAllServicesSlugs
 export const getAllServicesSlugs = () => {
@@ -31,4 +31,8 @@ export const getAllServices = () => {
 // geMinServices
 export const getMinServices = () => {
   return services.slice(0, 3);
+};
+
+export const getServiceParams = (): { slug: string }[] => {
+  return services.map((service) => ({ slug: service.slug }));
 };

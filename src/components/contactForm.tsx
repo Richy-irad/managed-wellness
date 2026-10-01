@@ -1,5 +1,7 @@
-import React, { useState, useRef, FormEvent, JSX } from "react";
-import { CheckCircleIcon, WarningIcon } from "@phosphor-icons/react";
+"use client";
+
+import React, { useState, useRef, MouseEvent } from "react";
+import Button from "@/components/button";
 
 import { MessageType } from "@/lib/types";
 
@@ -22,61 +24,29 @@ const ContactForm = () => {
   const subjectInputRef = useRef<HTMLInputElement>(null);
   const messageInputRef = useRef<HTMLTextAreaElement>(null);
 
-  const displayNotices = () => {
-    // Make sure there are message(s) for notices.
+  const displayNotice = () => {
     if (!status.message.length) {
       return;
     }
 
-    // Icon
-    const noticeIcon = (type: string) => {
-      switch (type) {
-        case "success":
-          return <CheckCircleIcon size={24} />;
-        default:
-          return <WarningIcon size={24} />;
-      }
-    };
-
-    // Notice
-    const notice = (type: string, message: MessageType) => {
-      let cssClasses = "border border-solid p-4 rounded-xs mb-4 text-sm";
-
-      switch (type) {
-        case "success":
-          cssClasses += " text-green-700 border-green-400 bg-green-50";
-          break;
-        default:
-          cssClasses += " text-red-700 border-red-400 bg-red-50";
-      }
-
-      return (
-        <div className={cssClasses}>
-          <p className="flex gap-3 items-center">
-            {noticeIcon(type)}
-            <span className="flex-1">
-              <strong>{message.title}: </strong>
-              {message.description}.
-            </span>
-          </p>
-        </div>
-      );
-    };
-
-    // Output notice with a success information.
     if (status.isSubmitted && !status.hasError) {
-      return notice("success", status.message[0]);
+      return (
+        <p className="text-dark font-display text-xl leading-snug">
+          {status.message[0].description}.
+        </p>
+      );
     }
 
-    // Output notice with an error information.
     if (status.hasError) {
-      let jsxErrors: JSX.Element[] = [];
-
-      status.message.map((message, index) => {
-        jsxErrors.push(<li key={index}>{notice("error", message)}</li>);
-      });
-
-      return <ul>{jsxErrors}</ul>;
+      return (
+        <div className="flex flex-col gap-1 mb-2">
+          {status.message.map((message, index) => (
+            <p key={index} className="text-red-700 text-sm">
+              {message.title}: {message.description}.
+            </p>
+          ))}
+        </div>
+      );
     }
   };
 
@@ -87,13 +57,13 @@ const ContactForm = () => {
     // Add CSS classes to the element.
     element.classList.add("placeholder:text-red-700", "border-red-400");
     // Remove CSS classes in the element.
-    element.classList.remove("border-slate-300");
+    element.classList.remove("border-dark");
   };
 
   // Clear error in input field.
   const clearInputError = (element: HTMLInputElement) => {
     // Add CSS classes to the element.
-    element.classList.add("border-slate-300");
+    element.classList.add("border-dark");
     // Remove CSS classes in the element.
     element.classList.remove("border-red-400");
   };
@@ -108,7 +78,7 @@ const ContactForm = () => {
   };
 
   // Detect message submission.
-  const handleSubmit = (e: FormEvent<HTMLButtonElement>) => {
+  const handleSubmit = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
     // Email data.
@@ -214,41 +184,45 @@ const ContactForm = () => {
     });
   };
 
-  return (
-    <form className="flex flex-col gap-y-8 items-center lg:items-start">
-      {displayNotices()}
+  if (status.isSubmitted && !status.hasError) {
+    return <div className="w-full">{displayNotice()}</div>;
+  }
 
-      <div className="flex flex-col gap-y-6 w-full">
+  return (
+    <form className="flex flex-col gap-y-6 w-full">
+      {displayNotice()}
+
+      <div className="flex flex-col gap-y-5 w-full">
         {/* first and last names */}
-        <div className="flex gap-x-6">
-          <div className="basis-1/2 space-y-3">
-            <label htmlFor="firstName" className="block">
-              First Name
+        <div className="flex gap-x-4">
+          <div className="basis-1/2 space-y-2">
+            <label htmlFor="firstName" className="block text-sm text-dark">
+              First name
             </label>
             <input
               type="text"
               ref={firstNameInputRef}
-              className="border-0.5 border-light rounded-xs-md block w-full px-2.5 py-3.5"
+              className="border border-dark rounded-sm block w-full px-3.5 py-3 text-sm focus:outline-none focus:border-dark"
               name="firstName"
               value={firstName}
-              placeholder="First Name"
+              placeholder="First name"
               onChange={(event) => setFirstName(event.target.value)}
               onBlur={() =>
                 handleOnBlur(firstNameInputRef.current as HTMLInputElement)
               }
             />
           </div>
-          <div className="basis-1/2 space-y-3">
-            <label htmlFor="lastName" className="block">
-              Last Name
+          <div className="basis-1/2 space-y-2">
+            <label htmlFor="lastName" className="block text-sm text-dark">
+              Last name
             </label>
             <input
               type="text"
               ref={lastNameInputRef}
-              className="border-0.5 border-light rounded-xs-md block w-full px-2.5 py-3.5"
+              className="border border-dark rounded-sm block w-full px-3.5 py-3 text-sm focus:outline-none focus:border-dark"
               name="lastName"
               value={lastName}
-              placeholder="First Name"
+              placeholder="Last name"
               onChange={(event) => setLastName(event.target.value)}
               onBlur={() =>
                 handleOnBlur(lastNameInputRef.current as HTMLInputElement)
@@ -258,12 +232,14 @@ const ContactForm = () => {
         </div>
 
         {/* email */}
-        <div className="space-y-3">
-          <label htmlFor="email ">Email</label>
+        <div className="space-y-2">
+          <label htmlFor="email" className="block text-sm text-dark">
+            Email
+          </label>
           <input
             type="email"
             ref={emailInputRef}
-            className="border-0.5 border-light rounded-xs-md block w-full px-2.5 py-3.5"
+            className="border border-dark rounded-sm block w-full px-3.5 py-3 text-sm focus:outline-none focus:border-dark"
             name="email"
             value={email}
             placeholder="e.g. john.doe@example.com"
@@ -275,12 +251,14 @@ const ContactForm = () => {
         </div>
 
         {/* subject */}
-        <div className="space-y-3">
-          <label htmlFor="subject ">Subject</label>
+        <div className="space-y-2">
+          <label htmlFor="subject" className="block text-sm text-dark">
+            Subject
+          </label>
           <input
             type="text"
             ref={subjectInputRef}
-            className="border-0.5 border-light rounded-xs-md block w-full px-2.5 py-3.5"
+            className="border border-dark rounded-sm block w-full px-3.5 py-3 text-sm focus:outline-none focus:border-dark"
             name="subject"
             value={subject}
             placeholder="Subject"
@@ -292,10 +270,12 @@ const ContactForm = () => {
         </div>
 
         {/* message */}
-        <div className="space-y-3">
-          <label htmlFor="message ">Message</label>
+        <div className="space-y-2">
+          <label htmlFor="message" className="block text-sm text-dark">
+            What brings you here?
+          </label>
           <textarea
-            className="border-0.5 border-light rounded-xs-md block w-full px-2.5 py-3.5"
+            className="border border-dark rounded-sm block w-full px-3.5 py-3 text-sm focus:outline-none focus:border-dark"
             name="message"
             ref={messageInputRef}
             rows={4}
@@ -309,13 +289,9 @@ const ContactForm = () => {
         </div>
       </div>
 
-      <button
-        type="submit"
-        className="bg-light-blue text-deep-blue font-semibold px-4 py-5 rounded-xs-md"
-        onClick={(event) => handleSubmit(event)}
-      >
-        Send Message
-      </button>
+      <Button onClick={handleSubmit} variant="solid">
+        book a session
+      </Button>
     </form>
   );
 };
