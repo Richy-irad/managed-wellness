@@ -24,7 +24,7 @@ export default function BlogFilter({ posts }: BlogFilterProps) {
             className={`px-5 py-2 rounded-full text-sm font-semibold font-josefin-sans tracking-wide transition-colors ${
               active === cat
                 ? "bg-deep-blue text-white"
-                : "bg-concrete text-warm-grey hover:bg-cool-grey/30"
+                : "bg-concrete text-dark hover:bg-cool-grey/30"
             }`}
           >
             {cat}

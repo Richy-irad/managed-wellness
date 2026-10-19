@@ -9,13 +9,13 @@ export default function NotFound() {
   return (
     <main className="font-josefin-sans min-h-screen flex flex-col items-center justify-center bg-concrete px-5 text-center gap-y-8">
       <div className="flex flex-col items-center gap-y-4">
-        <span className="text-xs font-semibold tracking-widest uppercase text-warm-grey">
+        <span className="text-xs font-semibold tracking-widest uppercase text-dark">
           404 — Page Not Found
         </span>
-        <h1 className="text-4xl font-bold text-dark">
+        <h1 className="text-4xl font-bold text-emerald-950">
           We couldn&apos;t find that page.
         </h1>
-        <p className="text-lg text-warm-grey max-w-md">
+        <p className="text-lg text-dark max-w-md">
           The page you&apos;re looking for may have moved or no longer exists.
         </p>
       </div>

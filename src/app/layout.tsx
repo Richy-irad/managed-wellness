@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 
 import AnnouncementBar from "@/components/announcementBar";
 import Footer from "@/components/footer";
+import { SanityLive } from "@/sanity/lib/live";
 
 const ltMuseum = localFont({
   src: "../../public/fonts/spirito/LTMuseumMedium.woff2",
@@ -64,6 +65,7 @@ export default function RootLayout({
         <AnnouncementBar />
         {children}
         <Footer />
+        <SanityLive />
       </body>
     </html>
   );

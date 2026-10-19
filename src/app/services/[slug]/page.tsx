@@ -9,8 +9,8 @@ import SvcCard from "@/components/svcCard";
 import DarkCTA from "@/components/darkCTA";
 import Button from "@/components/button";
 
-export function generateStaticParams() {
-  return getServiceParams();
+export async function generateStaticParams() {
+  return await getServiceParams();
 }
 
 export async function generateMetadata({
@@ -19,7 +19,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const service = getService(slug);
+  const service = await getService(slug);
   if (!service.service) return {};
   return {
     title: service.service,
@@ -33,13 +33,12 @@ export default async function ServicePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const service = getService(slug);
+  const service = await getService(slug);
 
   if (!service.service) notFound();
 
-  const related = getAllServices()
-    .filter((s) => s.slug !== slug)
-    .slice(0, 3);
+  const allServices = await getAllServices();
+  const related = allServices.filter((s) => s.slug !== slug).slice(0, 3);
 
   return (
     <main>

@@ -1,15 +1,21 @@
-import stats from "@/data/stats.json";
 import Counter from "@/components/counter";
 import SectionLabel from "@/components/sectionLabel";
+import { sanityFetch } from "@/sanity/lib/live";
+import { STATS_QUERY } from "@/sanity/lib/queries";
 
-const items = [
-  { value: stats.yearsInPractice, label: "Years in Practice" },
-  { value: stats.clientsServed, label: "Clients Served" },
-  { value: stats.sessionsCompleted, label: "Sessions Completed" },
-  { value: stats.satisfactionRate, label: "Satisfaction Rate" },
+type StatItem = { label: string; value: string };
+
+const fallbackItems: StatItem[] = [
+  { label: "Years in Practice", value: "8+" },
+  { label: "Clients Served", value: "2K+" },
+  { label: "Sessions Completed", value: "14K+" },
+  { label: "Satisfaction Rate", value: "98%" },
 ];
 
-export default function StatsBanner() {
+export default async function StatsBanner() {
+  const { data } = await sanityFetch({ query: STATS_QUERY });
+  const items: StatItem[] = data?.items?.length ? data.items : fallbackItems;
+
   return (
     <section className="bg-deep-blue py-12">
       <div className="container flex flex-col gap-y-12">

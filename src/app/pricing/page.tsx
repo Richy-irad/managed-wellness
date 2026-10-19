@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import pricing from "@/data/pricing.json";
+import { getAllPricing } from "@/lib/pricing";
 import Hero from "@/components/hero";
 import SectionLabel from "@/components/sectionLabel";
 import DarkCTA from "@/components/darkCTA";
@@ -19,7 +19,9 @@ function formatKES(amount: number) {
   }).format(amount);
 }
 
-export default function PricingPage() {
+export default async function PricingPage() {
+  const pricing = await getAllPricing();
+
   return (
     <main>
       <Hero
@@ -48,34 +50,34 @@ export default function PricingPage() {
                 className="flex flex-col gap-y-4 bg-concrete rounded-2xl p-6 border border-border"
               >
                 <div className="flex flex-col gap-y-1">
-                  <h3 className="text-h4 font-bold text-dark">{entry.serviceLabel}</h3>
-                  <p className="text-xs text-warm-grey font-josefin-sans uppercase tracking-wide">
+                  <h3 className="text-h4 font-bold text-emerald-950">{entry.serviceLabel}</h3>
+                  <p className="text-xs text-dark font-josefin-sans uppercase tracking-wide">
                     {entry.sessionDurationMinutes} min session
                   </p>
                 </div>
 
                 <div className="flex items-end gap-x-1">
-                  <span className="text-h2 font-bold text-deep-blue">
+                  <span className="text-h2 font-bold text-emerald-950">
                     {formatKES(entry.priceKES)}
                   </span>
-                  <span className="text-sm text-warm-grey mb-1.5">/ session</span>
+                  <span className="text-sm text-dark mb-1.5">/ session</span>
                 </div>
 
                 {entry.packageSessions && entry.packagePriceKES && (
-                  <div className="px-4 py-2.5 rounded-xl bg-sage-light text-sage-dark text-sm font-semibold font-josefin-sans">
+                  <div className="px-4 py-2.5 rounded-xl bg-sage-light text-dark text-sm font-semibold font-josefin-sans">
                     Package: {entry.packageSessions}× sessions —{" "}
                     {formatKES(entry.packagePriceKES)}
                   </div>
                 )}
 
                 {entry.description && (
-                  <p className="text-sm text-warm-grey leading-relaxed">{entry.description}</p>
+                  <p className="text-sm text-dark leading-relaxed">{entry.description}</p>
                 )}
 
                 {entry.serviceSlug && (
                   <Link
                     href={`/services/${entry.serviceSlug}`}
-                    className="text-sm font-semibold text-deep-blue hover:text-deep-blue-dark transition-colors mt-auto"
+                    className="text-sm font-semibold text-dark transition-colors mt-auto"
                   >
                     learn about this service
                   </Link>

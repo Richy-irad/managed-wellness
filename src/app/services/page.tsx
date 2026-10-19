@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     "Explore the full range of evidence-based mental health services at Managed Wellness Centre — including trauma counselling, couples therapy, psychometric testing, and more.",
 };
 
-export default function ServicesPage() {
-  const services = getAllServices();
+export default async function ServicesPage() {
+  const services = await getAllServices();
 
   return (
     <main>

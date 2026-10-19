@@ -47,8 +47,8 @@ const differentiators = [
   },
 ];
 
-export default function Home() {
-  const services = getMinServices();
+export default async function Home() {
+  const services = await getMinServices();
   const teamPreview = team.slice(0, 3);
   const blogPreview = blog.slice(0, 3);
 

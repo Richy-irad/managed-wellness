@@ -1,38 +1,38 @@
-import services from "../services/services.json" with { type: "json" };
+import { sanityFetch } from "@/sanity/lib/live";
+import { client } from "@/sanity/lib/client";
+import {
+  SERVICES_QUERY,
+  SERVICE_BY_SLUG_QUERY,
+  SERVICE_SLUGS_QUERY,
+} from "@/sanity/lib/queries";
+import type { ServiceType } from "@/lib/types";
 
-// getAllServicesSlugs
-export const getAllServicesSlugs = () => {
-  // loop over the services and return the slugs only
-  return services.map((service) => {
-    return {
-      params: {
-        slug: service.slug,
-      },
-    };
+export const getService = async (
+  slug: string | undefined,
+): Promise<{ slug: string | undefined } & Partial<ServiceType>> => {
+  const { data: service } = await sanityFetch({
+    query: SERVICE_BY_SLUG_QUERY,
+    params: { slug: slug ?? "" },
   });
-};
 
-// getService(slug)
-export const getService = (slug: string | undefined) => {
-  const service = services.find((serv) => serv.slug === slug);
-
-  // combine slug with service
   return {
     slug,
-    ...service,
+    ...(service as Partial<ServiceType> | null),
   };
 };
 
-// getAllServices
-export const getAllServices = () => {
-  return services;
+export const getAllServices = async (): Promise<ServiceType[]> => {
+  const { data } = await sanityFetch({ query: SERVICES_QUERY });
+  return data as ServiceType[];
 };
 
-// geMinServices
-export const getMinServices = () => {
+export const getMinServices = async (): Promise<ServiceType[]> => {
+  const services = await getAllServices();
   return services.slice(0, 3);
 };
 
-export const getServiceParams = (): { slug: string }[] => {
-  return services.map((service) => ({ slug: service.slug }));
+// Uses the plain client (not the live-wrapped sanityFetch): generateStaticParams
+// runs at build time, outside request scope, where draftMode()/sanityFetch can't be called.
+export const getServiceParams = async (): Promise<{ slug: string }[]> => {
+  return client.fetch(SERVICE_SLUGS_QUERY);
 };
