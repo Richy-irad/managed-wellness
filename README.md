@@ -1,5 +1,14 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Development
+
+This repo has two independent apps that run separately:
+
+- **Website** (this folder): `npm install && npm run dev` → http://localhost:3000
+- **Sanity Studio** (`studio/`): `cd studio && npm install && npm run dev` → http://localhost:3333
+
+Run both in separate terminals during local development.
+
 ## Getting Started
 
 First, run the development server:

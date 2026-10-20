@@ -1,30 +1,365 @@
 @import 'tailwindcss';
 
 @theme {
-  /* extend colors */
-  --color-primary: oklch(0.1591 0 0);
-  --color-dark: oklch(0.285 0 0);
-  --color-concrete: oklch(0.9612 0 0);
-  --color-light: oklch(0.8545 0 0);
-  --color-deep-blue: oklch(0.2996 0.0639 235.39);
-  --color-light-blue: oklch(0.8215 0.0559 224.65);
-  --color-sage-green: oklch(0.7461 0.0679 130.75);
-  --color-warm-grey: oklch(0.5698 0.0294 82.3);
-  --color-cool-grey: oklch(0.7413 0.0098 150.64);
-  --color-muted-yellow: oklch(0.8666 0.0973 99.73);
-  --color-dull-yellow: oklch(0.9199 0.0605 99.24);
+  /* ============================================================
+     MANAGED WELLNESS — DESIGN SYSTEM TOKENS
+     Source: Spirito Design System (claude.ai/design)
+     Last updated: 2026-07-27
+  ============================================================ */
 
-  /* extend typography */
-  --font-josefin-sans: 'Josefin Sans', sans-serif;
+  /* ----------------------------------------------------------
+     COLORS
+  ---------------------------------------------------------- */
 
-  /* extend spacing */
-  --border-width-0.5: 0.5px;
+  /* Spirito base palette — see tokens/colors.css in the Spirito Design System.
+     Namespaced under --color-* so Tailwind generates real utilities for them
+     (bg-sage-100, text-forest-900, fill-mint-500, etc) — every alias below
+     just points back at one of these, so each literal value lives here once. */
+  --color-sage-100: oklch(95.41% 0.0185 137.80);
+  --color-sage-300: oklch(87.65% 0.0954 138.59);
+  --color-sage-500: oklch(81.08% 0.1409 139.23);
+  --color-mint-500: oklch(90.61% 0.1892 140.33);
+  --color-forest-900: oklch(41.10% 0.0421 162.91);
+  --color-forest-700: oklch(46.72% 0.0492 164.73);
+  --color-stone-600: oklch(66.30% 0.0190 164.37);
+  --color-stone-300: oklch(85.90% 0.0068 160.05);
+  --color-stone-100: oklch(96.81% 0.0034 145.55);
+  --color-sun-400: oklch(87.87% 0.1333 98.27);
+  --color-sky-100: oklch(93.45% 0.0149 218.05);
+
+  /* Core Neutrals */
+  --color-primary: var(--color-forest-900);
+  /* near-black text/headings */
+  --color-dark: var(--color-forest-900);
+  /* headings on light bg */
+  --color-warm-grey: var(--color-stone-600);
+  /* body/secondary text */
+  --color-cool-grey: var(--color-stone-300);
+  /* borders, dividers */
+  --color-light: var(--color-stone-300);
+  /* disabled states, placeholder */
+  --color-concrete: var(--color-stone-100);
+  /* near-white background */
+  --color-surface: oklch(100% 0 0);
+  /* paper-0 — pure white, cards, modals */
+
+  /* Brand — Forest (hero, nav, dark sections; replaces "deep blue") */
+  --color-deep-blue: var(--color-forest-900);
+  --color-deep-blue-dark: var(--color-forest-900);
+  --color-deep-blue-mid: var(--color-forest-700);
+  /* mid tone for overlays */
+
+  /* Brand — Sky Wash (light section backgrounds; replaces "light blue") */
+  --color-light-blue: var(--color-sky-100);
+  --color-blue-wash: var(--color-sage-100);
+  /* very light section tint */
+
+  /* Brand — Sage Green (icons, tags, accents) */
+  --color-sage-green: var(--color-sage-500);
+  --color-sage-light: var(--color-sage-100);
+  /* sage tint for backgrounds */
+  --color-sage-dark: var(--color-forest-700);
+  /* deeper sage for hover */
+  --color-mint: var(--color-mint-500);
+  /* Spirito two-tone service-icon accent */
+
+  /* Accent — Sun Yellow (CTA buttons, highlights, used sparingly) */
+  --color-muted-yellow: var(--color-sun-400);
+  /* primary CTA */
+  --color-dull-yellow: var(--color-sage-100);
+  /* light accent surface */
+  --color-accent: var(--color-sun-400);
+  /* alias for CTA colour */
+  --color-accent-light: var(--color-sage-100);
+  /* alias for light accent */
+  --color-accent-dark: var(--color-forest-700);
+  /* hover / pressed state */
+
+  /* Semantic Aliases */
+  --color-hero-bg: var(--color-forest-900);
+  /* hero section background */
+  --color-section-wash: var(--color-sky-100);
+  /* alternating section bg */
+  --color-section-sage: var(--color-sage-100);
+  /* sage-tinted section bg */
+  --color-cta-bg: var(--color-forest-900);
+  /* dark CTA section bg */
+  --color-text-heading: var(--color-forest-900);
+  --color-text-body: var(--color-forest-900);
+  /* Spirito uses one ink for body + heading */
+  --color-text-muted: var(--color-stone-600);
+  /* muted / placeholder text */
+  --color-text-inverted: var(--color-surface);
+  /* text on dark backgrounds */
+  --color-border: var(--color-stone-300);
+  /* default border */
+  --color-border-strong: var(--color-stone-600);
+  /* emphasized border */
+  --color-icon-ink: oklch(0% 0 0);
+  /* Spirito --color-dark — icon glyph on sage-green chip */
+  --color-overlay-photo: color-mix(in oklch, var(--color-forest-900) 60%, transparent);
+  /* gradient scrim on photo cards */
+
+  /* ----------------------------------------------------------
+     TYPOGRAPHY
+  ---------------------------------------------------------- */
+
+  --font-display: 'LTMuseum', Georgia, serif;
+  --font-body: 'Switzer', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Bridge alias — kept so existing `font-josefin-sans` utility usages
+     (not yet reskinned per-component) still render in the new body font. */
+  --font-josefin-sans: var(--font-body);
+
+  /* Scale — fluid via clamp() */
+  --text-display: clamp(3rem, 6vw + 1rem, 4.5rem);
+  /* ~72px — hero headline */
+  --text-h1: clamp(2.5rem, 5vw, 3.5rem);
+  /* ~56px */
+  --text-h2: clamp(1.875rem, 3.5vw, 2.75rem);
+  /* ~44px */
+  --text-h3: clamp(1.5rem, 2.5vw, 2rem);
+  /* ~32px */
+  --text-h4: clamp(1.125rem, 2vw, 1.5rem);
+  /* ~24px */
+  --text-body-lg: 1.125rem;
+  /* 18px */
+  --text-body: 1rem;
+  /* 16px */
+  --text-sm: 0.875rem;
+  /* 14px */
+  --text-xs: 0.75rem;
+  /* 12px */
+
+  /* Line Heights */
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.02em;
+  --tracking-tight: -0.015em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.05em;
+  --tracking-widest: 0.15em;
+
+  /* Font Weights */
+  --weight-thin: 100;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ----------------------------------------------------------
+     SPACING
+  ---------------------------------------------------------- */
+
+  --space-1: 0.25rem;
+  /*  4px */
+  --space-2: 0.5rem;
+  /*  8px */
+  --space-3: 0.75rem;
+  /* 12px */
+  --space-4: 1rem;
+  /* 16px */
+  --space-5: 1.25rem;
+  /* 20px */
+  --space-6: 1.5rem;
+  /* 24px */
+  --space-8: 2rem;
+  /* 32px */
+  --space-10: 2.5rem;
+  /* 40px */
+  --space-12: 3rem;
+  /* 48px */
+  --space-16: 4rem;
+  /* 64px */
+  --space-20: 5rem;
+  /* 80px */
+  --space-24: 6rem;
+  /* 96px */
+  --space-32: 8rem;
+  /* 128px */
+
+  /* Section vertical padding — shrinks on mobile */
+  --section-py: clamp(4rem, 8vw, 8rem);
+
+  /* ----------------------------------------------------------
+     BORDER RADIUS
+  ---------------------------------------------------------- */
+
+  --radius-xs: 0.5rem;
+  /*  8px — Spirito chip/pill radius */
+  --radius-sm: 0.75rem;
+  /* 12px — Spirito small badge radius */
+  --radius-md: 1.25rem;
+  /* 20px — Spirito card radius */
+  --radius-lg: 1.25rem;
+  /* 20px — cards */
+  --radius-xl: 1.5rem;
+  /* 24px — cards, between Spirito's card/hero radii */
+  --radius-2xl: 1.875rem;
+  /* 30px — Spirito large hero/photo panel radius */
+  --radius-3xl: 1.875rem;
+  /* 30px — Spirito large hero/photo panel radius */
+  --radius-full: 9999px;
+  /* pill / circular */
+
+  /* ----------------------------------------------------------
+     SHADOWS
+  ---------------------------------------------------------- */
+
+  --shadow-xs: 0 1px 2px color-mix(in oklch, var(--color-forest-900) 4%, transparent);
+  --shadow-sm: 0 1px 3px color-mix(in oklch, var(--color-forest-900) 6%, transparent), 0 1px 2px color-mix(in oklch, var(--color-forest-900) 4%, transparent);
+  --shadow-md: 0 20px 40px -20px color-mix(in oklch, var(--color-forest-900) 18%, transparent);
+  /* Spirito --shadow-card */
+  --shadow-lg: 0 24px 48px -20px color-mix(in oklch, var(--color-forest-900) 22%, transparent);
+  --shadow-xl: 0 30px 60px -25px oklch(0% 0 0 / 25%);
+  /* Spirito --shadow-pop */
+  --shadow-accent: 0 8px 24px color-mix(in oklch, var(--color-sun-400) 40%, transparent);
+  --shadow-sage: 0 8px 24px color-mix(in oklch, var(--color-sage-500) 30%, transparent);
+
+  /* ----------------------------------------------------------
+     TRANSITIONS
+  ---------------------------------------------------------- */
+
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Scrolling ticker marquee — keyframes defined below (no utility
+     equivalent), registered here so `animate-ticker-scroll` is generated. */
+  --animate-ticker-scroll: ticker-scroll 30s linear infinite;
+
+  /* ----------------------------------------------------------
+     LAYOUT
+  ---------------------------------------------------------- */
+
+  --container-max: 1290px;
+  /* matches Spirito's --container-max */
+  --container-narrow: 800px;
+  --container-px: clamp(1rem, 5vw, 2rem);
+
+  /* ----------------------------------------------------------
+     LEGACY / KEPT FROM ORIGINAL
+  ---------------------------------------------------------- */
+
+  --border-width-0\.5: 0.5px;
   --border-width-3: 3px;
   --padding-18: 72px;
+  --bg-hero-pattern: url('/assets/hero-pattern.jpg');
+}
 
-  /* extend background */
-  --bg-hero-pattern: url('/src/assets/hero-pattern.jpg');}
+/* ----------------------------------------------------------
+   BASE STYLES
+   Wrapped in @layer base so Tailwind utilities (which live in
+   @layer utilities) can still override element defaults here —
+   unlayered CSS always wins over layered CSS regardless of
+   specificity, which would otherwise block e.g. `text-white` on
+   an <h1>/<h2>/etc.
+---------------------------------------------------------- */
 
-body {
-  width: 100vw;
+@layer base {
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: hidden;
+    font-family: var(--font-josefin-sans);
+    font-size: var(--text-body);
+    line-height: var(--leading-normal);
+    color: var(--color-text-body);
+    background-color: var(--color-surface);
+  }
+
+  /* ----------------------------------------------------------
+     TYPOGRAPHY BASE
+  ---------------------------------------------------------- */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-josefin-sans);
+    color: var(--color-text-heading);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+    font-weight: var(--weight-bold);
+  }
+
+  h1 {
+    font-size: var(--text-h1);
+  }
+
+  h2 {
+    font-size: var(--text-h2);
+  }
+
+  h3 {
+    font-size: var(--text-h3);
+  }
+
+  h4 {
+    font-size: var(--text-h4);
+  }
+
+  p {
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-body);
+  }
+}
+
+/* ----------------------------------------------------------
+   COMPONENT PATTERNS
+   Kept here only where no Tailwind utility can express it:
+   .container/.container-narrow are a genuine reusable layout
+   primitive (same rationale as Tailwind's own core `.container`),
+   and @keyframes have no utility equivalent (driven via the
+   --animate-ticker-scroll theme token above).
+---------------------------------------------------------- */
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }

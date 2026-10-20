@@ -1,0 +1,41 @@
+[
+  {
+    "id": "t1",
+    "quote": "Managed Wellness changed my life. After years of struggling with anxiety, I finally feel equipped with the tools to manage my thoughts and emotions. My therapist was patient, understanding, and genuinely invested in my progress.",
+    "clientName": "Wanjiku N.",
+    "clientContext": "Working Professional",
+    "rating": 5,
+    "serviceSlug": "trauma-and-psychological-debriefing"
+  },
+  {
+    "id": "t2",
+    "quote": "My husband and I were on the verge of separation. After six sessions of couples therapy here, we communicate better than we ever have. I cannot recommend this centre enough to any couple going through a rough patch.",
+    "clientName": "Aisha & Kofi M.",
+    "clientContext": "Married Couple",
+    "rating": 5,
+    "serviceSlug": "couples-therapy"
+  },
+  {
+    "id": "t3",
+    "quote": "Losing my mother was the hardest thing I have ever faced. The grief counselling sessions gave me a space to grieve without judgment and at my own pace. I am forever grateful for the compassion shown to me.",
+    "clientName": "Peter O.",
+    "clientContext": "Parent",
+    "rating": 5,
+    "serviceSlug": "loss-and-grief-counseling"
+  },
+  {
+    "id": "t4",
+    "quote": "The psychometric testing was thorough and eye-opening. It helped me understand my strengths and decide on a career change I had been afraid to make. Highly professional service.",
+    "clientName": "Grace K.",
+    "clientContext": "Graduate Student",
+    "rating": 4,
+    "serviceSlug": "psychometric-testing"
+  },
+  {
+    "id": "t5",
+    "quote": "Virtual sessions were a game-changer for me. I could access support from the comfort of my home, which made it much easier to be open and honest. The therapist was just as present and engaged online as in person.",
+    "clientName": "Samuel T.",
+    "clientContext": "Remote Worker",
+    "rating": 5
+  }
+]
